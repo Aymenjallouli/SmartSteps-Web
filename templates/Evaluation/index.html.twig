@@ -1,0 +1,77 @@
+{% extends "base.html.twig" %}
+
+{% block title "Evaluations" %}
+
+{% block title_h1 "Gestion des evaluations" %}
+
+{% block stylesheets %}
+{{ parent() }}
+  <link href="{{ asset("sbadmin2/vendor/datatables/dataTables.bootstrap4.min.css") }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+<main id="main" class="main">
+    <div class="card shadow my-4">
+        <div class="card-header py-2 d-flex align-items-center">
+            <a href="{{ path("admin_evaluation_new") }}" class="btn btn-success btn-icon-split ml-auto">
+                <span class="icon text-white-50">
+                    <i class="fas fa-plus"></i>
+                </span>
+                <span class="text">Ajouter une évaluation</span>
+            </a>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="userTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Titre</th>
+                            <th>Date Limite</th>
+                            <th>Durée</th>
+                            <th>Nombre de Questions</th>
+                        </tr>
+                    </thead>
+                    {# <tfoot>
+                        <tr>
+                            <th>Titre</th>
+                            <th>Date Limite</th>
+                            <th>Durée</th>
+                            <th>Nombre de Questions</th>
+                        </tr>
+                    </tfoot> #}
+                    <tbody>
+                    {% for evaluation in evaluations %}
+                        <tr>
+                            <td>{{ evaluation.titre }}</td>
+                            <td>{{ evaluation.dateLimite|date('Y-m-d H:i:s') }}</td>
+                            <td>{{ evaluation.duree }}</td>
+                            <td>{{ evaluation.nbQuestions }}</td>
+                            <td>
+                                <a href="{{ path("admin_evaluation_show", {"id": evaluation.id}) }}" class="btn btn-info rounded with-icon">
+                                    <i class="far fa-eye"></i>
+                                </a>
+                                {% if 1 %}
+                                    <a href="{{ path("admin_evaluation_edit", {"id": evaluation.id}) }}" class="btn btn-primary rounded with-icon">
+                                        <i class="far fa-edit"></i>
+                                    </a>
+                                
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main><!-- End #main -->
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+  <script src="{{ asset("sbadmin2/vendor/datatables/jquery.dataTables.min.js") }}"></script>
+  <script src="{{ asset("sbadmin2/vendor/datatables/dataTables.bootstrap4.min.js") }}"></script>
+
+  <script src="{{ asset("js/dataTable/user.js") }}"></script>
+{% endblock %}

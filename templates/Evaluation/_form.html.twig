@@ -1,0 +1,76 @@
+<div class="container">
+    {{form_start(form,{'attr':{'novalidate':'novalidate'}})}}
+    <div class="form-group">
+        {{ form_label(form.titre,"Titre") }}
+        {{ form_widget(form.titre,{ 'attr': {'class': 'form-control'} }) }} 
+        {% if form_errors(form.titre) is not empty %}
+        <div class="alert alert-danger" >
+        {{ form_errors(form.titre) }}
+    </div>
+    {% endif %}
+    </div>
+    {{ form_row(form.dateLimite) }}
+    {{ form_row(form.duree) }}
+    <div style="margin-bottom: 40px;"></div>
+    
+    <div id="questions-container" data-prototype="{{ form_widget(form.questions.vars.prototype)|e('html_attr') }}">
+        {% for question in form.questions %}
+            <div class="question-row">
+                <div class="row">
+                    <div class="col-1">{{ form_row(question.num) }}</div>
+                    <div class="col">{{ form_row(question.enonce) }}</div>
+                    <div class="col-auto"><button type="button" class="delete-question-btn">Delete</button></div>
+                </div>
+                {% for i in 1..4 %}
+                    {% set optionField = attribute(question, 'o' ~ i) %}
+                    <div class="row">
+                        <div class="col_auto">{{ form_widget(optionField.correct) }}</div>
+                        <div class="col">{{ form_widget(optionField.content) }}</div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div style="margin-bottom: 20px;"></div>
+        {% endfor %}
+    </div>
+    
+    <button type="button" id="add-question-btn">Add Question</button>
+    
+    {{ form_row(form.save) }}
+{{ form_end(form) }}
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+document.getElementById('add-question-btn').addEventListener('click', function () {
+    var questionsContainer = document.getElementById('questions-container');
+    var index = questionsContainer.querySelectorAll('.question-row').length;
+
+    var prototype = questionsContainer.getAttribute('data-prototype');
+    var newForm = prototype.replace(/__name__/g, index);
+
+    var newQuestionDiv = document.createElement('div');
+    newQuestionDiv.className = 'question-row'; // Make sure the class name matches the existing question rows
+    newQuestionDiv.innerHTML = newForm;
+
+    questionsContainer.appendChild(newQuestionDiv);
+
+    // Attach delete button functionality to the newly added question
+    addQuestionFormDeleteLink(newQuestionDiv);
+});
+
+// Attach delete button functionality to existing questions
+document.querySelectorAll('.delete-question-btn').forEach(function(deleteButton) {
+    deleteButton.addEventListener('click', function() {
+        deleteButton.closest('.question-row').remove();
+    });
+});
+});
+
+function addQuestionFormDeleteLink(question) {
+const deleteButton = question.querySelector('.delete-question-btn');
+deleteButton.addEventListener('click', function() {
+    question.remove();
+});
+}
+
+</script>

@@ -1,0 +1,21 @@
+
+<div class="container">
+{{form_start(form,{'attr':{'novalidate':'novalidate'}})}}
+
+<div class="form-group">
+    {{ form_label(form.enonce,"Enonce") }}
+    {{ form_widget(form.enonce,{ 'attr': {'class': 'form-control'} }) }} 
+    {% if form_errors(form.enonce) is not empty %}
+    <div class="alert alert-danger" >
+    {{ form_errors(form.enonce) }}
+</div>
+{% endif %}
+</div>
+
+
+    </div>
+
+<br>
+    {# <button class="btn">{{ button_label|default('Save') }}</button> #}
+{{ form_end(form) }}
+</div>
