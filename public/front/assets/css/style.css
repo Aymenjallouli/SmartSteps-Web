@@ -12,6 +12,18 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
+
+}
+.main {
+  margin-top: 60px;
+  padding: 20px 30px;
+  transition: all 0.3s;
+}
+
+@media (max-width: 1199px) {
+  #main {
+    padding: 20px;
+  }
 }
 
 a {
@@ -111,6 +123,7 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
+  
 }
 
 #header.header-scrolled,

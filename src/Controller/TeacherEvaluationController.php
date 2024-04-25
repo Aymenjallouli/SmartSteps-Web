@@ -13,23 +13,22 @@ use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\Common\Collections\ArrayCollection;
 
-#[Route('/admin/evaluation')]
-class AdminEvaluationController extends AbstractController
+#[Route('/teacher/evaluation')]
+class TeacherEvaluationController extends AbstractController
 {
     public static $t='bitatch';
- 
+
 //here1 *********************
-    #[Route('/', name: 'admin_evaluation_index', methods: ['GET'])]
+    #[Route('/', name: 'teacher_evaluation_index', methods: ['GET'])]
     public function index(EvaluationRepository $evaluationRepository): Response
     {
-        //echo("mpipiopoi");
-        return $this->render('admin/Evaluation/index.html.twig', [
+        return $this->render('teacher/evaluation/index.html.twig', [
             'evaluations' => $evaluationRepository->findAll(),
         ]);
     }
 
 
-    #[Route('/new', name: 'admin_evaluation_new', methods: ['GET', 'POST'])]
+    #[Route('/new', name: 'teacher_evaluation_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EvaluationRepository $evaluationRepository,ManagerRegistry $manager): Response
     {
         $em = $manager->getManager();
@@ -54,14 +53,15 @@ class AdminEvaluationController extends AbstractController
              else if($question->get('o4')->get('correct')->getData()){$rquestions[$i]->setSolution($question->get('o4')->get('content')->getData());}
              $i++;
              }
+             $evaluation->setNbQuestions($i);
            // $evaluationRepository->save($evaluation, true);
            $em->persist($evaluation);
            $em->flush();
 
-            return $this->redirectToRoute('app_evaluation_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('teacher_evaluation_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('admin/evaluation/new.html.twig', [
+        return $this->renderForm('teacher/evaluation/new.html.twig', [
             'evaluation' => $evaluation,
             'form' => $form,
         ]);
@@ -69,15 +69,15 @@ class AdminEvaluationController extends AbstractController
 
 
 
-    #[Route('/{id}', name: 'admin_evaluation_show', methods: ['GET'])]
+    #[Route('/{id}', name: 'teacher_evaluation_show', methods: ['GET'])]
     public function show(Evaluation $evaluation): Response
     {
-        return $this->render('evaluation/show.html.twig', [
+        return $this->render('teacher/evaluation/show.html.twig', [
             'evaluation' => $evaluation,
         ]);
     }
 
-    #[Route('{id}/edit', name: 'admin_evaluation_edit', methods: ['GET', 'POST'])]
+    #[Route('{id}/edit', name: 'teacher_evaluation_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Evaluation $evaluation, EvaluationRepository $evaluationRepository,ManagerRegistry $manager, $id): Response
     {
         
@@ -135,16 +135,16 @@ class AdminEvaluationController extends AbstractController
             $em->persist($evaluation);
             $em->flush();
 
-            return $this->redirectToRoute('admin_evaluation_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('teacher_evaluation_index', [], Response::HTTP_SEE_OTHER);
         
         }
-        return $this->renderForm('admin/evaluation/edit.html.twig', [
+        return $this->renderForm('teacher/evaluation/edit.html.twig', [
             'evaluation' => $evaluation,
             'form' => $form,
         ]);
     }
 
-    #[Route('/{id}', name: 'app_evaluation_delete', methods: ['POST'])]
+    #[Route('/{id}', name: 'teacher_evaluation_delete', methods: ['POST'])]
     public function delete($id,ManagerRegistry $manager,Request $request, Evaluation $evaluation, EvaluationRepository $evaluationRepository): Response
     {
         if ($this->isCsrfTokenValid('delete'.$evaluation->getId(), $request->request->get('_token'))) {
@@ -156,6 +156,6 @@ class AdminEvaluationController extends AbstractController
         $em->flush();
         }
 
-        return $this->redirectToRoute('app_evaluation_index', [], Response::HTTP_SEE_OTHER);
+        return $this->redirectToRoute('teacher_evaluation_index', [], Response::HTTP_SEE_OTHER);
     }
 }

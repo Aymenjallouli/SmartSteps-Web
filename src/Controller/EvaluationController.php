@@ -3,12 +3,14 @@
 namespace App\Controller;
 
 use App\Entity\Evaluation;
+use App\Entity\Note;
 use App\Form\EvaluationType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 //here1 *********************
 use App\Repository\EvaluationRepository;
+use App\Repository\NoteRepository;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -28,46 +30,7 @@ class EvaluationController extends AbstractController
     }
 
 
-    #[Route('/new', name: 'app_evaluation_new', methods: ['GET', 'POST'])]
-    public function new(Request $request, EvaluationRepository $evaluationRepository,ManagerRegistry $manager): Response
-    {
-        $em = $manager->getManager();
-        $evaluation = new Evaluation();
-        $ans=[];
-        $form = $this->createForm(EvaluationType::class, $evaluation, ['answers'=>$ans]);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $questions = $form->get('questions');
-            $options = '';
-            $rquestions=$evaluation->getQuestions();
-            $i=0;
-            foreach($questions as $question){
-             $data=$question->get('o1')->get('content')->getData();
-             //echo('mama'.$data);
-             $options=$question->get('o1')->get('content')->getData().','.$question->get('o2')->get('content')->getData().','.$question->get('o3')->get('content')->getData().','.$question->get('o4')->get('content')->getData();
-             $rquestions[$i]->setOptions($options);
-             if($question->get('o1')->get('correct')->getData()){$rquestions[$i]->setSolution($question->get('o1')->get('content')->getData());}
-             else if($question->get('o2')->get('correct')->getData()){$rquestions[$i]->setSolution($question->get('o2')->get('content')->getData());}
-             else if($question->get('o3')->get('correct')->getData()){$rquestions[$i]->setSolution($question->get('o3')->get('content')->getData());}
-             else if($question->get('o4')->get('correct')->getData()){$rquestions[$i]->setSolution($question->get('o4')->get('content')->getData());}
-             $i++;
-             }
-           // $evaluationRepository->save($evaluation, true);
-           $em->persist($evaluation);
-           $em->flush();
-
-            return $this->redirectToRoute('app_evaluation_index', [], Response::HTTP_SEE_OTHER);
-        }
-
-        return $this->renderForm('evaluation/new.html.twig', [
-            'evaluation' => $evaluation,
-            'form' => $form,
-        ]);
-    }
-
-
-
+   
     #[Route('/{id}', name: 'app_evaluation_show', methods: ['GET'])]
     public function show(Evaluation $evaluation): Response
     {
@@ -76,17 +39,23 @@ class EvaluationController extends AbstractController
         ]);
     }
 
-    #[Route('{id}/edit', name: 'app_evaluation_edit', methods: ['GET', 'POST'])]
-    public function edit(Request $request, Evaluation $evaluation, EvaluationRepository $evaluationRepository,ManagerRegistry $manager, $id): Response
+    #[Route('/{id}', name: 'app_evaluation_pass', methods: ['GET', 'POST'])]
+    public function pass(Request $request, Evaluation $evaluation, EvaluationRepository $evaluationRepository,ManagerRegistry $manager, $id): Response
     {
         
+
+        // Create an ArrayCollection of the current Tag objects in the database
+        $evaluation = $evaluationRepository->find($id);
+        $objectB = clone $evaluation;
+
         $originalQuestions = new ArrayCollection();
 
         // Create an ArrayCollection of the current Tag objects in the database
         $evaluation = $evaluationRepository->find($id);
         foreach ($evaluation->getQuestions() as $question) {
             $originalQuestions->add($question);
-        }   
+        }  
+        
        $answers = $evaluation->getQuestions();
        $ans=[];
        $i=0;
@@ -96,64 +65,40 @@ class EvaluationController extends AbstractController
             $i++;
         }
         //echo($i.'bbbbbb');
-        $form = $this->createForm(EvaluationType::class, $evaluation, ['answers'=>$ans]);
+        $form = $this->createForm(EvaluationType::class, $evaluation, ['answers'=>$ans, 'isTeacher'=>false]);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted()&& $form->isValid()) {
+        if ($form->isSubmitted()) {
             $questions = $form->get('questions');
            $options = '';
-           $rquestions=$evaluation->getQuestions();
            $i=0;
+           $rquestions=$evaluation->getQuestions();
+           $score=0;
            foreach($questions as $question){
             if( $rquestions[$i]!=null){
-            $data=$question->get('o1')->get('content')->getData();
-            //echo('mama'.$data);
-            $options=$question->get('o1')->get('content')->getData().','.$question->get('o2')->get('content')->getData().','.$question->get('o3')->get('content')->getData().','.$question->get('o4')->get('content')->getData();
-            //echo("4444444444444444444444444444".','.(count($rquestions)));
-            $rquestions[$i]->setOptions($options);
-            if($question->get('o1')->get('correct')->getData()){$rquestions[$i]->setSolution($question->get('o1')->get('content')->getData());}
-            else if($question->get('o2')->get('correct')->getData()){$rquestions[$i]->setSolution($question->get('o2')->get('content')->getData());}
-            else if($question->get('o3')->get('correct')->getData()){$rquestions[$i]->setSolution($question->get('o3')->get('content')->getData());}
-            else if($question->get('o4')->get('correct')->getData()){$rquestions[$i]->setSolution($question->get('o4')->get('content')->getData());}
+            $options=explode(',', $rquestions[$i]->getOptions());
+            if($question->get('o1')->get('correct')->getData()&& $options[0]==$rquestions[$i]->getSolution()){$score++;}
+            else if($question->get('o2')->get('correct')->getData()&& $options[1]==$rquestions[$i]->getSolution()){$score++;}
+            else if($question->get('o3')->get('correct')->getData()&& $options[2]==$rquestions[$i]->getSolution()){$score++;}
+            else if($question->get('o4')->get('correct')->getData()&& $options[3]==$rquestions[$i]->getSolution()){$score++;}
             $i++;
             //echo($i);
             }}
+            $note = new Note();
+            $note->setIdEvaluation(1);
+            $note->setIdEtudiant(20);
+            $note->setNote($score/$i*100);
             $em = $manager->getManager();
-            foreach ($originalQuestions as $question) {
-                if (false === $evaluation->getQuestions()->contains($question)) {
-                    // remove the Task from the Tag
-                    
-
-                    // if it was a many-to-one relationship, remove the relationship like this
-                    $question->setEvaluation(null);
-
-                    $em->persist($question);
-                    $em->remove($question);
-                }}
-            $em->persist($evaluation);
+            
+            $em->persist($note);
             $em->flush();
 
             return $this->redirectToRoute('app_evaluation_index', [], Response::HTTP_SEE_OTHER);
         
         }
-        return $this->renderForm('evaluation/edit.html.twig', [
+        return $this->renderForm('evaluation/_form.html.twig', [
             'evaluation' => $evaluation,
             'form' => $form,
         ]);
-    }
-
-    #[Route('/{id}', name: 'app_evaluation_delete', methods: ['POST'])]
-    public function delete($id,ManagerRegistry $manager,Request $request, Evaluation $evaluation, EvaluationRepository $evaluationRepository): Response
-    {
-        if ($this->isCsrfTokenValid('delete'.$evaluation->getId(), $request->request->get('_token'))) {
-            
-            $em = $manager->getManager();
-        $evaluation = $evaluationRepository->find($id);
-
-        $em->remove($evaluation);
-        $em->flush();
-        }
-
-        return $this->redirectToRoute('app_evaluation_index', [], Response::HTTP_SEE_OTHER);
     }
 }

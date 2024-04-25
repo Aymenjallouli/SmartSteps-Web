@@ -12,14 +12,14 @@ class Note
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\ManyToOne(targetEntity: User::class)]
-    private $idEtudiant;
+    #[ORM\Column]
+    private $id_etudiant;
 
     #[ORM\Column]
     private ?int $note = null;
-    
-    #[ORM\ManyToOne(targetEntity: Evaluation::class)]
-    private $idEvaluation;
+
+    #[ORM\Column]
+    private $id_evaluation;
 
     public function getId(): ?int
     {
@@ -28,12 +28,12 @@ class Note
 
     public function getIdEtudiant(): ?int
     {
-        return $this->idEtudiant;
+        return $this->id_etudiant;
     }
 
     public function setIdEtudiant(int $idEtudiant): static
     {
-        $this->idEtudiant = $idEtudiant;
+        $this->id_etudiant = $idEtudiant;
 
         return $this;
     }
@@ -52,12 +52,12 @@ class Note
 
     public function getIdEvaluation(): ?int
     {
-        return $this->idEvaluation;
+        return $this->id_evaluation;
     }
 
     public function setIdEvaluation(?int $idEvaluation): static
     {
-        $this->idEvaluation = $idEvaluation;
+        $this->id_evaluation = $idEvaluation;
 
         return $this;
     }

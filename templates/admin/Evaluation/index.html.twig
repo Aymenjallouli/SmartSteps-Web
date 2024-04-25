@@ -43,20 +43,21 @@
                     {% for evaluation in evaluations %}
                         <tr>
                             <td>{{ evaluation.titre }}</td>
-                            <td>{{ evaluation.dateLimite|date('Y-m-d H:i:s') }}</td>
+                            <td>{{ evaluation.dateLimite|date('Y-m-d') }}</td>
                             <td>{{ evaluation.duree }}</td>
                             <td>{{ evaluation.nbQuestions }}</td>
                             <td>
                                 <a href="{{ path("admin_evaluation_show", {"id": evaluation.id}) }}" class="btn btn-info rounded with-icon">
                                     <i class="far fa-eye"></i>
+                                    <span class="text">Show</span>
+
                                 </a>
-                                {% if 1 %}
-                                    <a href="{{ path("admin_evaluation_edit", {"id": evaluation.id}) }}" class="btn btn-primary rounded with-icon">
-                                        <i class="far fa-edit"></i>
-                                    </a>
-                                
-                                {% endif %}
-                            </td>
+                                <a href="{{ path("admin_evaluation_edit", {"id": evaluation.id}) }}" class="btn btn-primary rounded with-icon">
+                                    <i class="far fa-edit"></i>
+                                    <span class="text">Edit</span>
+
+                                </a>
+                                                            </td>
                         </tr>
                     {% endfor %}
                     </tbody>

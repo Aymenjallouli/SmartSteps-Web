@@ -1,76 +1,131 @@
-<div class="container">
-    {{form_start(form,{'attr':{'novalidate':'novalidate'}})}}
-    <div class="form-group">
-        {{ form_label(form.titre,"Titre") }}
-        {{ form_widget(form.titre,{ 'attr': {'class': 'form-control'} }) }} 
-        {% if form_errors(form.titre) is not empty %}
-        <div class="alert alert-danger" >
-        {{ form_errors(form.titre) }}
-    </div>
-    {% endif %}
-    </div>
-    {{ form_row(form.dateLimite) }}
-    {{ form_row(form.duree) }}
-    <div style="margin-bottom: 40px;"></div>
-    
-    <div id="questions-container" data-prototype="{{ form_widget(form.questions.vars.prototype)|e('html_attr') }}">
-        {% for question in form.questions %}
-            <div class="question-row">
-                <div class="row">
-                    <div class="col-1">{{ form_row(question.num) }}</div>
-                    <div class="col">{{ form_row(question.enonce) }}</div>
-                    <div class="col-auto"><button type="button" class="delete-question-btn">Delete</button></div>
+{% extends 'base.html.twig' %}
+
+{% block title %}Pass Evaluation{% endblock %}
+{% block stylesheets %}
+{{parent()}}
+<link rel="stylesheet" href="{{asset('front/stylesheet.css')}}">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+
+{% endblock %}
+
+
+{% block body %}
+
+    <h1>{{ form.vars.value.titre}}</h1>
+
+    <div class="container">
+        {{form_start(form,{'attr':{'novalidate':'novalidate'}})}}
+        {% set count = 0 %}
+        {% set saveFieldOutput = "" %}
+       
+        {{ form.vars.value.dateLimite|date('Y-m-d') }}
+        <div style="margin-bottom: 10px;"></div>
+        
+        <div id="questions-container" data-prototype="{{ form_widget(form.questions.vars.prototype)|e('html_attr') }}">
+            {% for question in form.questions %}
+            <div class="quiz">
+            
+           
+                <div id="ques-view">
+                   
                 </div>
-                {% for i in 1..4 %}
+                <div class="question">
+                <h1>{{question.enonce.vars.value}}</h1>
+                </div>
+                
+                <div class="choice">
+                    {% for i in 1..4 %}
                     {% set optionField = attribute(question, 'o' ~ i) %}
-                    <div class="row">
+                    <div class="options" style="display: flex;">
                         <div class="col_auto">{{ form_widget(optionField.correct) }}</div>
-                        <div class="col">{{ form_widget(optionField.content) }}</div>
+                        <div class="col">{{ optionField.content.vars.value }}</div>
                     </div>
                 {% endfor %}
+                </div>
+    
+                 <div class="ans-btn">
+                    <button type="button" class="submit-answer">Submit Answer</button>
+                     {% if count ==0  %}
+                    {% set count = count + 1 %}
+                    {% set saveFieldOutput %}
+                    {{ form_widget(form.save, {'attr': {'class': 'view-results'}}) }}
+                {% endset %}
+                
+                     {% endif %}
+                     {{ saveFieldOutput }}
+                </div>
             </div>
-            <div style="margin-bottom: 20px;"></div>
-        {% endfor %}
+            {% endfor %}
+            <div class="final-result">
+                {{ saveFieldOutput }}
+            </div>
+        </div>
+                
+        {% do form.duree.setRendered() %}
+        {% for field in form %}
+        {% do field.setRendered() %}
+    {% endfor %}
+    {{form_end(form)}}
     </div>
-    
-    <button type="button" id="add-question-btn">Add Question</button>
-    
-    {{ form_row(form.save) }}
-{{ form_end(form) }}
-</div>
+    <a href="{{ path('app_evaluation_index') }}">back to list</a>
 
+{% endblock %}
+
+    
+{% block javascripts %}
+{{parent()}}
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-document.getElementById('add-question-btn').addEventListener('click', function () {
-    var questionsContainer = document.getElementById('questions-container');
-    var index = questionsContainer.querySelectorAll('.question-row').length;
+    document.addEventListener('DOMContentLoaded', function () {
+        var currentQuestionIndex = 0;
+        var totalQuestions = document.querySelectorAll('.quiz').length;
 
-    var prototype = questionsContainer.getAttribute('data-prototype');
-    var newForm = prototype.replace(/__name__/g, index);
+        // Hide final result section initially
+        document.querySelector('.final-result').style.display = 'none';
 
-    var newQuestionDiv = document.createElement('div');
-    newQuestionDiv.className = 'question-row'; // Make sure the class name matches the existing question rows
-    newQuestionDiv.innerHTML = newForm;
+        function displayQuestion(index) {
+            // Hide all questions
+            var questions = document.querySelectorAll('.quiz');
+            questions.forEach(function (question) {
+                question.style.display = 'none';
+            });
+            // Show the question at the specified index
+            questions[index].style.display = 'block';
+            // Update question number
+        }
 
-    questionsContainer.appendChild(newQuestionDiv);
+        // Display the first question initially
+        displayQuestion(currentQuestionIndex);
 
-    // Attach delete button functionality to the newly added question
-    addQuestionFormDeleteLink(newQuestionDiv);
-});
+        // Handle submit answer button click
+        document.querySelectorAll('.submit-answer').forEach(function (button) {
+            button.addEventListener('click', function () {
+                // Assuming you have a function to validate the answer
+                // Here you can add your answer validation logic
+                // For demo purpose, I'm just incrementing the current question index
+                currentQuestionIndex++;
 
-// Attach delete button functionality to existing questions
-document.querySelectorAll('.delete-question-btn').forEach(function(deleteButton) {
-    deleteButton.addEventListener('click', function() {
-        deleteButton.closest('.question-row').remove();
+                // If all questions are answered, show final result
+                if (currentQuestionIndex >= totalQuestions) {
+                    document.querySelectorAll('.quiz').forEach(function (quiz) {
+                        quiz.style.display = 'none';
+                    });
+                    document.querySelector('.final-result').style.display = 'block';
+                } else {
+                    // Otherwise, display the next question
+                    displayQuestion(currentQuestionIndex);
+                }
+            });
+        });
+
+        // Handle restart button click
+        document.getElementById('restart').addEventListener('click', function () {
+            // Reset current question index
+            currentQuestionIndex = 0;
+            // Display the first question
+            displayQuestion(currentQuestionIndex);
+            // Hide final result and show quiz
+            document.querySelector('.final-result').style.display = 'none';
+        });
     });
-});
-});
-
-function addQuestionFormDeleteLink(question) {
-const deleteButton = question.querySelector('.delete-question-btn');
-deleteButton.addEventListener('click', function() {
-    question.remove();
-});
-}
-
 </script>
+{% endblock %}

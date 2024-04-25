@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Evaluation{% endblock %}
+{% block stylesheets %}
+{{parent()}}
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+{% endblock %}
+
+
+{% block body %}
+
+    <h1>Edit Evaluation</h1>
+
+    {{ include('teacher/evaluation/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('teacher_evaluation_index') }}">back to list</a>
+
+{% endblock %}
+
+    
