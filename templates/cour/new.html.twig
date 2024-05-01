@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Cour{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset("assets/css/styles.css") }}">
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row justify-content-center mt-5"> {# Ajout de la classe mt-5 pour marge en haut #}
+            <div class="col-md-10"> {# Utilisation de col-md-10 au lieu de col-md-8 #}
+                <div class="card">
+                    <div class="card-header text-center">{{ block('title') }}</div> {# Centrer le texte de l'en-tête #}
+                    <div class="card-body">
+                        <h2 class="text-center mb-4">Create New Cour</h2>
+                        {{ include('Cour/_form.html.twig') }}
+                    </div>
+                    <div class="card-footer d-flex justify-content-end"> {# Aligner le pied de page à droite #}
+                        <a href="{{ path('app_cour_index') }}" class="add-course-btn">Back to List</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Détails du Cour{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card-header {
+            background-color: #f0f0f0;
+            padding: 5px;
+            border-bottom: 1px solid #ccc;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .card-body {
+            padding: 10px;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <h1 class="text-center">Détails du Cour</h1>
+
+    <div class="card">
+        <div class="card-header">
+            <strong>NAME:</strong> {{ cour.Matiere }}
+        </div>
+        <div class="card-body">
+            <p><strong>Matière:</strong> {{ cour.Matiere }}</p>
+            <p><strong>Date de début:</strong> {{ cour.DateDebut ? cour.DateDebut|date('Y-m-d H:i:s') : 'Non définie' }}</p>
+            <p><strong>Date de fin:</strong> {{ cour.DateFin ? cour.DateFin|date('Y-m-d H:i:s') : 'Non définie' }}</p>
+        </div>
+    </div>
+
+    <div class="text-center mt-3">
+        <div class="d-flex justify-content-between">
+            <a href="{{ path('app_cour_index') }}" class="add-course-btn">Retour à la liste</a>
+            <a href="{{ path('app_cour_edit', {'id': cour.id}) }}" class="add-course-btn">Modifier</a>
+            {{ include('cour/_delete_form.html.twig') }}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+

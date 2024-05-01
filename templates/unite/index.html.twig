@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Unite index{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <style>
+        /* Ajoutez votre CSS pour le champ botResponse ici */
+        #botResponse {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            box-sizing: border-box;
+            resize: none;
+            overflow: auto;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <form method="GET" action="{{ path('app_unite_index') }}">
+                <div class="input-group">
+                    <input type="text" name="search" class="form-control" placeholder="Rechercher par titre">
+                    <button type="submit" class="btn btn-primary">Rechercher</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <form method="GET" action="{{ path('app_unite_index') }}">
+                <div class="input-group">
+                    <select name="sort" class="form-control">
+                        <option value="">Trier par...</option>
+                        <option value="num_unite_asc" {% if currentSort == 'num_unite_asc' %}selected{% endif %}>Numéro d'unité croissant</option>
+                        <option value="num_unite_desc" {% if currentSort == 'num_unite_desc' %}selected{% endif %}>Numéro d'unité décroissant</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary">Trier</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row flex-nowrap overflow-auto">
+        {% for unite in unites %}
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ unite.Titre }}</h5>
+                    <p class="card-text"><strong>Unit Number:</strong> {{ unite.NumUnite }}</p>
+                    <p class="card-text"><strong>Statut:</strong> {{ unite.Statut }}</p>
+                    <p class="card-text"><strong>Content:</strong> {{ unite.Contenu }}</p>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <a href="{{ path('app_unite_show', {'id': unite.id}) }}" class="add-course-btn">Show</a>
+                    <a href="{{ path('app_unite_edit', {'id': unite.id}) }}" class="add-course-btn">Edit</a>
+                    {{ include('unite/_delete_form.html.twig') }}
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div class="col">
+            <p class="text-center">Aucun enregistrement trouvé.</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <a href="{{ path('app_unite_new') }}" class="add-course-btn">Create New</a>
+</div>
+
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset("assets/js/chatbot.js") }}"></script>
+{% endblock %}
