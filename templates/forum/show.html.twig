@@ -1,0 +1,122 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Forum{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+      
+        .card {
+            border: 1px solid #dee2e6;
+            border-radius: 0.25rem;
+        }
+        .comments-section .card {
+            border-color: #007bff;
+        }
+        .comments-section .card p {
+            margin-bottom: 0;
+        }
+    </style>
+{% endblock %}
+
+
+
+{% block body %}
+    
+    <div class="container mt-5">
+        <a href="{{ path('app_forum_index') }}" class="btn btn-secondary mb-4"><i class="fas fa-arrow-left"></i> Back to list</a>
+<input type="text" id="search" class="form-control" placeholder="Search">  </script>
+<input   class="form-control" >
+   		<script src="{{ asset('https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js') }}"></script>
+   		<script>
+   			$(document).ready(function () {
+                $("#search").on("keyup", function () {
+                    var value = $(this).val().toLowerCase();
+                    $(".card.mb-3").filter(function () {
+                        var typeOeuvre = $(this).find(".card-body").text().toLowerCase();
+                        $(this).toggle(typeOeuvre.indexOf(value) > -1);
+                    });
+                });
+            });
+
+   		</script>
+
+        <div class="card mb-4">
+            <div class="card-header">
+                <h1>Forum Details</h1>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Forum Information</h5>
+                
+                <form>
+                    <input type="hidden" name="id" value="{{ app.request.get('id') }}">
+                    
+                    <div class="form-group">
+                        <label class="font-weight-bold">Title</label>
+                        <input type="text" class="form-control" value="{{ forum.titre }}" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="font-weight-bold">Image</label>
+                        <input type="text" class="form-control" value="{{ forum.image }}" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="font-weight-bold">Creation Date</label>
+                        <input type="text" class="form-control" value="{{ forum.datecreation ? forum.datecreation|date('Y-m-d') : '' }}" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="font-weight-bold">Description</label>
+                        <textarea class="form-control" rows="4" readonly>{{ forum.description }}</textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="card mb-4">
+            <div class="card-header">
+                <h2>Comments</h2>
+            </div>
+            <div class="card-body comments-section">
+                {% for comment in comments %}
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <p>{{ comment.description }}</p>
+                        </div>
+                    </div>
+                    <a href="{{ path('app_commentaire_edit', {'id': comment.id}) }}" class="btn btn-secondary mb-4"><i class="fas fa-delete"></i> edit</a>
+
+                {% endfor %}
+            </div>
+        </div>
+
+        
+        <div class="card mb-4">
+            <div class="card-header">
+                <h2>Create new Commentaire</h2>
+            </div>
+            <div class="card-body">
+                {{ form_start(commentForm, {'attr': {'class': 'mb-4'}}) }}
+            
+                <div class="form-group">
+                    {{ form_label(commentForm.description, 'Comment') }}
+                    {{ form_widget(commentForm.description, {'attr': {'class': 'form-control'}}) }}
+                </div>
+                <button type="submit" class="btn btn-primary">Save</button>
+                {{ form_end(commentForm) }}
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+{% endblock %}

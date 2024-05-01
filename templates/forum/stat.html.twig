@@ -1,0 +1,38 @@
+{# templates/stat.html.twig #}
+
+{% extends 'baseBack.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <h1>Top 3 Most Commented Forums</h1>
+        <div>
+            {% for forum in top3Forums %}
+                <p>{{ forum.titre }} - {{ forum.commentCount }} commentaires</p>
+            {% endfor %}
+        </div>
+        <canvas id="myPieChart" width="400" height="400"></canvas>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script>
+            var ctx = document.getElementById('myPieChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: [{% for forum in top3Forums %}"{{ forum.titre }}",{% endfor %}],
+                    datasets: [{
+                        data: [{% for forum in top3Forums %}{{ forum.commentCount }},{% endfor %}],
+                        backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)'],
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: { legend: { position: 'top' }, title: { display: true, text: 'Top 3 Most Commented Forums' } }
+                }
+            });
+        </script>
+    </div>
+    <div class="col-3">
+    <a href="{{ path('app_commentaire_indexback') }}" class="btn btn-secondary">Back to list</a>
+</div>
+{% endblock %}
