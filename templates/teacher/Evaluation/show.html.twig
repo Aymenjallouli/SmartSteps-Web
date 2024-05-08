@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Evaluation {% endblock %}
+
+
+{% block body %}
+<main id="main" class="main">
+
+<div class="container">
+    {{form_start(form,{'attr':{'novalidate':'novalidate'}})}}
+
+    <div class="form-group">
+        {{ form_label(form.titre,"Titre") }}
+        {{ form_widget(form.titre,{ 'attr': {'class': 'form-control'} }) }} 
+        {% if form_errors(form.titre) is not empty %}
+        <div class="alert alert-danger" >
+        {{ form_errors(form.titre) }}
+    </div>
+    {% endif %}
+    </div>
+    {{ form_row(form.dateLimite) }}
+    {{ form_row(form.duree) }}
+    <div style="margin-bottom: 40px;"></div>
+    
+    <div id="questions-container" data-prototype="{{ form_widget(form.questions.vars.prototype)|e('html_attr') }}">
+        {% for question in form.questions %}
+            <div class="question-row">
+                <div class="row">
+                    <div class="col-1">{{ form_row(question.num) }}</div>
+                    <div class="col">{{ form_row(question.enonce) }}</div>
+                </div>
+                {% for i in 1..4 %}
+                    {% set optionField = attribute(question, 'o' ~ i) %}
+                    <div class="row">
+                        <div class="col-auto" style="display: inline;">{{ form_widget(optionField.correct) }}</div>
+                        <div class="col" style="display: inline;">{{ form_widget(optionField.content) }}</div>
+                    </div>
+                    
+                    
+                {% endfor %}
+            </div>
+            <div style="margin-bottom: 20px;"></div>
+        {% endfor %}
+    </div>
+        
+    {% do form.duree.setRendered() %}
+    {% do form.save.setRendered() %}
+{{ form_end(form) }}
+</div>
+<a href="{{ path('admin_evaluation_index') }}">back to list</a>
+
+</main><!-- End #main -->
+
+{% endblock %}

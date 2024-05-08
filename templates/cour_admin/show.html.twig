@@ -1,0 +1,64 @@
+{% extends 'admin/base1.html.twig' %}
+
+{% block title %}Cour{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        /* Définir la couleur bleue pour le texte */
+        .text-blue {
+            color: blue;
+        }
+        /* Personnaliser le style du bouton de suppression */
+        .btn-delete {
+            background-color: red;
+            color: white;
+            border-color: red;
+        }
+        /* Pour ajouter une marge entre les boutons */
+        .btn-margin {
+            margin-right: 10px;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+<main id="main" class="main">
+
+    <div class="container">
+     
+                <h1 class="text-center text-blue">Détails du Cour</h1> {# Ajout de la classe pour changer la couleur en bleu #}
+        
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <th style="width: 30%;">Id</th>
+                            <td>{{ cour.id }}</td>
+                        </tr>
+                        <tr>
+                            <th>Matière</th>
+                            <td>{{ cour.Matiere }}</td>
+                        </tr>
+                        <tr>
+                            <th>Date de début</th>
+                            <td>{{ cour.DateDebut ? cour.DateDebut|date('Y-m-d H:i:s') : 'Non définie' }}</td>
+                        </tr>
+                        <tr>
+                            <th>Date de fin</th>
+                            <td>{{ cour.DateFin ? cour.DateFin|date('Y-m-d H:i:s') : 'Non définie' }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+<div class="card-footer text-center">
+    <div class="d-flex justify-content-between">
+        <a href="{{ path('admin_cour_index') }}" class="btn btn-info btn-sm">Retour à la liste</a>
+        {{ include('cour/_delete_form.html.twig') }}
+    </div>
+</div>
+<main
+
+
+     
+    
+{% endblock %}

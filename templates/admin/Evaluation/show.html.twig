@@ -1,46 +1,54 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin/base1.html.twig' %}
 
-{% block title %}Hello EvaluationController!{% endblock %}
+{% block title %} Evaluation {% endblock %}
+
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<main id="main" class="main">
 
-<div class="example-wrapper">
- 
- <table border="1" align="center">
-        <thead>
-            <tr>
-                <th>id</th>
-                
-                <th>nsc</th>
+<div class="container">
+    {{form_start(form,{'attr':{'novalidate':'novalidate'}})}}
 
-                <th>email</th>
-          
-
-            </tr>
-        </thead>
-        <tbody>
-           {% for evaluation in evaluations %}
-              <tr>
-                  <td>{{evaluation.id}} </td>
-                 <td>{{evaluation.nsc}} </td>
-                <td>{{evaluation.email}} </td>
-                  {# <td> <a href="{{ path('app_evaluation_edit', {'id': evaluation.id}) }}">edit</a></td> #}
-                 
-              </tr>
-          {% endfor %}
-
-           </tbody>
-        </table>
-          <a href="{{ path('app_evaluation_index') }}">back to list</a> 
-
-
+    <div class="form-group">
+        {{ form_label(form.titre,"Titre") }}
+        {{ form_widget(form.titre,{ 'attr': {'class': 'form-control'} }) }} 
+        {% if form_errors(form.titre) is not empty %}
+        <div class="alert alert-danger" >
+        {{ form_errors(form.titre) }}
+    </div>
+    {% endif %}
+    </div>
+    {{ form_row(form.dateLimite) }}
+    {{ form_row(form.duree) }}
+    <div style="margin-bottom: 40px;"></div>
+    
+    <div id="questions-container" data-prototype="{{ form_widget(form.questions.vars.prototype)|e('html_attr') }}">
+        {% for question in form.questions %}
+            <div class="question-row">
+                <div class="row">
+                    <div class="col-1">{{ form_row(question.num) }}</div>
+                    <div class="col">{{ form_row(question.enonce) }}</div>
+                </div>
+                {% for i in 1..4 %}
+                    {% set optionField = attribute(question, 'o' ~ i) %}
+                    <div class="row">
+                        <div class="col-auto" style="display: inline;">{{ form_widget(optionField.correct) }}</div>
+                        <div class="col" style="display: inline;">{{ form_widget(optionField.content) }}</div>
+                    </div>
+                    
+                    
+                {% endfor %}
+            </div>
+            <div style="margin-bottom: 20px;"></div>
+        {% endfor %}
+    </div>
+        
+    {% do form.duree.setRendered() %}
+    {% do form.save.setRendered() %}
+{{ form_end(form) }}
 </div>
+<a href="{{ path('admin_evaluation_index') }}">back to list</a>
 
-   
+</main><!-- End #main -->
 
-   
 {% endblock %}

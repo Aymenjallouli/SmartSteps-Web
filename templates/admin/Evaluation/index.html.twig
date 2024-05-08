@@ -11,6 +11,7 @@
 
 {% block body %}
 <main id="main" class="main">
+
     <div class="card shadow my-4">
         <div class="card-header py-2 d-flex align-items-center">
             <a href="{{ path("admin_evaluation_new") }}" class="btn btn-success btn-icon-split ml-auto">
@@ -19,6 +20,14 @@
                 </span>
                 <span class="text">Ajouter une évaluation</span>
             </a>
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="searchInput" placeholder="Recherche..." aria-label="Recherche" aria-describedby="searchButton">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button" id="searchButton">
+                    <i class="fas fa-search"></i> Rechercher
+                </button>
+            </div>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -31,14 +40,6 @@
                             <th>Nombre de Questions</th>
                         </tr>
                     </thead>
-                    {# <tfoot>
-                        <tr>
-                            <th>Titre</th>
-                            <th>Date Limite</th>
-                            <th>Durée</th>
-                            <th>Nombre de Questions</th>
-                        </tr>
-                    </tfoot> #}
                     <tbody>
                     {% for evaluation in evaluations %}
                         <tr>
@@ -71,8 +72,21 @@
 
 {% block javascripts %}
     {{ parent() }}
-  <script src="{{ asset("sbadmin2/vendor/datatables/jquery.dataTables.min.js") }}"></script>
-  <script src="{{ asset("sbadmin2/vendor/datatables/dataTables.bootstrap4.min.js") }}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+    $(document).ready(function () {
+        $('#searchInput').on('input', function () {
+            performSearch();
+        });
 
-  <script src="{{ asset("js/dataTable/user.js") }}"></script>
+        function performSearch() {
+            var searchTerm = $('#searchInput').val().toLowerCase();
+
+            $('#userTable tbody tr').each(function () {
+                var rowData = $(this).text().toLowerCase();
+                $(this).toggle(rowData.includes(searchTerm));
+            });
+        }
+    });
+    </script>
 {% endblock %}

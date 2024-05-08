@@ -1,0 +1,54 @@
+{% extends 'admin/base1.html.twig' %}
+
+{% block title %}Unite index{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+{% endblock %}
+
+{% block body %}
+<main id="main" class="main">
+
+    <div class="container">
+        <h1 class="text-center my-4">Unite List</h1>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Num_unite</th>
+                    <th>Titre</th>
+                    <th>Statut</th>
+                    <th>Contenu</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for unite in unites %}
+                    <tr>
+                        <td>{{ unite.id }}</td>
+                        <td>{{ unite.NumUnite }}</td>
+                        <td>{{ unite.Titre }}</td>
+                        <td>{{ unite.Statut }}</td>
+                        <td>{{ unite.Contenu }}</td>
+                     <td>
+    <div class="d-flex justify-content-between">
+        <a href="{{ path('admin_unite_show', {'id': unite.id}) }}" class="btn btn-info">Show</a>
+        {{ include('unite/_delete_form.html.twig') }}
+    </div>
+</td>
+
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="6" class="no-records">No records found</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+   
+    </div>
+</main>
+{% endblock %}

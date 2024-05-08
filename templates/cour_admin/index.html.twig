@@ -1,0 +1,78 @@
+{% extends 'admin/base1.html.twig' %}
+
+{% block title %}Cour index{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+{% endblock %}
+
+{% block body %}
+<main id="main" class="main">
+
+    <div class="container">
+        <h1 class="text-center mt-4 mb-4">Liste des Cours</h1>
+ <!-- Ajouter le champ de recherche avec design Bootstrap -->
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="searchInput" placeholder="Recherche..." aria-label="Recherche" aria-describedby="searchButton">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button" id="searchButton">
+                    <i class="fas fa-search"></i> Rechercher
+                </button>
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <table class="table table-bordered table-hover">
+            <thead class="bg-primary text-white">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Matière</th>
+                    <th scope="col">Date de Début</th>
+                    <th scope="col">Date de Fin</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for cour in cours %}
+                    <tr>
+                        <td>{{ cour.id }}</td>
+                        <td>{{ cour.Matiere }}</td>
+                        <td>{{ cour.DateDebut ? cour.DateDebut|date('d/m/Y H:i') : '' }}</td>
+                        <td>{{ cour.DateFin ? cour.DateFin|date('d/m/Y H:i') : '' }}</td>
+                        <td class="actions">
+                            <a href="{{ path('admin_cour_show', {'id': cour.id}) }}" class="btn btn-info btn-sm">Voir</a>
+                            <a href="{{ path('admin_cour_units', {'id': cour.id}) }}" class="btn btn-warning btn-sm">Unite</a>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="5" class="text-center">Aucun cours trouvé.</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+
+
+      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#searchInput').on('input', function () {
+                performSearch();
+            });
+
+            function performSearch() {
+                var searchTerm = $('#searchInput').val().toLowerCase();
+
+                $('.reservation-row').each(function () {
+                    var rowData = $(this).text().toLowerCase();
+                    $(this).toggle(rowData.includes(searchTerm));
+                });
+            }
+        });
+    </script>
+</main>
+{% endblock %}

@@ -57,6 +57,19 @@ class QuestionType extends AbstractType
         ; 
         EvaluationType::$index++;
     }
+    public function validateQuestion($o1, ExecutionContext $context) {
+        $correct = 0;
+        foreach ($answers as $answer) {
+            if ($answer['correct']) {
+                $correct++;
+                if($correct==2) break;
+            }
+        }
+        if ($correct!=1) {
+            $context
+            ->addViolation("Entrez une seule solution");
+        }
+    }
     
 
 

@@ -70,10 +70,23 @@ class TeacherEvaluationController extends AbstractController
 
 
     #[Route('/{id}', name: 'teacher_evaluation_show', methods: ['GET'])]
-    public function show(Evaluation $evaluation): Response
+    public function show(Evaluation $evaluation, EvaluationRepository $evaluationRepository, $id): Response
     {
-        return $this->render('teacher/evaluation/show.html.twig', [
+        $evaluation = $evaluationRepository->find($id);
+
+        $answers = $evaluation->getQuestions();
+       $ans=[];
+       $i=0;
+        foreach($answers as $question)
+        {
+            $ans[$i]=$question->getOptions().','.$question->getSolution();
+            $i++;
+        }
+        //echo($i.'bbbbbb');
+        $form = $this->createForm(EvaluationType::class, $evaluation, ['answers'=>$ans, 'isTeacher'=>false]);
+        return $this->renderForm('teacher/evaluation/show.html.twig', [
             'evaluation' => $evaluation,
+            'form' => $form,
         ]);
     }
 

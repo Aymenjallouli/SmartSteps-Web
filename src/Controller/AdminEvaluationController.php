@@ -70,10 +70,23 @@ class AdminEvaluationController extends AbstractController
 
 
     #[Route('/{id}', name: 'admin_evaluation_show', methods: ['GET'])]
-    public function show(Evaluation $evaluation): Response
+    public function show(Evaluation $evaluation, EvaluationRepository $evaluationRepository, $id): Response
     {
-        return $this->render('evaluation/show.html.twig', [
+        $evaluation = $evaluationRepository->find($id);
+
+        $answers = $evaluation->getQuestions();
+       $ans=[];
+       $i=0;
+        foreach($answers as $question)
+        {
+            $ans[$i]=$question->getOptions().','.$question->getSolution();
+            $i++;
+        }
+        //echo($i.'bbbbbb');
+        $form = $this->createForm(EvaluationType::class, $evaluation, ['answers'=>$ans, 'isTeacher'=>false]);
+        return $this->renderForm('admin/evaluation/show.html.twig', [
             'evaluation' => $evaluation,
+            'form' => $form,
         ]);
     }
 
@@ -158,4 +171,31 @@ class AdminEvaluationController extends AbstractController
 
         return $this->redirectToRoute('app_evaluation_index', [], Response::HTTP_SEE_OTHER);
     }
+    
+#[Route('/search', name: 'search')]
+public function search(Request $request):JsonResponse
+{
+    $searchTerm = $request->query->get('q');
+
+    $entityManager = $this->getDoctrine()->getManager();
+    $repository = $entityManager->getRepository(Evaluation::class);
+    $results = $repository->createQueryBuilder('u')
+        ->where('u.titre LIKE :searchTerm')
+        ->setParameter('searchTerm', '%' . $searchTerm . '%')
+        ->getQuery()
+        ->getResult();
+
+    $formattedResults = [];
+    foreach ($results as $evaluation) {
+        $formattedResults[] = [
+            'id' => $evaluation->getId(),
+            'nbQuestions' => $evaluation->getNbQuestions(),
+            'titre' => $evaluation->getTitre(),
+            'duree' => $evaluation->getDuree(),
+            'dateLimite' => $evaluation->getDateLimite(),
+        ];
+    }
+
+    return new JsonResponse($formattedResults);
+}
 }

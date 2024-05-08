@@ -2,128 +2,106 @@
 
 namespace App\Entity;
 
-use Doctrine\DBAL\Types\Types;
+use App\Repository\UniteRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
-/**
- * Unite
- *
- * @ORM\Table(name="unite", indexes={@ORM\Index(name="id_cour", columns={"id_cour"})})
- * @ORM\Entity
- */
+#[ORM\Entity(repositoryClass: UniteRepository::class)]
 class Unite
 {
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="num_unite", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $numUnite;
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column]
+    private ?int $id = null;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="Titre", type="string", length=255, nullable=false)
-     */
-    private $titre;
+    #[ORM\Column]
+    #[Assert\NotBlank(message: "Le champ Numéro d'unité ne peut pas être vide.")]
+    private ?int $Num_unite = null;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="Statut", type="string", length=11, nullable=false)
-     */
-    private $statut;
+    #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(message: "Le champ Titre ne peut pas être vide.")]
+    #[Assert\Length(max: 255, maxMessage: "Le Titre ne peut pas dépasser {{ limit }} caractères.")]
+    private ?string $Titre = null;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="Contenu", type="string", length=255, nullable=false)
-     */
-    private $contenu;
+    #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(message: "Le champ Statut ne peut pas être vide.")]
+    #[Assert\Length(max: 255, maxMessage: "Le Statut ne peut pas dépasser {{ limit }} caractères.")]
+    private ?string $Statut = null;
 
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="dateDepot", type="date", nullable=false, options={"default"="CURRENT_TIMESTAMP"})
-     */
-    private $datedepot = 'CURRENT_TIMESTAMP';
+    #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(message: "Le champ Contenu ne peut pas être vide.")]
+    private ?string $Contenu = null;
 
-    /**
-     * @var \Cour
-     *
-     * @ORM\ManyToOne(targetEntity="Cour")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_cour", referencedColumnName="id_cour")
-     * })
-     */
-    private $idCour;
+    #[ORM\ManyToOne(targetEntity: Cour::class, inversedBy: 'unites')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Cour $id_Cour = null;
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
 
     public function getNumUnite(): ?int
     {
-        return $this->numUnite;
+        return $this->Num_unite;
+    }
+
+    public function setNumUnite(int $Num_unite): self
+    {
+        $this->Num_unite = $Num_unite;
+
+        return $this;
     }
 
     public function getTitre(): ?string
     {
-        return $this->titre;
+
+        return $this->Titre;
     }
 
-    public function setTitre(string $titre): static
+    public function setTitre(string $Titre): self
     {
-        $this->titre = $titre;
+        $this->Titre = $Titre;
 
         return $this;
     }
 
     public function getStatut(): ?string
     {
-        return $this->statut;
+
+        return $this->Statut;
     }
 
-    public function setStatut(string $statut): static
+    public function setStatut(string $Statut): self
     {
-        $this->statut = $statut;
+        $this->Statut = $Statut;
 
         return $this;
     }
 
     public function getContenu(): ?string
     {
-        return $this->contenu;
+
+        return $this->Contenu;
     }
 
-    public function setContenu(string $contenu): static
+    public function setContenu(string $Contenu): self
     {
-        $this->contenu = $contenu;
-
-        return $this;
-    }
-
-    public function getDatedepot(): ?\DateTimeInterface
-    {
-        return $this->datedepot;
-    }
-
-    public function setDatedepot(\DateTimeInterface $datedepot): static
-    {
-        $this->datedepot = $datedepot;
+        $this->Contenu = $Contenu;
 
         return $this;
     }
 
     public function getIdCour(): ?Cour
     {
-        return $this->idCour;
+
+        return $this->id_Cour;
     }
 
-    public function setIdCour(?Cour $idCour): static
+    public function setIdCour(?Cour $id_Cour): self
     {
-        $this->idCour = $idCour;
+        $this->id_Cour = $id_Cour;
 
         return $this;
     }
-
-
 }
