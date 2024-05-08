@@ -72,6 +72,7 @@ class UniteController extends AbstractController
     public function edit(Request $request, Unite $unite, EntityManagerInterface $entityManager, ValidatorInterface $validator, $id): Response
     {
         $unite = $entityManager->getRepository(Unite::class)->find($id);
+
         $form = $this->createForm(UniteType::class, $unite);
         $form->handleRequest($request);
 
@@ -97,6 +98,7 @@ class UniteController extends AbstractController
     public function delete(Request $request, Unite $unite, EntityManagerInterface $entityManager, $id): Response
     {
         $unite = $entityManager->getRepository(Unite::class)->find($id);
+
         if ($this->isCsrfTokenValid('delete'.$unite->getId(), $request->request->get('_token'))) {
             $entityManager->remove($unite);
             $entityManager->flush();

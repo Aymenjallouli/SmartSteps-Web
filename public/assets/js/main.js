@@ -1,5 +1,6 @@
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 * Template Name: NiceAdmin
 * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
 * Updated: Apr 7 2024 with Bootstrap v5.3.3
@@ -8,6 +9,11 @@
 * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
 * Updated: Mar 17 2024 with Bootstrap v5.3.3
 >>>>>>> e30d6362263f9e8655f7dfa691ac12062b479db2
+=======
+* Template Name: Arsha
+* Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
+* Updated: Mar 17 2024 with Bootstrap v5.3.3
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
@@ -32,11 +38,14 @@
    */
   const on = (type, el, listener, all = false) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (all) {
       select(el, all).forEach(e => e.addEventListener(type, listener))
     } else {
       select(el, all).addEventListener(type, listener)
 =======
+=======
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
     let selectEl = select(el, all)
     if (selectEl) {
       if (all) {
@@ -44,7 +53,10 @@
       } else {
         selectEl.addEventListener(type, listener)
       }
+<<<<<<< HEAD
 >>>>>>> e30d6362263f9e8655f7dfa691ac12062b479db2
+=======
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
     }
   }
 
@@ -56,6 +68,7 @@
   }
 
   /**
+<<<<<<< HEAD
 <<<<<<< HEAD
    * Sidebar toggle
    */
@@ -77,6 +90,8 @@
   /**
 =======
 >>>>>>> e30d6362263f9e8655f7dfa691ac12062b479db2
+=======
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
    * Navbar links active state on scroll
    */
   let navbarlinks = select('#navbar .scrollto', true)
@@ -98,7 +113,10 @@
 
   /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
    * Scrolls to an element with header offset
    */
   const scrollto = (el) => {
@@ -113,7 +131,10 @@
   }
 
   /**
+<<<<<<< HEAD
 >>>>>>> e30d6362263f9e8655f7dfa691ac12062b479db2
+=======
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
    * Toggle .header-scrolled class to #header when page is scrolled
    */
   let selectHeader = select('#header')
@@ -146,6 +167,7 @@
   }
 
   /**
+<<<<<<< HEAD
 <<<<<<< HEAD
    * Initiate tooltips
    */
@@ -355,6 +377,8 @@
 
 })();
 =======
+=======
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
    * Mobile nav toggle
    */
   on('click', '.mobile-nav-toggle', function(e) {
@@ -502,5 +526,9 @@
     });
   });
 
+<<<<<<< HEAD
 })()
 >>>>>>> e30d6362263f9e8655f7dfa691ac12062b479db2
+=======
+})()
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d

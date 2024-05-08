@@ -42,6 +42,20 @@
 <nav id="navbar" class="navbar">
         <ul>
        
+          {% if app.user %}
+               <a href="{{ path('admin_account_index1') }}" class="nav-link scrollto active"><span class="ion-ios-arrow-forward">Profile</span></a>
+
+        {% if is_granted('ROLE_ADMIN') %}
+
+           <a href="{{ path('admin_dashboard_index') }}" class="nav-link scrollto active"><span class="ion-ios-arrow-forward">Admin</span></a>
+        {% endif %}
+        <a href="{{ logout_path('main') }}" class="nav-link scrollto active"><span class="ion-ios-arrow-forward">Logout </span></a>
+             
+
+    {% else %}
+        <a href="{{ path('login') }}" class="nav-link scrollto active"><span class="ion-ios-arrow-forward">Login</span></a>
+        <a href="{{ path('registration') }}" class="nav-link scrollto active"><span class="ion-ios-arrow-forward">Register</span></a>
+    {% endif %}
           <li><a class="nav-link scrollto active" href="{{ url('app_home') }}">Home</a></li>
           <li><a class="nav-link scrollto" href="{{ url('app_cour_index') }}">Cours</a></li>
           <li><a class="nav-link scrollto" href="{{ url('app_unite_index') }}">Unité</a></li>

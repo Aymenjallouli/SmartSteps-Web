@@ -1,5 +1,6 @@
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 * Template Name: NiceAdmin
 * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
 * Updated: Apr 7 2024 with Bootstrap v5.3.3
@@ -8,6 +9,11 @@
 * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
 * Updated: Mar 17 2024 with Bootstrap v5.3.3
 >>>>>>> e30d6362263f9e8655f7dfa691ac12062b479db2
+=======
+* Template Name: Arsha
+* Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
+* Updated: Mar 17 2024 with Bootstrap v5.3.3
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
@@ -15,6 +21,7 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+<<<<<<< HEAD
 <<<<<<< HEAD
 :root {
   scroll-behavior: smooth;
@@ -27,24 +34,36 @@ body {
 body {
   font-family: "Open Sans", sans-serif;
 >>>>>>> e30d6362263f9e8655f7dfa691ac12062b479db2
+=======
+body {
+  font-family: "Open Sans", sans-serif;
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
   color: #444444;
 }
 
 a {
 <<<<<<< HEAD
+<<<<<<< HEAD
   color: #4154f1;
 =======
   color: #47b2e4;
 >>>>>>> e30d6362263f9e8655f7dfa691ac12062b479db2
+=======
+  color: #47b2e4;
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
   text-decoration: none;
 }
 
 a:hover {
 <<<<<<< HEAD
+<<<<<<< HEAD
   color: #717ff5;
 =======
   color: #73c5eb;
 >>>>>>> e30d6362263f9e8655f7dfa691ac12062b479db2
+=======
+  color: #73c5eb;
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
   text-decoration: none;
 }
 
@@ -54,6 +73,7 @@ h3,
 h4,
 h5,
 h6 {
+<<<<<<< HEAD
 <<<<<<< HEAD
   font-family: "Nunito", sans-serif;
 }
@@ -86,6 +106,8 @@ h6 {
   font-weight: 600;
   color: #012970;
 =======
+=======
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
   font-family: "Jost", sans-serif;
 }
 
@@ -125,7 +147,10 @@ h6 {
   100% {
     transform: rotate(360deg);
   }
+<<<<<<< HEAD
 >>>>>>> e30d6362263f9e8655f7dfa691ac12062b479db2
+=======
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
 }
 
 /*--------------------------------------------------------------
@@ -138,18 +163,24 @@ h6 {
   right: 15px;
   bottom: 15px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   z-index: 99999;
   background: #4154f1;
   width: 40px;
   height: 40px;
   border-radius: 4px;
 =======
+=======
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
   z-index: 996;
   background: #47b2e4;
   width: 40px;
   height: 40px;
   border-radius: 50px;
+<<<<<<< HEAD
 >>>>>>> e30d6362263f9e8655f7dfa691ac12062b479db2
+=======
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
   transition: all 0.4s;
 }
 
@@ -161,10 +192,14 @@ h6 {
 
 .back-to-top:hover {
 <<<<<<< HEAD
+<<<<<<< HEAD
   background: #6776f4;
 =======
   background: #6bc1e9;
 >>>>>>> e30d6362263f9e8655f7dfa691ac12062b479db2
+=======
+  background: #6bc1e9;
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
   color: #fff;
 }
 
@@ -174,6 +209,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+<<<<<<< HEAD
 <<<<<<< HEAD
 # Override some default Bootstrap stylings
 --------------------------------------------------------------*/
@@ -1134,6 +1170,8 @@ h6 {
 .faq .basic p {
   color: #6980aa;
 =======
+=======
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
 # Header
 --------------------------------------------------------------*/
 #header {
@@ -2427,12 +2465,16 @@ section {
   .faq .faq-list {
     padding: 0;
   }
+<<<<<<< HEAD
 >>>>>>> e30d6362263f9e8655f7dfa691ac12062b479db2
+=======
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
 }
 
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+<<<<<<< HEAD
 <<<<<<< HEAD
 .contact .info-box {
   padding: 28px 30px;
@@ -2457,6 +2499,8 @@ section {
   font-size: 14px;
   margin-bottom: 0;
 =======
+=======
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
 .contact .info {
   border-top: 3px solid #47b2e4;
   border-bottom: 3px solid #47b2e4;
@@ -2549,7 +2593,10 @@ section {
   margin: 0 0 15px 0;
   font-weight: 400;
   font-size: 13px;
+<<<<<<< HEAD
 >>>>>>> e30d6362263f9e8655f7dfa691ac12062b479db2
+=======
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
 }
 
 .contact .php-email-form .error-message {
@@ -2559,11 +2606,14 @@ section {
   text-align: left;
   padding: 15px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   margin-bottom: 24px;
   font-weight: 600;
 }
 
 =======
+=======
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
   font-weight: 600;
 }
 
@@ -2571,7 +2621,10 @@ section {
   margin-top: 25px;
 }
 
+<<<<<<< HEAD
 >>>>>>> e30d6362263f9e8655f7dfa691ac12062b479db2
+=======
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
 .contact .php-email-form .sent-message {
   display: none;
   color: #fff;
@@ -2579,9 +2632,12 @@ section {
   text-align: center;
   padding: 15px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   margin-bottom: 24px;
 =======
 >>>>>>> e30d6362263f9e8655f7dfa691ac12062b479db2
+=======
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
   font-weight: 600;
 }
 
@@ -2591,9 +2647,12 @@ section {
   text-align: center;
   padding: 15px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   margin-bottom: 24px;
 =======
 >>>>>>> e30d6362263f9e8655f7dfa691ac12062b479db2
+=======
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
 }
 
 .contact .php-email-form .loading:before {
@@ -2609,7 +2668,10 @@ section {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
 .contact .php-email-form .form-group {
   margin-bottom: 20px;
 }
@@ -2618,21 +2680,29 @@ section {
   padding-bottom: 8px;
 }
 
+<<<<<<< HEAD
 >>>>>>> e30d6362263f9e8655f7dfa691ac12062b479db2
+=======
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
 .contact .php-email-form input,
 .contact .php-email-form textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   border-radius: 0;
 =======
   border-radius: 4px;
 >>>>>>> e30d6362263f9e8655f7dfa691ac12062b479db2
+=======
+  border-radius: 4px;
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
 }
 
 .contact .php-email-form input:focus,
 .contact .php-email-form textarea:focus {
+<<<<<<< HEAD
 <<<<<<< HEAD
   border-color: #4154f1;
 }
@@ -2657,6 +2727,8 @@ section {
 .contact .php-email-form button[type=submit]:hover {
   background: #5969f3;
 =======
+=======
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
   border-color: #47b2e4;
 }
 
@@ -2679,7 +2751,10 @@ section {
 
 .contact .php-email-form button[type=submit]:hover {
   background: #209dd8;
+<<<<<<< HEAD
 >>>>>>> e30d6362263f9e8655f7dfa691ac12062b479db2
+=======
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
 }
 
 @keyframes animate-loading {
@@ -2693,6 +2768,7 @@ section {
 }
 
 /*--------------------------------------------------------------
+<<<<<<< HEAD
 <<<<<<< HEAD
 # Error 404
 --------------------------------------------------------------*/
@@ -2752,6 +2828,8 @@ section {
   font-size: 13px;
   color: #012970;
 =======
+=======
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
 # Breadcrumbs
 --------------------------------------------------------------*/
 .breadcrumbs {
@@ -2983,5 +3061,8 @@ section {
   #footer .credits {
     padding-top: 4px;
   }
+<<<<<<< HEAD
 >>>>>>> e30d6362263f9e8655f7dfa691ac12062b479db2
+=======
+>>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
 }

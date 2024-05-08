@@ -54,6 +54,7 @@ class CourAdminController extends AbstractController
     public function show(Cour $cour, EntityManagerInterface $entityManager, $id): Response
     {
         $cour = $entityManager->getRepository(Cour::class)->find($id);
+
         return $this->render('cour_admin/show.html.twig', [
             'cour' => $cour,
         ]);
@@ -63,6 +64,7 @@ class CourAdminController extends AbstractController
     public function edit(Request $request, Cour $cour, EntityManagerInterface $entityManager, $id): Response
     {
         $cour = $entityManager->getRepository(Cour::class)->find($id);
+
         $form = $this->createForm(Cour1Type::class, $cour);
         $form->handleRequest($request);
 
@@ -82,6 +84,7 @@ class CourAdminController extends AbstractController
     public function delete(Request $request, Cour $cour, EntityManagerInterface $entityManager, $id): Response
     {
         $cour = $entityManager->getRepository(Cour::class)->find($id);
+
         if ($this->isCsrfTokenValid('delete'.$cour->getId(), $request->request->get('_token'))) {
             $entityManager->remove($cour);
             $entityManager->flush();
@@ -115,6 +118,7 @@ class CourAdminController extends AbstractController
     public function showUnits(Cour $cour, EntityManagerInterface $entityManager, $id): Response
     {
         $cour = $entityManager->getRepository(Cour::class)->find($id);
+
         // Récupérer les unités du cours spécifique
         $unites = $cour->getUnites();
 

@@ -2,140 +2,64 @@
 
 namespace App\Entity;
 
-use Doctrine\DBAL\Types\Types;
+
+use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
+use Symfony\Component\Security\Core\User\UserInterface;
 
-/**
- * User
- *
- * @ORM\Table(name="user")
- * @ORM\Entity
- */
-class User
+#[ORM\Entity(repositoryClass: UserRepository::class)]
+#[UniqueEntity(fields: ['email'], message: 'There is already an account with this email')]
+class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="idUser", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $iduser;
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column]
+    private ?int $id = null;
+
+    #[ORM\Column(length: 180, unique: true)]
+    private ?string $email = null;
+
+    #[ORM\Column]
+    private array $roles = [];
 
     /**
-     * @var int
-     *
-     * @ORM\Column(name="numTel", type="integer", nullable=false)
+     * @var string The hashed password
      */
-    private $numtel;
+    #[ORM\Column]
+    private ?string $password = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $username = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $firstName = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $lastName = null;
+
+    #[ORM\Column(type: 'boolean')]
+    private $isVerified = false;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="nomUser", type="string", length=255, nullable=false)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $nomuser;
+    private $qrCode;
+    
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    protected $resetToken;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="prenomUser", type="string", length=255, nullable=false)
+     * @ORM\Column(type="datetime")
      */
-    private $prenomuser;
+    private $createdAt;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="pwd", type="string", length=255, nullable=false)
-     */
-    private $pwd;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="email", type="string", length=255, nullable=false)
-     */
-    private $email;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="role", type="string", length=255, nullable=false)
-     */
-    private $role;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="isEnable", type="integer", nullable=false)
-     */
-    private $isenable;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="dateNai", type="date", nullable=false)
-     */
-    private $datenai;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="image", type="string", length=255, nullable=false)
-     */
-    private $image;
-
-    public function getIduser(): ?int
+    public function getId(): ?int
     {
-        return $this->iduser;
-    }
-
-    public function getNumtel(): ?int
-    {
-        return $this->numtel;
-    }
-
-    public function setNumtel(int $numtel): static
-    {
-        $this->numtel = $numtel;
-
-        return $this;
-    }
-
-    public function getNomuser(): ?string
-    {
-        return $this->nomuser;
-    }
-
-    public function setNomuser(string $nomuser): static
-    {
-        $this->nomuser = $nomuser;
-
-        return $this;
-    }
-
-    public function getPrenomuser(): ?string
-    {
-        return $this->prenomuser;
-    }
-
-    public function setPrenomuser(string $prenomuser): static
-    {
-        $this->prenomuser = $prenomuser;
-
-        return $this;
-    }
-
-    public function getPwd(): ?string
-    {
-        return $this->pwd;
-    }
-
-    public function setPwd(string $pwd): static
-    {
-        $this->pwd = $pwd;
-
-        return $this;
+        return $this->id;
     }
 
     public function getEmail(): ?string
@@ -143,60 +67,156 @@ class User
         return $this->email;
     }
 
-    public function setEmail(string $email): static
+
+    public function setEmail(string $email): self
     {
         $this->email = $email;
 
         return $this;
     }
 
-    public function getRole(): ?string
+
+    /**
+     * A visual identifier that represents this user.
+     *
+     * @see UserInterface
+     */
+    public function getUserIdentifier(): string
     {
-        return $this->role;
+        return (string) $this->email;
     }
 
-    public function setRole(string $role): static
+    /**
+     * @see UserInterface
+     */
+    public function getRoles(): array
     {
-        $this->role = $role;
+        $roles = $this->roles;
+        // guarantee every user at least has ROLE_USER
+        $roles[] = 'ROLE_USER';
 
-        return $this;
+        return array_unique($roles);
     }
 
-    public function getIsenable(): ?int
+    public function setRoles(array $roles): self
     {
-        return $this->isenable;
-    }
-
-    public function setIsenable(int $isenable): static
-    {
-        $this->isenable = $isenable;
-
-        return $this;
-    }
-
-    public function getDatenai(): ?\DateTimeInterface
-    {
-        return $this->datenai;
-    }
-
-    public function setDatenai(\DateTimeInterface $datenai): static
-    {
-        $this->datenai = $datenai;
-
-        return $this;
-    }
-
-    public function getImage(): ?string
-    {
-        return $this->image;
-    }
-
-    public function setImage(string $image): static
-    {
-        $this->image = $image;
+        $this->roles = $roles;
 
         return $this;
     }
 
 
+
+    /**
+     * @see PasswordAuthenticatedUserInterface
+     */
+    public function getPassword(): string
+    {
+        return $this->password;
+    }
+
+    public function setPassword(string $password): self
+    {
+        $this->password = $password;
+
+        return $this;
+    }
+
+
+    /**
+     * @see UserInterface
+     */
+    public function eraseCredentials()
+    {
+        // If you store any temporary, sensitive data on the user, clear it here
+        // $this->plainPassword = null;
+    }
+
+    public function getUsername(): ?string
+    {
+        return $this->username;
+    }
+
+    public function setUsername(string $username): self
+    {
+        $this->username = $username;
+
+        return $this;
+    }
+
+
+    public function getFirstName(): ?string
+    {
+        return $this->firstName;
+    }
+
+    public function setFirstName(string $firstName): self
+    {
+        $this->firstName = $firstName;
+
+        return $this;
+    }
+
+
+    public function getLastName(): ?string
+    {
+        return $this->lastName;
+    }
+
+    public function setLastName(string $lastName): self
+    {
+        $this->lastName = $lastName;
+
+        return $this;
+    }
+
+    public function isVerified(): bool
+    {
+        return $this->isVerified;
+    }
+
+    public function setIsVerified(bool $isVerified): self
+    {
+        $this->isVerified = $isVerified;
+
+        return $this;
+    }
+    public function getFullName()
+    {
+        return "{$this->firstName} {$this->lastName}";
+    }
+    public function getRoleTitle()
+    {
+        if(in_array("ROLE_ADMIN", $this->roles)) return "Administrateur";
+        else return "Utilisateur";
+    }
+    
+    public function getSalt()
+    {}
+
+    
+    public function getResetToken(): string
+    {
+        return $this->resetToken;
+    }
+     
+    public function setResetToken(?string $resetToken): void
+    {
+        $this->resetToken = $resetToken;
+    }
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+    public function getQrCode(): ?string
+    {
+        return $this->qrCode;
+    }
+
+    public function setQrCode(?string $qrCode): self
+    {
+        $this->qrCode = $qrCode;
+
+        return $this;
+    }
 }
