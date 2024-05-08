@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Unités du Cours {{ cour.Matiere }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* Ajout d'une marge en bas pour séparer les cartes */
+            flex: 0 0 auto; /* Empêcher les cartes de s'étirer pour remplir l'espace */
+        }
+
+        .card-header {
+            background-color: #007bff;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .card-body {
+            padding: 20px; /* Ajout de remplissage pour le corps de la carte */
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            color: #fff;
+            border-color: #6c757d;
+        }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+            border-color: #545b62;
+        }
+
+        .card-container {
+            display: flex; /* Utiliser flexbox pour afficher les cartes horizontalement */
+            flex-wrap: nowrap; /* Empêcher le retour à la ligne des cartes */
+            overflow-x: auto; /* Défilement horizontal */
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+   <div class="container">
+    <h1 class="text-center text-blue">Unités du Cours {{ cour.Matiere }}</h1>
+
+    <div class="row flex-row flex-nowrap overflow-auto card-container"> <!-- Ajout de la classe card-container pour le défilement horizontal -->
+        {% for unite in unites %}
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        Unité {{ unite.NumUnite }}
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ unite.Titre }}</h5>
+                        <p class="card-text"><strong>Statut:</strong> {{ unite.Statut }}</p>
+                        <p class="card-text"><strong>Contenu:</strong> {{ unite.Contenu }}</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-between"> <!-- Utilisation de flexbox pour aligner les boutons -->
+                            <a href="{{ path('app_unite_edit', {'id': unite.id}) }}" class="add-course-btn">Edit</a>
+                            {{ include('unite/_delete_form.html.twig') }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="text-center mt-3">
+        <a href="{{ path('app_cour_index') }}" class="add-course-btn">Retour à la liste des cours</a>
+    </div>
+</div>
+
+{% endblock %}

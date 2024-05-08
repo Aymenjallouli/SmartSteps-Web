@@ -1,0 +1,82 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Détails de l'unité{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        /* Utilisation des mêmes styles que pour le détail du cours */
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card-header {
+            background-color: #f0f0f0;
+            padding: 5px;
+            border-bottom: 1px solid #ccc;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .card-body {
+            padding: 10px;
+        }
+        /* Utilisation des mêmes styles pour les boutons */
+        .btn-container {
+            margin-top: 30px;
+        }
+        .btn-container .btn {
+            margin-right: 10px; /* Ajoute une marge à droite pour espacer les boutons */
+            margin-bottom: 10px; /* Ajoute une marge en bas pour espacer les boutons */
+        }
+        .btn-container .btn-group {
+            margin-top: 10px; /* Ajoute une marge en haut pour espacer le groupe de boutons */
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1 class="text-center">Détails de l'unité</h1>
+
+    <div class="card">
+        <div class="card-header">
+            <!-- Utilisation du même format de tableau que le détail du cours -->
+            <strong>ID:</strong> {{ unite.id }}
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">Numéro d'unité</dt>
+                <dd class="col-sm-9">{{ unite.NumUnite }}</dd>
+
+                <dt class="col-sm-3">Titre</dt>
+                <dd class="col-sm-9">{{ unite.Titre }}</dd>
+
+                <dt class="col-sm-3">Statut</dt>
+                <dd class="col-sm-9">{{ unite.Statut }}</dd>
+
+                <dt class="col-sm-3">Contenu</dt>
+                <dd class="col-sm-9">{{ unite.Contenu }}</dd>
+
+                <dt class="col-sm-3">Cours</dt>
+                <dd class="col-sm-9">{{ unite.idCour }}</dd>
+            </dl>
+        </div>
+    </div>
+
+    <div class="text-center mt-3">
+        <div class="btn-container d-flex justify-content-between">
+            <!-- Utilisation des mêmes boutons que pour le détail du cours -->
+            <a href="{{ path('app_unite_index') }}" class="add-course-btn">Retour à la liste</a>
+            <a href="{{ path('app_unite_edit', {'id': unite.id}) }}" class="add-course-btn">Modifier</a>
+            {{ include('unite/_delete_form.html.twig') }}
+        </div>
+        {# Ajouter le lien de téléchargement PDF #}
+<div style="border: 1px solid black; padding: 5px; margin-bottom: 10px; background-color: bold; display: inline-block;">
+    <a href="{{ path('app_unite_pdf', {'id': unite.id}) }}" style="color: white; text-decoration: none; display: inline;">Télécharger PDF</a>
+</div>
+    </div>
+</div>
+{% endblock %}

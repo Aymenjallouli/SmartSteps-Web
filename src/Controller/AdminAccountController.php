@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Form\UserEditType;
 
-#[IsGranted('ROLE_ADMIN')]
+
 #[Route('/admin/profil')]
 class AdminAccountController extends AbstractController
 {
@@ -58,6 +58,54 @@ class AdminAccountController extends AbstractController
     {
         return $this->render('admin/account/index.html.twig', [
             'user' => $this->getUser()
+        ]);
+    }
+
+    /**
+     * Profil
+     *
+     * @Route("profilefront", name="admin_account_index1")
+     * 
+     * @return Response
+     */
+    public function index1()
+    {
+        return $this->render('admin/account/indexfront.html.twig', [
+            'user' => $this->getUser()
+        ]);
+    }
+
+    /**
+     * Edit user
+     *
+     * @Route("editionfront", name="admin_account_editfront")
+     * 
+     * @param Request $request
+     * @return Response
+     */
+    public function editf(Request $request, EntityManagerInterface $entityManager)
+    {
+        $user = $this->getUser();
+
+        $form = $this->createForm(UserEditType::class, $user);
+
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()){
+            $entityManager->flush();
+
+            $this->addFlash(
+                'success',
+                "Votre profil a bien était mis à jour !"
+            );
+
+            return $this->redirectToRoute('admin_account_index');
+        }
+
+        return $this->render('admin/account/editfront.html.twig', [
+            'body_class' => "profil-edit content-center",
+            'user' => $user,
+            'form' => $form->createView()
         ]);
     }
 

@@ -1,0 +1,70 @@
+{% extends 'admin/layout.html.twig' %}
+
+{% block title %}Unite{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        /* Définir la couleur bleue pour le texte */
+        .text-blue {
+            color: blue;
+        }
+        /* Personnaliser le style du bouton de suppression */
+        .btn-delete {
+            background-color: red;
+            color: white;
+            border-color: red;
+        }
+        /* Pour ajouter une marge entre les boutons */
+        .btn-margin {
+            margin-right: 10px;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="text-center mt-4 mb-4">Unite Details</h1>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <th>Id</th>
+                            <td>{{ unite.id }}</td>
+                        </tr>
+                        <tr>
+                            <th>Num_unite</th>
+                            <td>{{ unite.NumUnite }}</td>
+                        </tr>
+                        <tr>
+                            <th>Titre</th>
+                            <td>{{ unite.Titre }}</td>
+                        </tr>
+                        <tr>
+                            <th>Statut</th>
+                            <td>{{ unite.Statut }}</td>
+                        </tr>
+                        <tr>
+                            <th>Contenu</th>
+                            <td>{{ unite.Contenu }}</td>
+                        </tr>
+                        <tr>
+                            <th>Cour</th>
+                            <td>{{ unite.idCour }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <div class="d-flex justify-content-between">
+                    <a href="{{ path('admin_unite_index') }}" class="btn btn-info btn-sm">Back to List</a>
+                    {{ include('unite/_delete_form.html.twig') }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

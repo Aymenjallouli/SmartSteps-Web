@@ -286,6 +286,6 @@ class __TwigTemplate_daee940a33be32b296a587dfe749e638 extends Template
         </div>
     </div>
 </div>
-{% endblock %}", "security/login.html.twig", "C:\\Users\\Malik\\Desktop\\User-Crud-Symfony5-master\\templates\\security\\login.html.twig");
+{% endblock %}", "security/login.html.twig", "C:\\Users\\Malik\\Desktop\\User-Crud-Symfony5\\templates\\security\\login.html.twig");
     }
 }

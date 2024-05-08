@@ -10,6 +10,8 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Gregwar\CaptchaBundle\Type\CaptchaType;
+
 
 
 class UserEditType extends AbstractType
@@ -52,14 +54,20 @@ class UserEditType extends AbstractType
                 'choices' => [
                     'User' => 'ROLE_USER',
                     'Admin' => 'ROLE_ADMIN',
+                    'Teacher' => 'ROLE_TEACHER',
+                    'Student' => 'ROLE_STUDENT',
+                    'Recruteur' => 'ROLE_RECRUITER',
+
                 ]
-            ])        
+            ])     
+            ->add('captcha', CaptchaType::class)   
             ->add('save', SubmitType::class, [
                 'label' => "Modifier",
                 'attr' => [
                     'class' => "btn btn-primary btn-user btn-block"
                 ]
-            ]);
+                ]);
+            
         ;
     }
 

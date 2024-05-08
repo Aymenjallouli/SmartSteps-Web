@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
   <parameters>
-    <parameter key="kernel.project_dir">C:\Users\Malik\Desktop\User-Crud-Symfony5-master</parameter>
+    <parameter key="kernel.project_dir">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5</parameter>
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.runtime_environment">%env(default:kernel.environment:APP_RUNTIME_ENV)%</parameter>
     <parameter key="kernel.debug">true</parameter>
-    <parameter key="kernel.build_dir">C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev</parameter>
-    <parameter key="kernel.cache_dir">C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev</parameter>
-    <parameter key="kernel.logs_dir">C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\log</parameter>
+    <parameter key="kernel.build_dir">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev</parameter>
+    <parameter key="kernel.cache_dir">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev</parameter>
+    <parameter key="kernel.logs_dir">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\log</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
       <parameter key="DoctrineBundle">Doctrine\Bundle\DoctrineBundle\DoctrineBundle</parameter>
@@ -23,63 +23,68 @@
       <parameter key="SymfonyCastsVerifyEmailBundle">SymfonyCasts\Bundle\VerifyEmail\SymfonyCastsVerifyEmailBundle</parameter>
       <parameter key="SymfonyCastsResetPasswordBundle">SymfonyCasts\Bundle\ResetPassword\SymfonyCastsResetPasswordBundle</parameter>
       <parameter key="EndroidQrCodeBundle">Endroid\QrCodeBundle\EndroidQrCodeBundle</parameter>
+      <parameter key="GregwarCaptchaBundle">Gregwar\CaptchaBundle\GregwarCaptchaBundle</parameter>
     </parameter>
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
-        <parameter key="path">C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\framework-bundle</parameter>
+        <parameter key="path">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\framework-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\FrameworkBundle</parameter>
       </parameter>
       <parameter key="DoctrineBundle" type="collection">
-        <parameter key="path">C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\doctrine\doctrine-bundle</parameter>
+        <parameter key="path">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\doctrine\doctrine-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\DoctrineBundle</parameter>
       </parameter>
       <parameter key="DoctrineMigrationsBundle" type="collection">
-        <parameter key="path">C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\doctrine\doctrine-migrations-bundle</parameter>
+        <parameter key="path">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\doctrine\doctrine-migrations-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\MigrationsBundle</parameter>
       </parameter>
       <parameter key="DebugBundle" type="collection">
-        <parameter key="path">C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\debug-bundle</parameter>
+        <parameter key="path">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\debug-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\DebugBundle</parameter>
       </parameter>
       <parameter key="TwigBundle" type="collection">
-        <parameter key="path">C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\twig-bundle</parameter>
+        <parameter key="path">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\twig-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\TwigBundle</parameter>
       </parameter>
       <parameter key="WebProfilerBundle" type="collection">
-        <parameter key="path">C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\web-profiler-bundle</parameter>
+        <parameter key="path">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\web-profiler-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\WebProfilerBundle</parameter>
       </parameter>
       <parameter key="TwigExtraBundle" type="collection">
-        <parameter key="path">C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\twig\extra-bundle</parameter>
+        <parameter key="path">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\twig\extra-bundle</parameter>
         <parameter key="namespace">Twig\Extra\TwigExtraBundle</parameter>
       </parameter>
       <parameter key="SecurityBundle" type="collection">
-        <parameter key="path">C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-bundle</parameter>
+        <parameter key="path">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\SecurityBundle</parameter>
       </parameter>
       <parameter key="MonologBundle" type="collection">
-        <parameter key="path">C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\monolog-bundle</parameter>
+        <parameter key="path">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\monolog-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\MonologBundle</parameter>
       </parameter>
       <parameter key="MakerBundle" type="collection">
-        <parameter key="path">C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\maker-bundle\src</parameter>
+        <parameter key="path">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\maker-bundle\src</parameter>
         <parameter key="namespace">Symfony\Bundle\MakerBundle</parameter>
       </parameter>
       <parameter key="SensioFrameworkExtraBundle" type="collection">
-        <parameter key="path">C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\sensio\framework-extra-bundle\src</parameter>
+        <parameter key="path">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\sensio\framework-extra-bundle\src</parameter>
         <parameter key="namespace">Sensio\Bundle\FrameworkExtraBundle</parameter>
       </parameter>
       <parameter key="SymfonyCastsVerifyEmailBundle" type="collection">
-        <parameter key="path">C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\verify-email-bundle\src</parameter>
+        <parameter key="path">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\verify-email-bundle\src</parameter>
         <parameter key="namespace">SymfonyCasts\Bundle\VerifyEmail</parameter>
       </parameter>
       <parameter key="SymfonyCastsResetPasswordBundle" type="collection">
-        <parameter key="path">C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\reset-password-bundle\src</parameter>
+        <parameter key="path">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\reset-password-bundle\src</parameter>
         <parameter key="namespace">SymfonyCasts\Bundle\ResetPassword</parameter>
       </parameter>
       <parameter key="EndroidQrCodeBundle" type="collection">
-        <parameter key="path">C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\endroid\qr-code-bundle\src</parameter>
+        <parameter key="path">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\endroid\qr-code-bundle\src</parameter>
         <parameter key="namespace">Endroid\QrCodeBundle</parameter>
+      </parameter>
+      <parameter key="GregwarCaptchaBundle" type="collection">
+        <parameter key="path">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle</parameter>
+        <parameter key="namespace">Gregwar\CaptchaBundle</parameter>
       </parameter>
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
@@ -119,17 +124,17 @@
     <parameter key="asset.request_context.base_path">null</parameter>
     <parameter key="asset.request_context.secure">null</parameter>
     <parameter key="translator.logging">false</parameter>
-    <parameter key="translator.default_path">C:\Users\Malik\Desktop\User-Crud-Symfony5-master/translations</parameter>
+    <parameter key="translator.default_path">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5/translations</parameter>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
-    <parameter key="debug.container.dump">C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/App_KernelDevDebugContainer.xml</parameter>
+    <parameter key="debug.container.dump">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/App_KernelDevDebugContainer.xml</parameter>
     <parameter key="router.request_context.host">localhost</parameter>
     <parameter key="router.request_context.scheme">http</parameter>
     <parameter key="router.request_context.base_url"></parameter>
     <parameter key="router.resource">kernel::loadRoutes</parameter>
     <parameter key="request_listener.http_port">80</parameter>
     <parameter key="request_listener.https_port">443</parameter>
-    <parameter key="serializer.mapping.cache.file">C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/serialization.php</parameter>
-    <parameter key="cache.prefix.seed">_C:\Users\Malik\Desktop\User-Crud-Symfony5-master.App_KernelDevDebugContainer</parameter>
+    <parameter key="serializer.mapping.cache.file">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/serialization.php</parameter>
+    <parameter key="cache.prefix.seed">_C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5.App_KernelDevDebugContainer</parameter>
     <parameter key="session.metadata.storage_key">_sf2_meta</parameter>
     <parameter key="session.storage.options" type="collection">
       <parameter key="cache_limiter" type="string">0</parameter>
@@ -138,15 +143,15 @@
       <parameter key="cookie_samesite">lax</parameter>
       <parameter key="gc_probability">1</parameter>
     </parameter>
-    <parameter key="session.save_path">C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/sessions</parameter>
+    <parameter key="session.save_path">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/sessions</parameter>
     <parameter key="session.metadata.update_threshold">0</parameter>
     <parameter key="form.type_extension.csrf.enabled">true</parameter>
     <parameter key="form.type_extension.csrf.field_name">_token</parameter>
-    <parameter key="validator.mapping.cache.file">C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/validation.php</parameter>
+    <parameter key="validator.mapping.cache.file">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/validation.php</parameter>
     <parameter key="validator.translation_domain">validators</parameter>
     <parameter key="profiler_listener.only_exceptions">false</parameter>
     <parameter key="profiler_listener.only_main_requests">false</parameter>
-    <parameter key="profiler.storage.dsn">file:C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/profiler</parameter>
+    <parameter key="profiler.storage.dsn">file:C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/profiler</parameter>
     <parameter key="doctrine.dbal.configuration.class">Doctrine\DBAL\Configuration</parameter>
     <parameter key="doctrine.data_collector.class">Doctrine\Bundle\DoctrineBundle\DataCollector\DoctrineDataCollector</parameter>
     <parameter key="doctrine.dbal.connection.event_manager.class">Symfony\Bridge\Doctrine\ContainerAwareEventManager</parameter>
@@ -211,15 +216,16 @@
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
     <parameter key="doctrine.orm.enable_lazy_ghost_objects">false</parameter>
-    <parameter key="doctrine.orm.proxy_dir">C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/doctrine/orm/Proxies</parameter>
+    <parameter key="doctrine.orm.proxy_dir">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/doctrine/orm/Proxies</parameter>
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
     <parameter key="doctrine.migrations.preferred_em">null</parameter>
     <parameter key="doctrine.migrations.preferred_connection">null</parameter>
     <parameter key="env(VAR_DUMPER_SERVER)">127.0.0.1:9912</parameter>
     <parameter key="twig.form.resources" type="collection">
+      <parameter>@GregwarCaptcha/captcha.html.twig</parameter>
       <parameter>form_div_layout.html.twig</parameter>
     </parameter>
-    <parameter key="twig.default_path">C:\Users\Malik\Desktop\User-Crud-Symfony5-master/templates</parameter>
+    <parameter key="twig.default_path">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5/templates</parameter>
     <parameter key="web_profiler.debug_toolbar.intercept_redirects">false</parameter>
     <parameter key="web_profiler.debug_toolbar.mode">2</parameter>
     <parameter key="security.role_hierarchy.roles" type="collection"/>
@@ -250,6 +256,47 @@
         </parameter>
       </parameter>
     </parameter>
+    <parameter key="gregwar_captcha.controller.class">Gregwar\CaptchaBundle\Controller\CaptchaController</parameter>
+    <parameter key="gregwar_captcha.captcha_type.class">Gregwar\CaptchaBundle\Type\CaptchaType</parameter>
+    <parameter key="gregwar_captcha.captcha_generator.class">Gregwar\CaptchaBundle\Generator\CaptchaGenerator</parameter>
+    <parameter key="gregwar_captcha.image_file_handler.class">Gregwar\CaptchaBundle\Generator\ImageFileHandler</parameter>
+    <parameter key="gregwar_captcha.captcha_builder.class">Gregwar\Captcha\CaptchaBuilder</parameter>
+    <parameter key="gregwar_captcha.phrase_builder.class">Gregwar\Captcha\PhraseBuilder</parameter>
+    <parameter key="gregwar_captcha.config" type="collection">
+      <parameter key="length">5</parameter>
+      <parameter key="width">130</parameter>
+      <parameter key="height">50</parameter>
+      <parameter key="font">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle\DependencyInjection/../Generator/Font/captcha.ttf</parameter>
+      <parameter key="keep_value">false</parameter>
+      <parameter key="charset">abcdefhjkmnprstuvwxyz23456789</parameter>
+      <parameter key="as_file">false</parameter>
+      <parameter key="as_url">false</parameter>
+      <parameter key="reload">false</parameter>
+      <parameter key="image_folder">captcha</parameter>
+      <parameter key="web_path">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5/public</parameter>
+      <parameter key="gc_freq">100</parameter>
+      <parameter key="expiration">60</parameter>
+      <parameter key="quality">50</parameter>
+      <parameter key="invalid_message">Bad code value</parameter>
+      <parameter key="bypass_code">null</parameter>
+      <parameter key="whitelist_key">captcha_whitelist_key</parameter>
+      <parameter key="humanity">0</parameter>
+      <parameter key="distortion">true</parameter>
+      <parameter key="max_front_lines">null</parameter>
+      <parameter key="max_behind_lines">null</parameter>
+      <parameter key="interpolation">true</parameter>
+      <parameter key="text_color" type="collection"/>
+      <parameter key="background_color" type="collection"/>
+      <parameter key="background_images" type="collection"/>
+      <parameter key="disabled">false</parameter>
+      <parameter key="ignore_all_effects">false</parameter>
+      <parameter key="session_key">captcha</parameter>
+    </parameter>
+    <parameter key="gregwar_captcha.config.image_folder">captcha</parameter>
+    <parameter key="gregwar_captcha.config.web_path">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5/public</parameter>
+    <parameter key="gregwar_captcha.config.gc_freq">100</parameter>
+    <parameter key="gregwar_captcha.config.expiration">60</parameter>
+    <parameter key="gregwar_captcha.config.whitelist_key">captcha_whitelist_key</parameter>
     <parameter key="data_collector.templates" type="collection">
       <parameter key="data_collector.request" type="collection">
         <parameter>request</parameter>
@@ -344,6 +391,7 @@
       <tag name="controller.service_arguments"/>
       <tag name="routing.route_loader"/>
     </service>
+    <service id="endroid.qr_code.builder" class="Endroid\QrCode\Builder\Builder" autowire="true" autoconfigure="true"/>
     <service id="App\Controller\AdminAccountController" class="App\Controller\AdminAccountController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -368,7 +416,7 @@
     <service id="App\Controller\AdminUserController" class="App\Controller\AdminUserController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
-      <argument type="service" id="Endroid\QrCode\Builder\Builder"/>
+      <argument type="service" id="endroid.qr_code.builder"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.mx0UMmY.App\Controller\AdminUserController"/>
       </call>
@@ -378,6 +426,20 @@
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.mx0UMmY.App\Controller\BackController"/>
+      </call>
+    </service>
+    <service id="App\Controller\CourAdminController" class="App\Controller\CourAdminController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.mx0UMmY.App\Controller\CourAdminController"/>
+      </call>
+    </service>
+    <service id="App\Controller\CourController" class="App\Controller\CourController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.mx0UMmY.App\Controller\CourController"/>
       </call>
     </service>
     <service id="App\Controller\FrontController" class="App\Controller\FrontController" public="true" autowire="true" autoconfigure="true">
@@ -433,7 +495,24 @@
         <argument type="service" id=".service_locator.mx0UMmY.App\Controller\SecurityController1"/>
       </call>
     </service>
+    <service id="App\Controller\UniteAdminController" class="App\Controller\UniteAdminController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.mx0UMmY.App\Controller\UniteAdminController"/>
+      </call>
+    </service>
+    <service id="App\Controller\UniteController" class="App\Controller\UniteController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.mx0UMmY.App\Controller\UniteController"/>
+      </call>
+    </service>
     <service id="App\Form\ChangePasswordFormType" class="App\Form\ChangePasswordFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\Cour1Type" class="App\Form\Cour1Type" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
     <service id="App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" autoconfigure="true">
@@ -443,6 +522,9 @@
       <tag name="form.type"/>
     </service>
     <service id="App\Form\ResetPasswordRequestFormType" class="App\Form\ResetPasswordRequestFormType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\UniteType" class="App\Form\UniteType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
     <service id="App\Form\UpdatePasswordType" class="App\Form\UpdatePasswordType" autowire="true" autoconfigure="true">
@@ -457,7 +539,15 @@
     <service id="App\Form\UserType" class="App\Form\UserType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
+    <service id="App\Repository\CourRepository" class="App\Repository\CourRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
     <service id="App\Repository\ResetPasswordRequestRepository" class="App\Repository\ResetPasswordRequestRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\UniteRepository" class="App\Repository\UniteRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
@@ -473,6 +563,7 @@
       <argument type="service" id="mailer.mailer"/>
       <argument type="service" id="doctrine.orm.default_entity_manager"/>
     </service>
+    <service id="App\Service\TwilioService" class="App\Service\TwilioService" autowire="true" autoconfigure="true"/>
     <service id="argument_metadata_factory" class="Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadataFactory"/>
     <service id="response_listener" class="Symfony\Component\HttpKernel\EventListener\ResponseListener">
       <tag name="kernel.event_subscriber"/>
@@ -542,7 +633,7 @@
       </argument>
     </service>
     <service id="http_cache.store" class="Symfony\Component\HttpKernel\HttpCache\Store">
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/http_cache</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/http_cache</argument>
     </service>
     <service id="url_helper" class="Symfony\Component\HttpFoundation\UrlHelper">
       <argument type="service" id="request_stack"/>
@@ -552,7 +643,7 @@
       <tag name="container.no_preload"/>
       <argument type="tagged_iterator" tag="kernel.cache_warmer"/>
       <argument>true</argument>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/App_KernelDevDebugContainerDeprecations.log</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/App_KernelDevDebugContainerDeprecations.log</argument>
     </service>
     <service id="cache_clearer" class="Symfony\Component\HttpKernel\CacheClearer\ChainCacheClearer" public="true">
       <tag name="container.private" package="symfony/framework-bundle" version="5.2"/>
@@ -752,7 +843,7 @@
       </argument>
       <argument>UTF-8</argument>
       <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5</argument>
       <argument type="service">
         <service>
           <argument type="service" id="request_stack"/>
@@ -785,7 +876,7 @@
       <tag name="console.command"/>
       <tag name="container.no_preload"/>
       <argument type="service" id="filesystem"/>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5</argument>
       <call method="setName">
         <argument>assets:install</argument>
       </call>
@@ -954,7 +1045,7 @@
       <tag name="console.command"/>
       <tag name="container.no_preload"/>
       <argument>dev</argument>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5</argument>
       <call method="setName">
         <argument>debug:dotenv</argument>
       </call>
@@ -1129,16 +1220,16 @@
       <argument type="service" id="translator.data_collector"/>
       <argument type="service" id="translation.reader"/>
       <argument type="service" id="translation.extractor"/>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master/translations</argument>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master/templates</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5/translations</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5/templates</argument>
       <argument type="collection">
-        <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations</argument>
-        <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations</argument>
-        <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations</argument>
+        <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations</argument>
+        <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations</argument>
+        <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations</argument>
       </argument>
       <argument type="collection">
-        <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\twig-bridge/Resources/views/Email</argument>
-        <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\twig-bridge/Resources/views/Form</argument>
+        <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\twig-bridge/Resources/views/Email</argument>
+        <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\twig-bridge/Resources/views/Form</argument>
       </argument>
       <argument type="collection"/>
       <call method="setName">
@@ -1155,16 +1246,16 @@
       <argument type="service" id="translation.reader"/>
       <argument type="service" id="translation.extractor"/>
       <argument>en</argument>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master/translations</argument>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master/templates</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5/translations</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5/templates</argument>
       <argument type="collection">
-        <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations</argument>
-        <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations</argument>
-        <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations</argument>
+        <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations</argument>
+        <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations</argument>
+        <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations</argument>
       </argument>
       <argument type="collection">
-        <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\twig-bridge/Resources/views/Email</argument>
-        <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\twig-bridge/Resources/views/Form</argument>
+        <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\twig-bridge/Resources/views/Email</argument>
+        <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\twig-bridge/Resources/views/Form</argument>
       </argument>
       <argument type="collection"/>
       <call method="setName">
@@ -1248,12 +1339,15 @@
         <argument>Symfony\Component\Form\Extension\Core\Type</argument>
         <argument>App\Form</argument>
         <argument>Symfony\Bridge\Doctrine\Form\Type</argument>
+        <argument></argument>
       </argument>
       <argument type="collection">
         <argument>App\Form\ChangePasswordFormType</argument>
+        <argument>App\Form\Cour1Type</argument>
         <argument>App\Form\RegistrationFormType</argument>
         <argument>App\Form\RegistrationFormType1</argument>
         <argument>App\Form\ResetPasswordRequestFormType</argument>
+        <argument>App\Form\UniteType</argument>
         <argument>App\Form\UpdatePasswordType</argument>
         <argument>App\Form\UserAddType</argument>
         <argument>App\Form\UserEditType</argument>
@@ -1263,6 +1357,7 @@
         <argument>Symfony\Component\Form\Extension\Core\Type\FileType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ColorType</argument>
         <argument>Symfony\Bridge\Doctrine\Form\Type\EntityType</argument>
+        <argument>Gregwar\CaptchaBundle\Type\CaptchaType</argument>
       </argument>
       <argument type="collection">
         <argument>Symfony\Component\Form\Extension\Core\Type\TransformationFailureExtension</argument>
@@ -1402,7 +1497,7 @@
       <argument></argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/pools/system</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -1432,7 +1527,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/pools/app</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/pools/app</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
@@ -1723,370 +1818,404 @@
         </argument>
       </argument>
       <argument type="collection">
-        <argument key="cache_dir">C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/translations</argument>
+        <argument key="cache_dir">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/translations</argument>
         <argument key="debug">true</argument>
         <argument key="resource_files" type="collection">
           <argument key="af" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.af.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.af.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.af.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.af.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.af.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.af.xlf</argument>
           </argument>
           <argument key="ar" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.ar.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.ar.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.ar.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.ar.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.ar.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.ar.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.ar.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.ar.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.ar.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.ar.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.ar.yml</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\validators.ar.yml</argument>
           </argument>
           <argument key="az" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.az.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.az.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.az.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.az.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.az.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.az.xlf</argument>
           </argument>
           <argument key="be" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.be.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.be.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.be.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.be.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.be.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.be.xlf</argument>
           </argument>
           <argument key="bg" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.bg.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.bg.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.bg.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.bg.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.bg.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.bg.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.bg.yml</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\validators.bg.yml</argument>
           </argument>
           <argument key="bs" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.bs.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.bs.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.bs.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.bs.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.bs.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.bs.xlf</argument>
           </argument>
           <argument key="ca" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.ca.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.ca.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.ca.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.ca.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.ca.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.ca.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.ca.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.ca.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.ca.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.ca.xlf</argument>
           </argument>
           <argument key="cs" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.cs.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.cs.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.cs.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.cs.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.cs.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.cs.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.cs.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.cs.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.cs.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.cs.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.cs.yml</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\validators.cs.yml</argument>
           </argument>
           <argument key="cy" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.cy.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.cy.xlf</argument>
           </argument>
           <argument key="da" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.da.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.da.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.da.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.da.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.da.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.da.xlf</argument>
           </argument>
           <argument key="de" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.de.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.de.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.de.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.de.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.de.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.de.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.de.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.de.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.de.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.de.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.de.yml</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\validators.de.yml</argument>
           </argument>
           <argument key="el" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.el.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.el.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.el.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.el.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.el.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.el.xlf</argument>
           </argument>
           <argument key="en" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.en.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.en.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.en.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.en.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.en.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.en.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.en.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.en.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.en.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.en.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.en.yml</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\validators.en.yml</argument>
           </argument>
           <argument key="es" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.es.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.es.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.es.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.es.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.es.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.es.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.es.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.es.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.es.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.es.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.es.yml</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\validators.es.yml</argument>
           </argument>
           <argument key="et" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.et.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.et.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.et.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.et.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.et.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.et.xlf</argument>
           </argument>
           <argument key="eu" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.eu.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.eu.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.eu.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.eu.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.eu.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.eu.xlf</argument>
           </argument>
           <argument key="fa" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.fa.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.fa.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.fa.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.fa.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.fa.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.fa.xlf</argument>
           </argument>
           <argument key="fi" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.fi.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.fi.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.fi.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.fi.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.fi.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.fi.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.fi.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.fi.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.fi.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.fi.xlf</argument>
           </argument>
           <argument key="fr" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.fr.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.fr.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.fr.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.fr.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.fr.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.fr.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.fr.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.fr.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.fr.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.fr.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.fr.yml</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\validators.fr.yml</argument>
           </argument>
           <argument key="gl" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.gl.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.gl.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.gl.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.gl.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.gl.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.gl.xlf</argument>
           </argument>
           <argument key="he" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.he.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.he.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.he.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.he.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.he.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.he.xlf</argument>
           </argument>
           <argument key="hr" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.hr.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.hr.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.hr.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.hr.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.hr.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.hr.xlf</argument>
           </argument>
           <argument key="hu" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.hu.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.hu.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.hu.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.hu.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.hu.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.hu.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.hu.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.hu.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.hu.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.hu.xlf</argument>
           </argument>
           <argument key="hy" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.hy.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.hy.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.hy.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.hy.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.hy.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.hy.xlf</argument>
           </argument>
           <argument key="id" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.id.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.id.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.id.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.id.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.id.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.id.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.id.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.id.xlf</argument>
           </argument>
           <argument key="it" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.it.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.it.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.it.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.it.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.it.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.it.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.it.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.it.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.it.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.it.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.it.yml</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\validators.it.yml</argument>
           </argument>
           <argument key="ja" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.ja.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.ja.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.ja.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.ja.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.ja.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.ja.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.ja.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.ja.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.ja.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.ja.xlf</argument>
           </argument>
           <argument key="lb" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.lb.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.lb.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.lb.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.lb.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.lb.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.lb.xlf</argument>
           </argument>
           <argument key="lt" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.lt.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.lt.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.lt.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.lt.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.lt.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.lt.xlf</argument>
           </argument>
           <argument key="lv" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.lv.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.lv.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.lv.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.lv.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.lv.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.lv.xlf</argument>
           </argument>
           <argument key="mn" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.mn.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.mn.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.mn.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.mn.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.mn.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.mn.xlf</argument>
           </argument>
           <argument key="my" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.my.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.my.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.my.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.my.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.my.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.my.xlf</argument>
           </argument>
           <argument key="nb" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.nb.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.nb.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.nb.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.nb.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.nb.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.nb.xlf</argument>
           </argument>
           <argument key="nl" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.nl.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.nl.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.nl.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle+intl-icu.nl.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle+intl-icu.nl.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.nl.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.nl.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.nl.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle+intl-icu.nl.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle+intl-icu.nl.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.nl.yml</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\validators.nl.yml</argument>
           </argument>
           <argument key="nn" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.nn.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.nn.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.nn.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.nn.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.nn.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.nn.xlf</argument>
           </argument>
           <argument key="no" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.no.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.no.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.no.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.no.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.no.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.no.xlf</argument>
           </argument>
           <argument key="pl" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.pl.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.pl.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.pl.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.pl.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.pl.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.pl.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.pl.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.pl.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.pl.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.pl.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.pl.yml</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\validators.pl.yml</argument>
           </argument>
           <argument key="pt" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.pt.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.pt.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.pt.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.pt.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.pt.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.pt.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.pt.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.pt.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.pt.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.pt.xlf</argument>
           </argument>
           <argument key="pt_BR" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.pt_BR.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.pt_BR.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.pt_BR.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.pt_BR.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.pt_BR.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.pt_BR.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.pt_BR.yml</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\validators.pt_BR.yml</argument>
           </argument>
           <argument key="ro" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.ro.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.ro.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.ro.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.ro.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.ro.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.ro.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.ro.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.ro.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.ro.yml</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\validators.ro.yml</argument>
           </argument>
           <argument key="ru" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.ru.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.ru.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.ru.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.ru.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.ru.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.ru.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.ru.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.ru.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.ru.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.ru.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.ru.yml</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\validators.ru.yml</argument>
           </argument>
           <argument key="sk" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.sk.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.sk.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.sk.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.sk.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.sk.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.sk.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.sk.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.sk.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.sk.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.sk.xlf</argument>
           </argument>
           <argument key="sl" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.sl.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.sl.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.sl.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.sl.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.sl.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.sl.xlf</argument>
           </argument>
           <argument key="sq" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.sq.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.sq.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.sq.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.sq.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.sq.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.sq.xlf</argument>
           </argument>
           <argument key="sr_Cyrl" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.sr_Cyrl.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.sr_Cyrl.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.sr_Cyrl.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.sr_Cyrl.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.sr_Cyrl.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.sr_Cyrl.xlf</argument>
           </argument>
           <argument key="sr_Latn" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.sr_Latn.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.sr_Latn.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.sr_Latn.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.sr_Latn.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.sr_Latn.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.sr_Latn.xlf</argument>
           </argument>
           <argument key="sv" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.sv.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.sv.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.sv.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.sv.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.sv.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.sv.xlf</argument>
           </argument>
           <argument key="th" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.th.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.th.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.th.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.th.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.th.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.th.xlf</argument>
           </argument>
           <argument key="tl" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.tl.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.tl.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.tl.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.tl.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.tl.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.tl.xlf</argument>
           </argument>
           <argument key="tr" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.tr.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.tr.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.tr.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.tr.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.tr.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.tr.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.tr.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.tr.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.tr.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.tr.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.tr.yml</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\validators.tr.yml</argument>
           </argument>
           <argument key="uk" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.uk.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.uk.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.uk.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.uk.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.uk.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.uk.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.uk.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.uk.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.uk.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.uk.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.uk.yml</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\validators.uk.yml</argument>
           </argument>
           <argument key="ur" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.ur.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.ur.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.ur.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.ur.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.ur.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.ur.xlf</argument>
           </argument>
           <argument key="uz" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.uz.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.uz.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.uz.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.uz.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.uz.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.uz.xlf</argument>
           </argument>
           <argument key="vi" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.vi.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.vi.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.vi.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.vi.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.vi.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.vi.xlf</argument>
           </argument>
           <argument key="zh_CN" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.zh_CN.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.zh_CN.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.zh_CN.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.zh_CN.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.zh_CN.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.zh_CN.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.zh_CN.yml</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations\validators.zh_CN.yml</argument>
           </argument>
           <argument key="zh_TW" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations\validators.zh_TW.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations\validators.zh_TW.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations\security.zh_TW.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations\validators.zh_TW.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations\validators.zh_TW.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations\security.zh_TW.xlf</argument>
           </argument>
           <argument key="sr" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.sr.xlf</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.sr.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.sr.xlf</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\reset-password-bundle\src/Resources/translations\ResetPasswordBundle.sr.xlf</argument>
           </argument>
         </argument>
         <argument key="scanned_directories" type="collection">
-          <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations</argument>
-          <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations</argument>
-          <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations</argument>
-          <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\verify-email-bundle\src/Resources/translations</argument>
-          <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\reset-password-bundle\src/Resources/translations</argument>
-          <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master/translations</argument>
-          <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\framework-bundle/translations</argument>
-          <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\doctrine\doctrine-bundle/translations</argument>
-          <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\doctrine\doctrine-migrations-bundle/translations</argument>
-          <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\debug-bundle/translations</argument>
-          <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\twig-bundle/translations</argument>
-          <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\web-profiler-bundle/translations</argument>
-          <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\twig\extra-bundle/translations</argument>
-          <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-bundle/translations</argument>
-          <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\monolog-bundle/translations</argument>
-          <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\maker-bundle\src/translations</argument>
-          <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\sensio\framework-extra-bundle\src/translations</argument>
-          <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\endroid\qr-code-bundle\src/translations</argument>
+          <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations</argument>
+          <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations</argument>
+          <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations</argument>
+          <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\verify-email-bundle\src/Resources/translations</argument>
+          <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\reset-password-bundle\src/Resources/translations</argument>
+          <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations</argument>
+          <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5/translations</argument>
+          <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\framework-bundle/translations</argument>
+          <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\doctrine\doctrine-bundle/translations</argument>
+          <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\doctrine\doctrine-migrations-bundle/translations</argument>
+          <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\debug-bundle/translations</argument>
+          <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\twig-bundle/translations</argument>
+          <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\web-profiler-bundle/translations</argument>
+          <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\twig\extra-bundle/translations</argument>
+          <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-bundle/translations</argument>
+          <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\monolog-bundle/translations</argument>
+          <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\maker-bundle\src/translations</argument>
+          <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\sensio\framework-extra-bundle\src/translations</argument>
+          <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\endroid\qr-code-bundle\src/translations</argument>
         </argument>
         <argument key="cache_vary" type="collection">
           <argument key="scanned_directories" type="collection">
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\validator/Resources/translations</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/translations</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-core/Resources/translations</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\verify-email-bundle\src/Resources/translations</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfonycasts\reset-password-bundle\src/Resources/translations</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\validator/Resources/translations</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/translations</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-core/Resources/translations</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\verify-email-bundle\src/Resources/translations</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfonycasts\reset-password-bundle\src/Resources/translations</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/translations</argument>
             <argument>translations</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\framework-bundle/translations</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\doctrine\doctrine-bundle/translations</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\doctrine\doctrine-migrations-bundle/translations</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\debug-bundle/translations</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\twig-bundle/translations</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\web-profiler-bundle/translations</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\twig\extra-bundle/translations</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-bundle/translations</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\monolog-bundle/translations</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\maker-bundle\src/translations</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\sensio\framework-extra-bundle\src/translations</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\endroid\qr-code-bundle\src/translations</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\framework-bundle/translations</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\doctrine\doctrine-bundle/translations</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\doctrine\doctrine-migrations-bundle/translations</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\debug-bundle/translations</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\twig-bundle/translations</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\web-profiler-bundle/translations</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\twig\extra-bundle/translations</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-bundle/translations</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\monolog-bundle/translations</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\maker-bundle\src/translations</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\sensio\framework-extra-bundle\src/translations</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\endroid\qr-code-bundle\src/translations</argument>
           </argument>
         </argument>
       </argument>
@@ -2319,7 +2448,7 @@
     <service id="debug.file_link_formatter" class="Symfony\Component\HttpKernel\Debug\FileLinkFormatter">
       <argument>null</argument>
       <argument type="service" id="request_stack" on-invalid="ignore"/>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5</argument>
       <argument type="service_closure" id="debug.file_link_formatter.url_format"/>
     </service>
     <service id="debug.stopwatch" class="Symfony\Component\Stopwatch\Stopwatch">
@@ -2972,7 +3101,7 @@
       <argument type="service" id=".service_locator.NUKe30Y.router.default"/>
       <argument>kernel::loadRoutes</argument>
       <argument type="collection">
-        <argument key="cache_dir">C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev</argument>
+        <argument key="cache_dir">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev</argument>
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\CompiledUrlGenerator</argument>
         <argument key="generator_dumper_class">Symfony\Component\Routing\Generator\Dumper\CompiledUrlGeneratorDumper</argument>
@@ -3022,7 +3151,7 @@
       <argument type="service" id="request_stack"/>
       <argument type="service" id="router.request_context" on-invalid="ignore"/>
       <argument type="service" id="monolog.logger.request" on-invalid="ignore"/>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5</argument>
       <argument>true</argument>
     </service>
     <service id="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" class="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" public="true">
@@ -3090,13 +3219,13 @@
     <service id="annotations.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\AnnotationsCacheWarmer">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="annotations.reader"/>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/annotations.php</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/annotations.php</argument>
       <argument>#^Symfony\\(?:Component\\HttpKernel\\|Bundle\\FrameworkBundle\\Controller\\(?!.*Controller$))#</argument>
       <argument>true</argument>
     </service>
     <service id="annotations.cache_adapter" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter">
       <tag name="container.hot_path"/>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/annotations.php</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/annotations.php</argument>
       <argument type="service" id="cache.annotations"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -3114,7 +3243,7 @@
     </service>
     <service id="secrets.vault" class="Symfony\Bundle\FrameworkBundle\Secrets\SodiumVault">
       <tag name="container.env_var_loader"/>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master/config/secrets/%env(default:kernel.environment:APP_RUNTIME_ENV)%</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5/config/secrets/%env(default:kernel.environment:APP_RUNTIME_ENV)%</argument>
       <argument type="service" id="secrets.decryption_key" on-invalid="ignore"/>
     </service>
     <service id="secrets.decryption_key" class="Symfony\Component\String\LazyString">
@@ -3123,7 +3252,7 @@
       <factory class="Symfony\Component\String\LazyString" method="fromCallable"/>
     </service>
     <service id="secrets.local_vault" class="Symfony\Bundle\FrameworkBundle\Secrets\DotenvVault">
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master/.env.dev.local</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5/.env.dev.local</argument>
     </service>
     <service id="serializer" class="Symfony\Component\Serializer\Serializer" public="true">
       <tag name="container.private" package="symfony/framework-bundle" version="5.2"/>
@@ -3235,10 +3364,10 @@
           </service>
         </argument>
       </argument>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/serialization.php</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/serialization.php</argument>
     </service>
     <service id="serializer.mapping.cache.symfony" class="Psr\Cache\CacheItemPoolInterface">
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/serialization.php</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/serialization.php</argument>
       <argument type="service" id="cache.serializer"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -3377,7 +3506,7 @@
       <argument>true</argument>
     </service>
     <service id="session.storage.factory.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorageFactory">
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/sessions</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/sessions</argument>
       <argument>MOCKSESSID</argument>
       <argument type="service">
         <service class="Symfony\Component\HttpFoundation\Session\Storage\MetadataBag">
@@ -3409,7 +3538,7 @@
     <service id="session.handler.native_file" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\StrictSessionHandler">
       <argument type="service">
         <service class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler">
-          <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/sessions</argument>
+          <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/sessions</argument>
         </service>
       </argument>
     </service>
@@ -3462,7 +3591,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension">
-      <argument type="service" id=".service_locator.JNSap1J"/>
+      <argument type="service" id=".service_locator.dR85vr2"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -3568,7 +3697,7 @@
       </call>
       <call method="addXmlMappings">
         <argument type="collection">
-          <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\form/Resources/config/validation.xml</argument>
+          <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\form/Resources/config/validation.xml</argument>
         </argument>
       </call>
       <call method="enableAnnotationMapping">
@@ -3596,10 +3725,10 @@
     <service id="validator.mapping.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\ValidatorCacheWarmer">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="validator.builder"/>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/validation.php</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/validation.php</argument>
     </service>
     <service id="validator.mapping.cache.adapter" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter">
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/validation.php</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/validation.php</argument>
       <argument type="service" id="cache.validator"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -3984,7 +4113,7 @@
       </call>
     </service>
     <service id="profiler.storage" class="Symfony\Component\HttpKernel\Profiler\FileProfilerStorage">
-      <argument>file:C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/profiler</argument>
+      <argument>file:C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/profiler</argument>
     </service>
     <service id="profiler_listener" class="Symfony\Component\HttpKernel\EventListener\ProfilerListener">
       <tag name="kernel.event_subscriber"/>
@@ -4031,7 +4160,7 @@
       <tag name="monolog.logger" channel="profiler"/>
       <tag name="data_collector" template="@WebProfiler/Collector/logger.html.twig" id="logger" priority="300"/>
       <argument type="service" id="monolog.logger.profiler" on-invalid="ignore"/>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/App_KernelDevDebugContainer</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/App_KernelDevDebugContainer</argument>
       <argument type="service" id="request_stack" on-invalid="ignore"/>
     </service>
     <service id="data_collector.time" class="Symfony\Component\HttpKernel\DataCollector\TimeDataCollector">
@@ -4325,7 +4454,7 @@
       <tag name="doctrine.event_subscriber"/>
       <argument type="tagged_iterator" tag="messenger.receiver"/>
     </service>
-    <service id=".1_ServiceLocator~U5vk9GT" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".1_ServiceLocator~5iU_0YO" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <argument type="collection"/>
     </service>
     <service id="doctrine.orm.proxy_cache_warmer" class="Symfony\Bridge\Doctrine\CacheWarmer\ProxyCacheWarmer">
@@ -4344,7 +4473,7 @@
     <service id="doctrine.orm.configuration" class="Doctrine\ORM\Configuration" abstract="true"/>
     <service id="doctrine.orm.entity_manager.abstract" class="Doctrine\ORM\EntityManager" lazy="true" abstract="true"/>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory">
-      <argument type="service" id=".service_locator.N41nchi"/>
+      <argument type="service" id=".service_locator.fTZSGbI"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -4534,7 +4663,7 @@
         <argument type="service" id=".doctrine.orm.default_metadata_driver"/>
       </call>
       <call method="setProxyDir">
-        <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/doctrine/orm/Proxies</argument>
+        <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/doctrine/orm/Proxies</argument>
       </call>
       <call method="setProxyNamespace">
         <argument>Proxies</argument>
@@ -4569,7 +4698,7 @@
     </service>
     <service id="doctrine.orm.default_attribute_metadata_driver" class="Doctrine\ORM\Mapping\Driver\AttributeDriver">
       <argument type="collection">
-        <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\src\Entity</argument>
+        <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\src\Entity</argument>
       </argument>
     </service>
     <service id="cache.doctrine.orm.default.metadata" class="Symfony\Component\Cache\Adapter\ArrayAdapter"/>
@@ -4634,7 +4763,7 @@
     <service id="doctrine.migrations.configuration" class="Doctrine\Migrations\Configuration\Configuration">
       <call method="addMigrationsDirectory">
         <argument>DoctrineMigrations</argument>
-        <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master/migrations</argument>
+        <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5/migrations</argument>
       </call>
       <call method="setAllOrNothing">
         <argument>false</argument>
@@ -4813,7 +4942,7 @@
         <argument key="source" type="service">
           <service class="Symfony\Component\VarDumper\Dumper\ContextProvider\SourceContextProvider">
             <argument>UTF-8</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5</argument>
             <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
           </service>
         </argument>
@@ -4835,7 +4964,7 @@
         <argument key="source" type="service">
           <service class="Symfony\Component\VarDumper\Dumper\ContextProvider\SourceContextProvider">
             <argument>UTF-8</argument>
-            <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master</argument>
+            <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5</argument>
             <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
           </service>
         </argument>
@@ -4900,7 +5029,7 @@
       <argument type="service" id="twig.loader.native_filesystem"/>
       <argument type="collection">
         <argument key="autoescape">name</argument>
-        <argument key="cache">C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/twig</argument>
+        <argument key="cache">C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/twig</argument>
         <argument key="charset">UTF-8</argument>
         <argument key="debug">true</argument>
         <argument key="strict_variables">true</argument>
@@ -5013,10 +5142,10 @@
     <service id="twig.template_iterator" class="Symfony\Bundle\TwigBundle\TemplateIterator">
       <argument type="service" id="kernel"/>
       <argument type="collection">
-        <argument key="C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\twig-bridge/Resources/views/Email">email</argument>
-        <argument key="C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\twig-bridge/Resources/views/Form">null</argument>
+        <argument key="C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\twig-bridge/Resources/views/Email">email</argument>
+        <argument key="C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\twig-bridge/Resources/views/Form">null</argument>
       </argument>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master/templates</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5/templates</argument>
     </service>
     <service id="twig.template_cache_warmer" class="Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheWarmer">
       <tag name="kernel.cache_warmer"/>
@@ -5027,60 +5156,68 @@
     <service id="twig.loader.native_filesystem" class="Twig\Loader\FilesystemLoader">
       <tag name="twig.loader"/>
       <argument type="collection"/>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5</argument>
       <call method="addPath">
-        <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\doctrine\doctrine-bundle/Resources/views</argument>
+        <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\doctrine\doctrine-bundle/Resources/views</argument>
         <argument>Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\doctrine\doctrine-bundle/Resources/views</argument>
+        <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\doctrine\doctrine-bundle/Resources/views</argument>
         <argument>!Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\doctrine\doctrine-migrations-bundle/Resources/views</argument>
+        <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\doctrine\doctrine-migrations-bundle/Resources/views</argument>
         <argument>DoctrineMigrations</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\doctrine\doctrine-migrations-bundle/Resources/views</argument>
+        <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\doctrine\doctrine-migrations-bundle/Resources/views</argument>
         <argument>!DoctrineMigrations</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\debug-bundle/Resources/views</argument>
+        <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\debug-bundle/Resources/views</argument>
         <argument>Debug</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\debug-bundle/Resources/views</argument>
+        <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\debug-bundle/Resources/views</argument>
         <argument>!Debug</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\web-profiler-bundle/Resources/views</argument>
+        <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\web-profiler-bundle/Resources/views</argument>
         <argument>WebProfiler</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\web-profiler-bundle/Resources/views</argument>
+        <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\web-profiler-bundle/Resources/views</argument>
         <argument>!WebProfiler</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-bundle/Resources/views</argument>
+        <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-bundle/Resources/views</argument>
         <argument>Security</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\security-bundle/Resources/views</argument>
+        <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\security-bundle/Resources/views</argument>
         <argument>!Security</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master/templates</argument>
+        <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/views</argument>
+        <argument>GregwarCaptcha</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\twig-bridge/Resources/views/Email</argument>
+        <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\gregwar\captcha-bundle/Resources/views</argument>
+        <argument>!GregwarCaptcha</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5/templates</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\twig-bridge/Resources/views/Email</argument>
         <argument>email</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\twig-bridge/Resources/views/Email</argument>
+        <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\twig-bridge/Resources/views/Email</argument>
         <argument>!email</argument>
       </call>
       <call method="addPath">
-        <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\vendor\symfony\twig-bridge/Resources/views/Form</argument>
+        <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\vendor\symfony\twig-bridge/Resources/views/Form</argument>
       </call>
     </service>
     <service id="twig.loader.chain" class="Twig\Loader\ChainLoader"/>
@@ -5106,7 +5243,7 @@
     <service id="twig.extension.code" class="Symfony\Bridge\Twig\Extension\CodeExtension">
       <tag name="twig.extension"/>
       <argument type="service" id="debug.file_link_formatter" on-invalid="ignore"/>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5</argument>
       <argument>UTF-8</argument>
     </service>
     <service id="twig.extension.routing" class="Symfony\Bridge\Twig\Extension\RoutingExtension">
@@ -5192,9 +5329,9 @@
       <tag name="console.command"/>
       <tag name="container.no_preload"/>
       <argument type="service" id="twig"/>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5</argument>
       <argument>%kernel.bundles_metadata%</argument>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master/templates</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5/templates</argument>
       <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
       <call method="setName">
         <argument>debug:twig</argument>
@@ -5228,7 +5365,7 @@
       <argument type="service" id="twig"/>
       <argument>%data_collector.templates%</argument>
       <argument type="service" id="web_profiler.csp.handler"/>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5</argument>
     </service>
     <service id="web_profiler.controller.router" class="Symfony\Bundle\WebProfilerBundle\Controller\RouterController" public="true">
       <argument type="service" id="profiler" on-invalid="null"/>
@@ -6097,7 +6234,7 @@
     <service id="monolog.processor.psr_log_message" class="Monolog\Processor\PsrLogMessageProcessor"/>
     <service id="monolog.handler.main" class="Monolog\Handler\StreamHandler">
       <tag name="kernel.reset" method="reset"/>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\log/dev.log</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\log/dev.log</argument>
       <argument>100</argument>
       <argument>true</argument>
       <argument>null</argument>
@@ -6119,8 +6256,8 @@
       <argument type="service" id="filesystem"/>
       <argument type="service" id="maker.autoloader_util"/>
       <argument type="service" id="maker.file_link_formatter"/>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master</argument>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master/templates</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5/templates</argument>
     </service>
     <service id="maker.autoloader_finder" class="Symfony\Bundle\MakerBundle\Util\ComposerAutoloaderFinder">
       <argument>App</argument>
@@ -6280,7 +6417,7 @@
     </service>
     <service id="maker.maker.make_migration" class="Symfony\Bundle\MakerBundle\Maker\MakeMigration">
       <tag name="maker.command"/>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5</argument>
     </service>
     <service id="maker.maker.make_stimulus_controller" class="Symfony\Bundle\MakerBundle\Maker\MakeStimulusController">
       <tag name="maker.command"/>
@@ -6477,6 +6614,31 @@
         <argument>false</argument>
       </call>
     </service>
+    <service id="gregwar_captcha.controller" class="Gregwar\CaptchaBundle\Controller\CaptchaController" public="true" autowire="true">
+      <argument type="service" id="gregwar_captcha.generator"/>
+      <argument>%gregwar_captcha.config%</argument>
+    </service>
+    <service id="gregwar_captcha.type" class="Gregwar\CaptchaBundle\Type\CaptchaType" public="true">
+      <tag name="form.type" alias="captcha"/>
+      <argument type="service" id="request_stack"/>
+      <argument type="service" id="gregwar_captcha.generator"/>
+      <argument type="service" id="translator.data_collector"/>
+      <argument>%gregwar_captcha.config%</argument>
+    </service>
+    <service id="gregwar_captcha.generator" class="Gregwar\CaptchaBundle\Generator\CaptchaGenerator" public="true">
+      <argument type="service" id="router.default"/>
+      <argument type="service" id="gregwar_captcha.captcha_builder"/>
+      <argument type="service" id="gregwar_captcha.phrase_builder"/>
+      <argument type="service" id="gregwar_captcha.image_file_handler"/>
+    </service>
+    <service id="gregwar_captcha.image_file_handler" class="Gregwar\CaptchaBundle\Generator\ImageFileHandler" public="true">
+      <argument>captcha</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5/public</argument>
+      <argument>100</argument>
+      <argument>60</argument>
+    </service>
+    <service id="gregwar_captcha.captcha_builder" class="Gregwar\Captcha\CaptchaBuilder" public="true"/>
+    <service id="gregwar_captcha.phrase_builder" class="Gregwar\Captcha\PhraseBuilder" public="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AdminAccountController" class="App\Controller\AdminAccountController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AdminAccountController" class="App\Controller\AdminAccountController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\AdminAccountController" class="App\Controller\AdminAccountController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -6492,6 +6654,12 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\BackController" class="App\Controller\BackController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\BackController" class="App\Controller\BackController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\BackController" class="App\Controller\BackController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CourAdminController" class="App\Controller\CourAdminController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CourAdminController" class="App\Controller\CourAdminController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\CourAdminController" class="App\Controller\CourAdminController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CourController" class="App\Controller\CourController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CourController" class="App\Controller\CourController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\CourController" class="App\Controller\CourController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\FrontController" class="App\Controller\FrontController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\FrontController" class="App\Controller\FrontController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\FrontController" class="App\Controller\FrontController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -6513,14 +6681,24 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SecurityController1" class="App\Controller\SecurityController1" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SecurityController1" class="App\Controller\SecurityController1" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\SecurityController1" class="App\Controller\SecurityController1" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\UniteAdminController" class="App\Controller\UniteAdminController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\UniteAdminController" class="App\Controller\UniteAdminController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\UniteAdminController" class="App\Controller\UniteAdminController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\UniteController" class="App\Controller\UniteController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\UniteController" class="App\Controller\UniteController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\UniteController" class="App\Controller\UniteController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ChangePasswordFormType" class="App\Form\ChangePasswordFormType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\ChangePasswordFormType" class="App\Form\ChangePasswordFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\Cour1Type" class="App\Form\Cour1Type" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\Cour1Type" class="App\Form\Cour1Type" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RegistrationFormType1" class="App\Form\RegistrationFormType1" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\RegistrationFormType1" class="App\Form\RegistrationFormType1" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ResetPasswordRequestFormType" class="App\Form\ResetPasswordRequestFormType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\ResetPasswordRequestFormType" class="App\Form\ResetPasswordRequestFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UniteType" class="App\Form\UniteType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\UniteType" class="App\Form\UniteType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UpdatePasswordType" class="App\Form\UpdatePasswordType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\UpdatePasswordType" class="App\Form\UpdatePasswordType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UserAddType" class="App\Form\UserAddType" autowire="true" abstract="true"/>
@@ -6529,8 +6707,12 @@
     <service id=".abstract.instanceof.App\Form\UserEditType" class="App\Form\UserEditType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UserType" class="App\Form\UserType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\UserType" class="App\Form\UserType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\CourRepository" class="App\Repository\CourRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\CourRepository" class="App\Repository\CourRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ResetPasswordRequestRepository" class="App\Repository\ResetPasswordRequestRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\ResetPasswordRequestRepository" class="App\Repository\ResetPasswordRequestRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UniteRepository" class="App\Repository\UniteRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\UniteRepository" class="App\Repository\UniteRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Twig\Extension\ExtensionInterface.0.Endroid\QrCodeBundle\Twig\QrCodeExtension" class="Endroid\QrCodeBundle\Twig\QrCodeExtension" autowire="true" abstract="true"/>
@@ -6911,6 +7093,32 @@
         <argument key="user" type="service_closure" id=".errored..service_locator.GPGtF8v.App\Entity\User"/>
       </argument>
     </service>
+    <service id=".service_locator.HGuQ0HE" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="courRepository" type="service_closure" id="App\Repository\CourRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.4vztcD7" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="cour" type="service_closure" id=".errored..service_locator.4vztcD7.App\Entity\Cour"/>
+      </argument>
+    </service>
+    <service id=".service_locator.BM1Gbfy" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="cour" type="service_closure" id=".errored..service_locator.BM1Gbfy.App\Entity\Cour"/>
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+      </argument>
+    </service>
+    <service id=".service_locator.afgDqDS" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+        <argument key="twilioService" type="service_closure" id="App\Service\TwilioService"/>
+      </argument>
+    </service>
     <service id=".service_locator.iQAD6w2" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6946,10 +7154,45 @@
         <argument key="authenticationUtils" type="service_closure" id="security.authentication_utils"/>
       </argument>
     </service>
-    <service id=".service_locator.QQzfbaG" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.qMbaKkM" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="uniteRepository" type="service_closure" id="App\Repository\UniteRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.MYMgWQW" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+        <argument key="validator" type="service_closure" id="debug.validator"/>
+      </argument>
+    </service>
+    <service id=".service_locator.QiLEYYg" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="unite" type="service_closure" id=".errored..service_locator.QiLEYYg.App\Entity\Unite"/>
+      </argument>
+    </service>
+    <service id=".service_locator.NugJTxD" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+        <argument key="unite" type="service_closure" id=".errored..service_locator.NugJTxD.App\Entity\Unite"/>
+        <argument key="validator" type="service_closure" id="debug.validator"/>
+      </argument>
+    </service>
+    <service id=".service_locator.mEfRNNE" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+        <argument key="unite" type="service_closure" id=".errored..service_locator.mEfRNNE.App\Entity\Unite"/>
+      </argument>
+    </service>
+    <service id=".service_locator.RXBmYf8" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AdminAccountController::edit" type="service_closure" id=".service_locator.aKM6MDa"/>
+        <argument key="App\Controller\AdminAccountController::editf" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\AdminDashboardController::index" type="service_closure" id=".service_locator.Q1F27w5"/>
         <argument key="App\Controller\AdminParameterController::edit" type="service_closure" id=".service_locator.YU8H6ve"/>
         <argument key="App\Controller\AdminUserController::add" type="service_closure" id=".service_locator.Q1F27w5"/>
@@ -6957,6 +7200,20 @@
         <argument key="App\Controller\AdminUserController::edit" type="service_closure" id=".service_locator.9uW928t"/>
         <argument key="App\Controller\AdminUserController::index" type="service_closure" id=".service_locator.Q1F27w5"/>
         <argument key="App\Controller\AdminUserController::show" type="service_closure" id=".service_locator.4T4EJFR"/>
+        <argument key="App\Controller\CourAdminController::delete" type="service_closure" id=".service_locator.BM1Gbfy"/>
+        <argument key="App\Controller\CourAdminController::edit" type="service_closure" id=".service_locator.BM1Gbfy"/>
+        <argument key="App\Controller\CourAdminController::index" type="service_closure" id=".service_locator.HGuQ0HE"/>
+        <argument key="App\Controller\CourAdminController::new" type="service_closure" id=".service_locator.aKM6MDa"/>
+        <argument key="App\Controller\CourAdminController::newUnite" type="service_closure" id=".service_locator.BM1Gbfy"/>
+        <argument key="App\Controller\CourAdminController::show" type="service_closure" id=".service_locator.4vztcD7"/>
+        <argument key="App\Controller\CourAdminController::showUnits" type="service_closure" id=".service_locator.4vztcD7"/>
+        <argument key="App\Controller\CourController::delete" type="service_closure" id=".service_locator.BM1Gbfy"/>
+        <argument key="App\Controller\CourController::edit" type="service_closure" id=".service_locator.BM1Gbfy"/>
+        <argument key="App\Controller\CourController::index" type="service_closure" id=".service_locator.HGuQ0HE"/>
+        <argument key="App\Controller\CourController::new" type="service_closure" id=".service_locator.afgDqDS"/>
+        <argument key="App\Controller\CourController::newUnite" type="service_closure" id=".service_locator.BM1Gbfy"/>
+        <argument key="App\Controller\CourController::show" type="service_closure" id=".service_locator.4vztcD7"/>
+        <argument key="App\Controller\CourController::showUnits" type="service_closure" id=".service_locator.4vztcD7"/>
         <argument key="App\Controller\RegistrationController1::register" type="service_closure" id=".service_locator.YU8H6ve"/>
         <argument key="App\Controller\RegistrationController1::verifyUserEmail" type="service_closure" id=".service_locator.q2ji3lu"/>
         <argument key="App\Controller\RegistrationController::register" type="service_closure" id=".service_locator.iQAD6w2"/>
@@ -6965,11 +7222,23 @@
         <argument key="App\Controller\ResetPasswordController::resetPassword" type="service_closure" id=".service_locator.kdKsWx5"/>
         <argument key="App\Controller\SecurityController1::login" type="service_closure" id=".service_locator.zFcJjKU"/>
         <argument key="App\Controller\SecurityController::login" type="service_closure" id=".service_locator.zFcJjKU"/>
+        <argument key="App\Controller\UniteAdminController::delete" type="service_closure" id=".service_locator.mEfRNNE"/>
+        <argument key="App\Controller\UniteAdminController::edit" type="service_closure" id=".service_locator.NugJTxD"/>
+        <argument key="App\Controller\UniteAdminController::index" type="service_closure" id=".service_locator.qMbaKkM"/>
+        <argument key="App\Controller\UniteAdminController::new" type="service_closure" id=".service_locator.MYMgWQW"/>
+        <argument key="App\Controller\UniteAdminController::show" type="service_closure" id=".service_locator.QiLEYYg"/>
+        <argument key="App\Controller\UniteController::delete" type="service_closure" id=".service_locator.mEfRNNE"/>
+        <argument key="App\Controller\UniteController::edit" type="service_closure" id=".service_locator.NugJTxD"/>
+        <argument key="App\Controller\UniteController::generatePdf" type="service_closure" id=".service_locator.QiLEYYg"/>
+        <argument key="App\Controller\UniteController::index" type="service_closure" id=".service_locator.qMbaKkM"/>
+        <argument key="App\Controller\UniteController::new" type="service_closure" id=".service_locator.MYMgWQW"/>
+        <argument key="App\Controller\UniteController::show" type="service_closure" id=".service_locator.QiLEYYg"/>
         <argument key="App\Kernel::loadRoutes" type="service_closure" id=".service_locator.xUrKPVU"/>
         <argument key="App\Kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.xUrKPVU"/>
         <argument key="kernel::loadRoutes" type="service_closure" id=".service_locator.xUrKPVU"/>
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.xUrKPVU"/>
         <argument key="App\Controller\AdminAccountController:edit" type="service_closure" id=".service_locator.aKM6MDa"/>
+        <argument key="App\Controller\AdminAccountController:editf" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\AdminDashboardController:index" type="service_closure" id=".service_locator.Q1F27w5"/>
         <argument key="App\Controller\AdminParameterController:edit" type="service_closure" id=".service_locator.YU8H6ve"/>
         <argument key="App\Controller\AdminUserController:add" type="service_closure" id=".service_locator.Q1F27w5"/>
@@ -6977,6 +7246,20 @@
         <argument key="App\Controller\AdminUserController:edit" type="service_closure" id=".service_locator.9uW928t"/>
         <argument key="App\Controller\AdminUserController:index" type="service_closure" id=".service_locator.Q1F27w5"/>
         <argument key="App\Controller\AdminUserController:show" type="service_closure" id=".service_locator.4T4EJFR"/>
+        <argument key="App\Controller\CourAdminController:delete" type="service_closure" id=".service_locator.BM1Gbfy"/>
+        <argument key="App\Controller\CourAdminController:edit" type="service_closure" id=".service_locator.BM1Gbfy"/>
+        <argument key="App\Controller\CourAdminController:index" type="service_closure" id=".service_locator.HGuQ0HE"/>
+        <argument key="App\Controller\CourAdminController:new" type="service_closure" id=".service_locator.aKM6MDa"/>
+        <argument key="App\Controller\CourAdminController:newUnite" type="service_closure" id=".service_locator.BM1Gbfy"/>
+        <argument key="App\Controller\CourAdminController:show" type="service_closure" id=".service_locator.4vztcD7"/>
+        <argument key="App\Controller\CourAdminController:showUnits" type="service_closure" id=".service_locator.4vztcD7"/>
+        <argument key="App\Controller\CourController:delete" type="service_closure" id=".service_locator.BM1Gbfy"/>
+        <argument key="App\Controller\CourController:edit" type="service_closure" id=".service_locator.BM1Gbfy"/>
+        <argument key="App\Controller\CourController:index" type="service_closure" id=".service_locator.HGuQ0HE"/>
+        <argument key="App\Controller\CourController:new" type="service_closure" id=".service_locator.afgDqDS"/>
+        <argument key="App\Controller\CourController:newUnite" type="service_closure" id=".service_locator.BM1Gbfy"/>
+        <argument key="App\Controller\CourController:show" type="service_closure" id=".service_locator.4vztcD7"/>
+        <argument key="App\Controller\CourController:showUnits" type="service_closure" id=".service_locator.4vztcD7"/>
         <argument key="App\Controller\RegistrationController1:register" type="service_closure" id=".service_locator.YU8H6ve"/>
         <argument key="App\Controller\RegistrationController1:verifyUserEmail" type="service_closure" id=".service_locator.q2ji3lu"/>
         <argument key="App\Controller\RegistrationController:register" type="service_closure" id=".service_locator.iQAD6w2"/>
@@ -6985,6 +7268,17 @@
         <argument key="App\Controller\ResetPasswordController:resetPassword" type="service_closure" id=".service_locator.kdKsWx5"/>
         <argument key="App\Controller\SecurityController1:login" type="service_closure" id=".service_locator.zFcJjKU"/>
         <argument key="App\Controller\SecurityController:login" type="service_closure" id=".service_locator.zFcJjKU"/>
+        <argument key="App\Controller\UniteAdminController:delete" type="service_closure" id=".service_locator.mEfRNNE"/>
+        <argument key="App\Controller\UniteAdminController:edit" type="service_closure" id=".service_locator.NugJTxD"/>
+        <argument key="App\Controller\UniteAdminController:index" type="service_closure" id=".service_locator.qMbaKkM"/>
+        <argument key="App\Controller\UniteAdminController:new" type="service_closure" id=".service_locator.MYMgWQW"/>
+        <argument key="App\Controller\UniteAdminController:show" type="service_closure" id=".service_locator.QiLEYYg"/>
+        <argument key="App\Controller\UniteController:delete" type="service_closure" id=".service_locator.mEfRNNE"/>
+        <argument key="App\Controller\UniteController:edit" type="service_closure" id=".service_locator.NugJTxD"/>
+        <argument key="App\Controller\UniteController:generatePdf" type="service_closure" id=".service_locator.QiLEYYg"/>
+        <argument key="App\Controller\UniteController:index" type="service_closure" id=".service_locator.qMbaKkM"/>
+        <argument key="App\Controller\UniteController:new" type="service_closure" id=".service_locator.MYMgWQW"/>
+        <argument key="App\Controller\UniteController:show" type="service_closure" id=".service_locator.QiLEYYg"/>
         <argument key="kernel:loadRoutes" type="service_closure" id=".service_locator.xUrKPVU"/>
         <argument key="kernel:registerContainerConfiguration" type="service_closure" id=".service_locator.xUrKPVU"/>
       </argument>
@@ -7048,17 +7342,20 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.JNSap1J" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.dR85vr2" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\ChangePasswordFormType" type="service_closure" id="App\Form\ChangePasswordFormType"/>
+        <argument key="App\Form\Cour1Type" type="service_closure" id="App\Form\Cour1Type"/>
         <argument key="App\Form\RegistrationFormType" type="service_closure" id="App\Form\RegistrationFormType"/>
         <argument key="App\Form\RegistrationFormType1" type="service_closure" id="App\Form\RegistrationFormType1"/>
         <argument key="App\Form\ResetPasswordRequestFormType" type="service_closure" id="App\Form\ResetPasswordRequestFormType"/>
+        <argument key="App\Form\UniteType" type="service_closure" id="App\Form\UniteType"/>
         <argument key="App\Form\UpdatePasswordType" type="service_closure" id="App\Form\UpdatePasswordType"/>
         <argument key="App\Form\UserAddType" type="service_closure" id="App\Form\UserAddType"/>
         <argument key="App\Form\UserEditType" type="service_closure" id="App\Form\UserEditType"/>
         <argument key="App\Form\UserType" type="service_closure" id="App\Form\UserType"/>
+        <argument key="Gregwar\CaptchaBundle\Type\CaptchaType" type="service_closure" id="gregwar_captcha.type"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service_closure" id="form.type.entity"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service_closure" id="form.type.choice"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ColorType" type="service_closure" id="form.type.color"/>
@@ -7144,10 +7441,12 @@
         <argument key="doctrine.orm.messenger.doctrine_schema_subscriber" type="service_closure" id="doctrine.orm.messenger.doctrine_schema_subscriber"/>
       </argument>
     </service>
-    <service id=".service_locator.N41nchi" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.fTZSGbI" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Repository\CourRepository" type="service_closure" id="App\Repository\CourRepository"/>
         <argument key="App\Repository\ResetPasswordRequestRepository" type="service_closure" id="App\Repository\ResetPasswordRequestRepository"/>
+        <argument key="App\Repository\UniteRepository" type="service_closure" id="App\Repository\UniteRepository"/>
         <argument key="App\Repository\UserRepository" type="service_closure" id="App\Repository\UserRepository"/>
       </argument>
     </service>
@@ -7447,6 +7746,18 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.mx0UMmY" method="withContext"/>
     </service>
+    <service id=".service_locator.mx0UMmY.App\Controller\CourAdminController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\CourAdminController"/>
+      <argument>App\Controller\CourAdminController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.mx0UMmY" method="withContext"/>
+    </service>
+    <service id=".service_locator.mx0UMmY.App\Controller\CourController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\CourController"/>
+      <argument>App\Controller\CourController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.mx0UMmY" method="withContext"/>
+    </service>
     <service id=".service_locator.mx0UMmY.App\Controller\FrontController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\FrontController"/>
       <argument>App\Controller\FrontController</argument>
@@ -7486,6 +7797,18 @@
     <service id=".service_locator.mx0UMmY.App\Controller\SecurityController1" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\SecurityController1"/>
       <argument>App\Controller\SecurityController1</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.mx0UMmY" method="withContext"/>
+    </service>
+    <service id=".service_locator.mx0UMmY.App\Controller\UniteAdminController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\UniteAdminController"/>
+      <argument>App\Controller\UniteAdminController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.mx0UMmY" method="withContext"/>
+    </service>
+    <service id=".service_locator.mx0UMmY.App\Controller\UniteController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\UniteController"/>
+      <argument>App\Controller\UniteController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.mx0UMmY" method="withContext"/>
     </service>
@@ -7671,12 +7994,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.QQzfbaG"/>
+      <argument type="service" id=".service_locator.RXBmYf8"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.QQzfbaG"/>
+      <argument type="service" id=".service_locator.RXBmYf8"/>
     </service>
     <service id="debug.traced.messenger.bus.default.inner" class="Symfony\Component\Messenger\MessageBus">
       <argument type="iterator">
@@ -7699,6 +8022,11 @@
     <service id=".errored..service_locator.4T4EJFR.App\Entity\User" class="App\Entity\User"/>
     <service id=".errored..service_locator.9uW928t.App\Entity\User" class="App\Entity\User"/>
     <service id=".errored..service_locator.GPGtF8v.App\Entity\User" class="App\Entity\User"/>
+    <service id=".errored..service_locator.4vztcD7.App\Entity\Cour" class="App\Entity\Cour"/>
+    <service id=".errored..service_locator.BM1Gbfy.App\Entity\Cour" class="App\Entity\Cour"/>
+    <service id=".errored..service_locator.QiLEYYg.App\Entity\Unite" class="App\Entity\Unite"/>
+    <service id=".errored..service_locator.NugJTxD.App\Entity\Unite" class="App\Entity\Unite"/>
+    <service id=".errored..service_locator.mEfRNNE.App\Entity\Unite" class="App\Entity\Unite"/>
     <service id=".console.command.about.lazy" class="Symfony\Component\Console\Command\LazyCommand">
       <argument>about</argument>
       <argument type="collection"/>
@@ -8397,78 +8725,78 @@
       </argument>
     </service>
     <service id="cache.app.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter">
-      <argument>thEL4-2ReP</argument>
+      <argument>MLjaQukwmJ</argument>
       <argument>0</argument>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/pools/app</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/pools/app</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
     </service>
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>705aZjpzkU</argument>
+      <argument>SBtkGmFnN0</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/pools/system</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>2qq4XNCKp6</argument>
+      <argument>KWz1l6-Brx</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/pools/system</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>AGys-0WQV7</argument>
+      <argument>RM1EOyyKzO</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/pools/system</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>TQh9sNFspX</argument>
+      <argument>gwDpU93AoK</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/pools/system</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.property_info.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>mQcHGam47I</argument>
+      <argument>lPymdXDDDY</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/pools/system</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.messenger.restart_workers_signal.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter">
-      <argument>gnGr33nKg0</argument>
+      <argument>AdrbYzmUzm</argument>
       <argument>0</argument>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/pools/app</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/pools/app</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
     </service>
     <service id="cache.validator_expression_language.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>CSaA6AYxi+</argument>
+      <argument>Hgid8mNeDJ</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/pools/system</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.doctrine.orm.default.result.recorder_inner" class="Symfony\Component\Cache\Adapter\ArrayAdapter"/>
     <service id="cache.doctrine.orm.default.query.recorder_inner" class="Symfony\Component\Cache\Adapter\ArrayAdapter"/>
     <service id="cache.security_expression_language.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>zueH3vLAbn</argument>
+      <argument>ACToA-uM2G</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Users\Malik\Desktop\User-Crud-Symfony5-master\var\cache\dev/pools/system</argument>
+      <argument>C:\Users\MSI\Desktop\final\integration\User-Crud-Symfony5\var\cache\dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -8488,6 +8816,7 @@
     <service id="Symfony\Component\DependencyInjection\ContainerInterface" alias="service_container">
       <deprecated package="symfony/dependency-injection" version="5.1">The "%alias_id%" autowiring alias is deprecated. Define it explicitly in your app if you want to keep using it.</deprecated>
     </service>
+    <service id="Endroid\QrCode\Builder\BuilderInterface" alias="endroid.qr_code.builder"/>
     <service id="App\Kernel" alias="kernel" public="true"/>
     <service id="Symfony\Component\DependencyInjection\ParameterBag\ContainerBagInterface" alias="parameter_bag"/>
     <service id="Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface" alias="parameter_bag"/>
@@ -8647,12 +8976,12 @@
     <service id="sensio_framework_extra.security.expression_language" alias="sensio_framework_extra.security.expression_language.default"/>
     <service id="SymfonyCasts\Bundle\VerifyEmail\VerifyEmailHelperInterface" alias="symfonycasts.verify_email.helper"/>
     <service id="SymfonyCasts\Bundle\ResetPassword\ResetPasswordHelperInterface" alias="symfonycasts.reset_password.helper"/>
-    <service id="Endroid\QrCode\Builder\BuilderInterface" alias="Endroid\QrCode\Builder\Builder"/>
     <service id="Endroid\QrCode\Builder\BuilderRegistryInterface" alias="Endroid\QrCode\Builder\BuilderRegistry"/>
     <service id="Endroid\QrCode\Builder\BuilderInterface $defaultQrCodeBuilder" alias="endroid_qr_code.default_builder"/>
+    <service id="Gregwar\CaptchaBundle\Controller\CaptchaController" alias="gregwar_captcha.controller" public="true"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.QQzfbaG"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.RXBmYf8"/>
     <service id="session" alias=".session.do-not-use" public="true">
       <deprecated package="symfony/framework-bundle" version="5.3">The "%alias_id%" service and "SessionInterface" alias are deprecated, use "$requestStack-&gt;getSession()" instead.</deprecated>
     </service>
@@ -8679,9 +9008,11 @@
     <service id=".service_locator.riGN6sa" alias=".service_locator.YU8H6ve"/>
     <service id=".service_locator.b76MKMg" alias=".service_locator.GPGtF8v"/>
     <service id=".service_locator.x__eXbe" alias=".service_locator.iQAD6w2"/>
-    <service id=".service_locator.RuqbmBs" alias=".service_locator.QQzfbaG"/>
+    <service id=".service_locator.h3Ic2c2" alias=".service_locator.NugJTxD"/>
+    <service id=".service_locator.jSpn.VJ" alias=".service_locator.mEfRNNE"/>
+    <service id=".service_locator.3QSZ9iy" alias=".service_locator.RXBmYf8"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.19_mNxd"/>
-    <service id=".service_locator.O9PLjrB" alias=".service_locator.JNSap1J"/>
+    <service id=".service_locator.k3NYyih" alias=".service_locator.dR85vr2"/>
     <service id=".service_locator.nk0lT0X" alias=".service_locator.1kmbKC8"/>
     <service id=".service_locator.O24_MAy" alias=".service_locator.yY.p4P7"/>
     <service id=".service_locator.0ghLsew" alias=".service_locator.mx0UMmY"/>
@@ -8713,11 +9044,20 @@
     <service id=".service_locator.Zp0NSXM" alias=".service_locator.4T4EJFR"/>
     <service id=".service_locator.S89QQxH" alias=".service_locator.9uW928t"/>
     <service id=".service_locator.O99ujjA" alias=".service_locator.GPGtF8v"/>
+    <service id=".service_locator.gPzv00Z" alias=".service_locator.HGuQ0HE"/>
+    <service id=".service_locator.Jl5dBvA" alias=".service_locator.4vztcD7"/>
+    <service id=".service_locator.GnsMOjp" alias=".service_locator.BM1Gbfy"/>
+    <service id=".service_locator.s6WfCYB" alias=".service_locator.afgDqDS"/>
     <service id=".service_locator.yhWEeZ1" alias=".service_locator.iQAD6w2"/>
     <service id=".service_locator.426yQGu" alias=".service_locator.q2ji3lu"/>
     <service id=".service_locator.vmloCRj" alias=".service_locator.pXhSQsU"/>
     <service id=".service_locator.Gf4Gasx" alias=".service_locator.kdKsWx5"/>
     <service id=".service_locator.URfgn8g" alias=".service_locator.zFcJjKU"/>
+    <service id=".service_locator.93FKIwU" alias=".service_locator.qMbaKkM"/>
+    <service id=".service_locator.jjMYWI_" alias=".service_locator.MYMgWQW"/>
+    <service id=".service_locator.1PSq2rx" alias=".service_locator.QiLEYYg"/>
+    <service id=".service_locator.UBZxe0C" alias=".service_locator.NugJTxD"/>
+    <service id=".service_locator.UaxDiSh" alias=".service_locator.mEfRNNE"/>
     <service id=".service_locator.A740LBW" alias=".service_locator.mx0UMmY"/>
     <service id=".service_locator.L0rFhJm" alias=".service_locator.GVyCdgr"/>
     <service id=".service_locator.pFwChgS" alias=".service_locator.UkE3SaZ"/>
