@@ -58,6 +58,14 @@
                                     <span class="text">Edit</span>
 
                                 </a>
+                             
+                                    <form method="post" action="{{ path('admin_evaluation_delete', {'id': evaluation.id}) }}"  onsubmit="return confirm('Are you sure you want to delete this item?');" class="d-inline">
+                                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ evaluation.id) }}">
+                                        <button class="btn btn-danger rounded with-icon">Delete</button>
+                                    </form>
+
+                                </a>
+                                
                                                             </td>
                         </tr>
                     {% endfor %}

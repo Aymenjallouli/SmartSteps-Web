@@ -29,16 +29,13 @@ class SecurityController extends AbstractController
     {
         throw new \LogicException('This method can be blank - it will be intercepted by the logout key on your firewall.');
     }
-    /**
-     * Check for role and redirect
-     *
-     * @Route("/connexion/succes", name="login_success")
-     * 
-     * @return Response
-     */
-    public function onLoginSuccess()
+     #[Route('/connexion/succes', name: 'login_success')]
+    public function onLoginSuccess(): Response
     {
-        if ($this->isGranted('ROLE_ADMIN')) return $this->redirectToRoute('admin_dashboard_index');
-        else return $this->redirectToRoute('home_index');
+        if ($this->authorizationChecker->isGranted('ROLE_ADMIN')) {
+            return new RedirectResponse($this->generateUrl('app_back'));
+        } else {
+            return new RedirectResponse($this->generateUrl('home_index'));
+        }
     }
 }

@@ -41,7 +41,6 @@ class QuestionController extends AbstractController
     }
 
 
-    #[Route('/{id}/newq', name: 'app_question_new', methods: ['GET', 'POST'])]
     public function new(Request $request, QuestionRepository $questionRepository,EvaluationRepository $evaluationRepository,ManagerRegistry $manager, $id): Response
     {
         $evaluation = $evaluationRepository->find($id);
@@ -76,7 +75,6 @@ class QuestionController extends AbstractController
 
 
 
-    #[Route('/{id}/q', name: 'app_evaluation_show', methods: ['GET'])]
     public function show(Question $question): Response
     {
         return $this->render('question/show.html.twig', [
@@ -84,7 +82,6 @@ class QuestionController extends AbstractController
         ]);
     }
 
-    #[Route('', name: 'app_question_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Question $question, QuestionRepository $questionRepository,ManagerRegistry $manager): Response
     {
         $form = $this->createForm(QuestionType::class, $question);
@@ -104,7 +101,6 @@ class QuestionController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'app_evaluation_delete', methods: ['POST'])]
     public function delete($id,ManagerRegistry $manager,Request $request, Question $question, QuestionRepository $questionRepository): Response
     {
         if ($this->isCsrfTokenValid('delete'.$question->getId(), $request->request->get('_token'))) {

@@ -36,7 +36,7 @@
   <header id="header" class="fixed-top " style="background-color:rgba(40, 58, 90, 0.9);">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="{{ url('app_home') }}">SmartSteps</a></h1>
+      <h1 class="logo me-auto"><a href="{{ path('home_index') }}">SmartSteps</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 <nav id="navbar" class="navbar">
@@ -56,7 +56,7 @@
         <a href="{{ path('login') }}" class="nav-link scrollto active"><span class="ion-ios-arrow-forward">Login</span></a>
         <a href="{{ path('registration') }}" class="nav-link scrollto active"><span class="ion-ios-arrow-forward">Register</span></a>
     {% endif %}
-          <li><a class="nav-link scrollto active" href="{{ url('app_home') }}">Home</a></li>
+          <li><a class="nav-link scrollto active" href="{{ path('home_index') }}">Home</a></li>
           <li><a class="nav-link scrollto" href="{{ url('app_cour_index') }}">Cours</a></li>
           <li><a class="nav-link scrollto" href="{{ url('app_unite_index') }}">Unité</a></li>
           <li><a class="nav-link scrollto" href="{{ url('app_evaluation_index') }}">Evaluation</a></li>          

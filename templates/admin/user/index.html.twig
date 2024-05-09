@@ -1,38 +1,29 @@
-{% extends "admin/layout.html.twig" %}
+{% extends "admin/base1.html.twig" %}
 
 {% block title "Utilisateurs" %}
 
 {% block title_h1 "Gestion des utilisateurs" %}
 
 {% block stylesheets %}
+{{parent()}}
   <link href="{{ asset("sbadmin2/vendor/datatables/dataTables.bootstrap4.min.css") }}" rel="stylesheet">
 {% endblock %}
 
 {% block body %}
+<main id="main" class="main">
 
     <div class="card shadow my-4">
         <div class="card-header py-2 d-flex align-items-center">
             <h6 class="m-0 font-weight-bold text-primary">Utilisateurs</h6>
-<<<<<<< HEAD
-            <a  class="btn btn-success btn-icon-split ml-auto">
-=======
+
             <a href="{{ path("admin_user_add") }}" class="btn btn-success btn-icon-split ml-auto">
->>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
                 <span class="icon text-white-50">
                     <i class="fas fa-plus"></i>
                 </span>
                 <span class="text">Ajouter un utilisateur</span>
             </a>
         </div>
-<<<<<<< HEAD
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-bordered" id="userTable" width="100%" cellspacing="0">
-                    <thead>
-                        <tr>
-                            <th>Prénom</th>
-                            <th>Nom</th>
-=======
+
           <div class="d-flex">
             <button id="btPrint" onclick="createPDF()" class="export-pdf-btn">
                 <i class="fas fa-file-pdf"></i> Export PDF
@@ -47,15 +38,12 @@
                         <tr>
                             <th>Prénom</th>
                             <th onclick="sortTable(1)">Nom</th>
->>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
                             <th>Email</th>
                             <th>Nom d'utilisateur</th>
                             <th>Type</th>
                             <th>Créer le</th>
-<<<<<<< HEAD
-=======
+
                             <th>QR</th>
->>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -71,9 +59,7 @@
                         </tr>
                     </tfoot> #}
                     <tbody>
-<<<<<<< HEAD
-                    
-=======
+
                     {% for user in users %}
                         <tr>
                             <td>{{ user.firstName }}</td>
@@ -100,21 +86,20 @@
                             </td>
                         </tr>
                     {% endfor %}
->>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
+
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
-
+</main>
 {% endblock %}
 
 {% block javascripts %}
+{{parent()}}
   <script src="{{ asset("sbadmin2/vendor/datatables/jquery.dataTables.min.js") }}"></script>
   <script src="{{ asset("sbadmin2/vendor/datatables/dataTables.bootstrap4.min.js") }}"></script>
-<<<<<<< HEAD
 
-=======
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
             <script>
         function createPDF() {
@@ -214,6 +199,5 @@
           }
         }
     </script>
->>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
   <script src="{{ asset("js/dataTable/user.js") }}"></script>
 {% endblock %}

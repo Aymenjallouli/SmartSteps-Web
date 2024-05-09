@@ -1,25 +1,20 @@
-<<<<<<< HEAD
 
-=======
-{% extends "admin/layout.html.twig" %}
->>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
+{% extends "admin/base1.html.twig" %}
+
 
 {% block title "Profil" %}
 
 {% block title_h1 "Mon profil" %}
 
 {% block body %}
+<main id="main" class="main">
 
     <div class="card border-left-info shadow h-100 py-2 my-4">
         <div class="card-body">
             <div class="d-flex align-items-center">
-<<<<<<< HEAD
-                <h2 class="card-title text-uppercase text-info mb-0"><i class="fas fa-user fa-x2 text-gray-500 mr-3"></i></h2>
-                <a  class="btn btn-primary btn-icon-split ml-auto">
-=======
+
                 <h2 class="card-title text-uppercase text-info mb-0"><i class="fas fa-user fa-x2 text-gray-500 mr-3"></i>{{ user.fullName }}</h2>
                 <a href="{{ path("admin_account_edit") }}" class="btn btn-primary btn-icon-split ml-auto">
->>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
                     <span class="icon text-white-50">
                         <i class="far fa-edit"></i>
                     </span>
@@ -28,11 +23,8 @@
             </div>
             <div class="row no-gutters align-items-center">
                 <div class="text-gray-400 mb-2">
-<<<<<<< HEAD
-                    <small>Utilisateur inscrit depuis le </small>
-=======
+
                     <small>Utilisateur inscrit depuis le {{ user.createdAt | date('d-m-Y') }}</small>
->>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
                 </div>
             </div>
             <hr class="sidebar-divider my-1">
@@ -40,36 +32,28 @@
                 <div class="row no-gutters">
                     <div class="d-flex flex-row align-items-center">
                         <h5 class="text-secondary">Email :</h5>
-<<<<<<< HEAD
-                        <p class="text-gray-500 mb-1 ml-3"></p>
-=======
+
                         <p class="text-gray-500 mb-1 ml-3">{{ user.email }}</p>
->>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
                     </div>
                 </div>
                 <div class="row no-gutters">
                     <div class="d-flex flex-row align-items-center">
                         <h5 class="text-secondary">Nom d'utilisateur :</h5>
-<<<<<<< HEAD
-                        <p class="text-gray-500 mb-1 ml-3"></p>
-=======
+
                         <p class="text-gray-500 mb-1 ml-3">{{ user.username }}</p>
->>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
                     </div>
                 </div>
                 <div class="row no-gutters">
                     <div class="d-flex flex-row align-items-center">
                         <h5 class="text-secondary">Rôle : </h5>
-<<<<<<< HEAD
-                        <p class="text-gray-500 mb-1 ml-3"></p>
-=======
+
+
                         <p class="text-gray-500 mb-1 ml-3">{{ user.roleTitle }}</p>
->>>>>>> 963c1cdb530c346c2b9e3004e2f9547681b61c0d
                     </div>
                 </div>
             </div>
             <hr class="sidebar-divider my-1">
         </div>
     </div>
-
+</main>
 {% endblock %}

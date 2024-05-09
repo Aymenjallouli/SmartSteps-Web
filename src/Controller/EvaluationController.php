@@ -30,14 +30,7 @@ class EvaluationController extends AbstractController
     }
 
 
-   
-    #[Route('/{id}', name: 'app_evaluation_show', methods: ['GET'])]
-    public function show(Evaluation $evaluation): Response
-    {
-        return $this->render('evaluation/show.html.twig', [
-            'evaluation' => $evaluation,
-        ]);
-    }
+ 
 
     #[Route('/{id}', name: 'app_evaluation_pass', methods: ['GET', 'POST'])]
     public function pass(Request $request, Evaluation $evaluation, EvaluationRepository $evaluationRepository,ManagerRegistry $manager, $id): Response

@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 //here1 *********************
+use Doctrine\ORM\EntityManagerInterface;
 use App\Repository\EvaluationRepository;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\Request;
@@ -58,7 +59,7 @@ class AdminEvaluationController extends AbstractController
            $em->persist($evaluation);
            $em->flush();
 
-            return $this->redirectToRoute('app_evaluation_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('admin_evaluation_index', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('admin/evaluation/new.html.twig', [
@@ -156,20 +157,17 @@ class AdminEvaluationController extends AbstractController
             'form' => $form,
         ]);
     }
-
-    #[Route('/{id}', name: 'app_evaluation_delete', methods: ['POST'])]
-    public function delete($id,ManagerRegistry $manager,Request $request, Evaluation $evaluation, EvaluationRepository $evaluationRepository): Response
+    #[Route('/{id}', name: 'admin_evaluation_delete', methods: ['POST'])]
+    public function delete(Request $request, Evaluation $evaluation, EntityManagerInterface $entityManager, $id): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$evaluation->getId(), $request->request->get('_token'))) {
-            
-            $em = $manager->getManager();
-        $evaluation = $evaluationRepository->find($id);
+        $evaluation = $entityManager->getRepository(Evaluation::class)->find($id);
 
-        $em->remove($evaluation);
-        $em->flush();
+        if ($this->isCsrfTokenValid('delete'.$evaluation->getId(), $request->request->get('_token'))) {
+            $entityManager->remove($evaluation);
+            $entityManager->flush();
         }
 
-        return $this->redirectToRoute('app_evaluation_index', [], Response::HTTP_SEE_OTHER);
+        return $this->redirectToRoute('admin_evaluation_index', [], Response::HTTP_SEE_OTHER);
     }
     
 #[Route('/search', name: 'search')]
