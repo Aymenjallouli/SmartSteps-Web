@@ -8,6 +8,7 @@ twig:
     
     globals:
         const_website_title: "Animaland"
+
 when@test:
     twig:
         strict_variables: true

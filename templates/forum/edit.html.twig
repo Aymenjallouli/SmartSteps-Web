@@ -1,0 +1,120 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Forum{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        .container {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn-primary:hover,
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+        }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+
+        .custom-file-label::after {
+            content: "Browse";
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Edit Forum</h1>
+
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                {{ form_start(form, {'attr': {'class': 'row g-3', 'novalidate': 'novalidate'}}) }}
+                {{ form_errors(form) }}
+
+                <div class="col-md-6">
+                    {{ form_label(form.titre, 'Titre', {'label_attr': {'class': 'form-label'}}) }}
+                    {{ form_widget(form.titre, {'attr': {'class': 'form-control' ~ (form_errors(form.titre)|length ? ' is-invalid' : (form.vars.valid ? ' is-valid' : '')), 'id': 'validationCustomTitre'}}) }}
+                    {% if form_errors(form.titre)|length %}
+                        <div class="invalid-feedback">
+                            {{ form_errors(form.titre) }}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="col-md-6">
+                    {{ form_label(form.image, 'Image', {'label_attr': {'class': 'form-label'}}) }}
+                    {{ form_widget(form.image, {'attr': {'class': 'form-control' ~ (form_errors(form.image)|length ? ' is-invalid' : (form.vars.valid ? ' is-valid' : '')), 'id': 'validationCustomImage'}}) }}
+                    {% if form_errors(form.image)|length %}
+                        <div class="invalid-feedback">
+                            {{ form_errors(form.image) }}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="col-12">
+                    {{ form_label(form.description, 'Description', {'label_attr': {'class': 'form-label'}}) }}
+                    {{ form_widget(form.description, {'attr': {'class': 'form-control' ~ (form_errors(form.description)|length ? ' is-invalid' : (form.vars.valid ? ' is-valid' : '')), 'id': 'validationCustomDescription'}}) }}
+                    {% if form_errors(form.description)|length %}
+                        <div class="invalid-feedback">
+                            {{ form_errors(form.description) }}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="col-12">
+                    {{ form_label(form.datecreation, 'Date de création', {'label_attr': {'class': 'form-label'}}) }}
+                    {{ form_widget(form.datecreation, {'attr': {'class': 'form-control' ~ (form_errors(form.datecreation)|length ? ' is-invalid' : (form.vars.valid ? ' is-valid' : '')), 'id': 'validationCustomDateCreation'}}) }}
+                    {% if form_errors(form.datecreation)|length %}
+                        <div class="invalid-feedback">
+                            {{ form_errors(form.datecreation) }}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">{{ button_label|default('Save') }}</button>
+                </div>
+                {{ form_end(form) }}
+
+                {{ include('forum/_delete_form.html.twig') }}
+            </div>
+        </div>
+    </div>
+
+    <script>
+       
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                var forms = document.querySelectorAll('.needs-validation');
+                Array.prototype.slice.call(forms)
+                    .forEach(function (form) {
+                        form.addEventListener('submit', function (event) {
+                            if (!form.checkValidity()) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+                            form.classList.add('was-validated');
+                        }, false);
+                    });
+            }, false);
+        })();
+    </script>
+{% endblock %}

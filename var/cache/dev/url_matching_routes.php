@@ -19,12 +19,19 @@ return [
         '/admin/utilisateur' => [[['_route' => 'admin_user_index', '_controller' => 'App\\Controller\\AdminUserController::index'], null, ['GET' => 0], null, true, false, null]],
         '/admin/utilisateur/add' => [[['_route' => 'admin_user_add', '_controller' => 'App\\Controller\\AdminUserController::add'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/admin' => [[['_route' => 'app_back', '_controller' => 'App\\Controller\\BackController::index'], null, null, null, false, false, null]],
+        '/commentaire' => [[['_route' => 'app_commentaire_index', '_controller' => 'App\\Controller\\CommentaireController::index'], null, ['GET' => 0], null, true, false, null]],
+        '/commentaire/back' => [[['_route' => 'app_commentaire_indexback', '_controller' => 'App\\Controller\\CommentaireController::indexback'], null, ['GET' => 0], null, false, false, null]],
+        '/commentaire/new' => [[['_route' => 'app_commentaire_new', '_controller' => 'App\\Controller\\CommentaireController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/commentaire/aaaa/pdf' => [[['_route' => 'app_demande_pdf', '_controller' => 'App\\Controller\\CommentaireController::generatePdf'], null, null, null, false, false, null]],
         '/admin/cour' => [[['_route' => 'admin_cour_index', '_controller' => 'App\\Controller\\CourAdminController::index'], null, ['GET' => 0], null, true, false, null]],
         '/admin/cour/new' => [[['_route' => 'admin_cour_new', '_controller' => 'App\\Controller\\CourAdminController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/cour' => [[['_route' => 'app_cour_index', '_controller' => 'App\\Controller\\CourController::index'], null, ['GET' => 0], null, true, false, null]],
         '/cour/new' => [[['_route' => 'app_cour_new', '_controller' => 'App\\Controller\\CourController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/calendar' => [[['_route' => 'app_evaluation_caldendar', '_controller' => 'App\\Controller\\EvaluationCaldendarController::index'], null, null, null, true, false, null]],
         '/evaluation' => [[['_route' => 'app_evaluation_index', '_controller' => 'App\\Controller\\EvaluationController::index'], null, ['GET' => 0], null, true, false, null]],
+        '/forum' => [[['_route' => 'app_forum_index', '_controller' => 'App\\Controller\\ForumController::index'], null, ['GET' => 0], null, true, false, null]],
+        '/forum/new' => [[['_route' => 'app_forum_new', '_controller' => 'App\\Controller\\ForumController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/forum/aaaa/statttt' => [[['_route' => 'app_forum_stat', '_controller' => 'App\\Controller\\ForumController::top3MostCommentedForums'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/front' => [[['_route' => 'app_front', '_controller' => 'App\\Controller\\FrontController::index'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'home_index', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
         '/workshop' => [[['_route' => 'app_index', '_controller' => 'App\\Controller\\QuestionController::index'], null, ['GET' => 0], null, false, false, null]],
@@ -87,44 +94,58 @@ return [
                         .'|search(*:299)'
                     .')'
                 .')'
-                .'|/cour/([^/]++)(?'
-                    .'|(*:326)'
-                    .'|/(?'
-                        .'|edit(*:342)'
-                        .'|new_unite(*:359)'
-                        .'|units(*:372)'
+                .'|/co(?'
+                    .'|mmentaire/([^/]++)(?'
+                        .'|(*:336)'
+                        .'|/edit(*:349)'
+                        .'|(*:357)'
                     .')'
-                    .'|(*:381)'
+                    .'|ur/([^/]++)(?'
+                        .'|(*:380)'
+                        .'|/(?'
+                            .'|edit(*:396)'
+                            .'|new_unite(*:413)'
+                            .'|units(*:426)'
+                        .')'
+                        .'|(*:435)'
+                    .')'
                 .')'
-                .'|/evaluation/([^/]++)(*:410)'
-                .'|/mot\\-de\\-passe/nouveau\\-mot\\-de\\-passe(?:/([^/]++))?(*:471)'
+                .'|/evaluation/([^/]++)(*:465)'
+                .'|/forum/(?'
+                    .'|([^/]++)(?'
+                        .'|(*:494)'
+                        .'|/edit(*:507)'
+                    .')'
+                    .'|delete/([^/]++)(*:531)'
+                .')'
+                .'|/mot\\-de\\-passe/nouveau\\-mot\\-de\\-passe(?:/([^/]++))?(*:593)'
                 .'|/teacher/evaluation(?'
-                    .'|/([^/]++)(*:510)'
-                    .'|([^/]++)/edit(*:531)'
-                    .'|/([^/]++)(*:548)'
+                    .'|/([^/]++)(*:632)'
+                    .'|([^/]++)/edit(*:653)'
+                    .'|/([^/]++)(*:670)'
                 .')'
                 .'|/unite/([^/]++)(?'
-                    .'|(*:575)'
+                    .'|(*:697)'
                     .'|/(?'
-                        .'|edit(*:591)'
-                        .'|pdf(*:602)'
+                        .'|edit(*:713)'
+                        .'|pdf(*:724)'
                     .')'
-                    .'|(*:611)'
+                    .'|(*:733)'
                 .')'
-                .'|/qr\\-code/([^/]++)/([\\w\\W]+)(*:648)'
+                .'|/qr\\-code/([^/]++)/([\\w\\W]+)(*:770)'
                 .'|/_(?'
-                    .'|error/(\\d+)(?:\\.([^/]++))?(*:687)'
-                    .'|wdt/([^/]++)(*:707)'
+                    .'|error/(\\d+)(?:\\.([^/]++))?(*:809)'
+                    .'|wdt/([^/]++)(*:829)'
                     .'|profiler/([^/]++)(?'
                         .'|/(?'
-                            .'|search/results(*:753)'
-                            .'|router(*:767)'
+                            .'|search/results(*:875)'
+                            .'|router(*:889)'
                             .'|exception(?'
-                                .'|(*:787)'
-                                .'|\\.css(*:800)'
+                                .'|(*:909)'
+                                .'|\\.css(*:922)'
                             .')'
                         .')'
-                        .'|(*:810)'
+                        .'|(*:932)'
                     .')'
                 .')'
             .')/?$}sDu',
@@ -145,28 +166,34 @@ return [
         275 => [[['_route' => 'admin_cour_units', '_controller' => 'App\\Controller\\CourAdminController::showUnits'], ['id'], ['GET' => 0], null, false, false, null]],
         284 => [[['_route' => 'admin_cour_delete', '_controller' => 'App\\Controller\\CourAdminController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
         299 => [[['_route' => 'search', '_controller' => 'App\\Controller\\CourAdminController::search'], [], null, null, false, false, null]],
-        326 => [[['_route' => 'app_cour_show', '_controller' => 'App\\Controller\\CourController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        342 => [[['_route' => 'app_cour_edit', '_controller' => 'App\\Controller\\CourController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        359 => [[['_route' => 'app_cour_new_unite', '_controller' => 'App\\Controller\\CourController::newUnite'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        372 => [[['_route' => 'app_cour_units', '_controller' => 'App\\Controller\\CourController::showUnits'], ['id'], ['GET' => 0], null, false, false, null]],
-        381 => [[['_route' => 'app_cour_delete', '_controller' => 'App\\Controller\\CourController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        410 => [[['_route' => 'app_evaluation_pass', '_controller' => 'App\\Controller\\EvaluationController::pass'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        471 => [[['_route' => 'reset_password', 'token' => null, '_controller' => 'App\\Controller\\ResetPasswordController::resetPassword'], ['token'], null, null, false, true, null]],
-        510 => [[['_route' => 'teacher_evaluation_show', '_controller' => 'App\\Controller\\TeacherEvaluationController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        531 => [[['_route' => 'teacher_evaluation_edit', '_controller' => 'App\\Controller\\TeacherEvaluationController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        548 => [[['_route' => 'teacher_evaluation_delete', '_controller' => 'App\\Controller\\TeacherEvaluationController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        575 => [[['_route' => 'app_unite_show', '_controller' => 'App\\Controller\\UniteController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        591 => [[['_route' => 'app_unite_edit', '_controller' => 'App\\Controller\\UniteController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        602 => [[['_route' => 'app_unite_pdf', '_controller' => 'App\\Controller\\UniteController::generatePdf'], ['id'], ['GET' => 0], null, false, false, null]],
-        611 => [[['_route' => 'app_unite_delete', '_controller' => 'App\\Controller\\UniteController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        648 => [[['_route' => 'qr_code_generate', '_controller' => 'Endroid\\QrCodeBundle\\Controller\\GenerateController'], ['builder', 'data'], null, null, false, true, null]],
-        687 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
-        707 => [[['_route' => '_wdt', '_controller' => 'web_profiler.controller.profiler::toolbarAction'], ['token'], null, null, false, true, null]],
-        753 => [[['_route' => '_profiler_search_results', '_controller' => 'web_profiler.controller.profiler::searchResultsAction'], ['token'], null, null, false, false, null]],
-        767 => [[['_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'], ['token'], null, null, false, false, null]],
-        787 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
-        800 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
-        810 => [
+        336 => [[['_route' => 'app_commentaire_show', '_controller' => 'App\\Controller\\CommentaireController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        349 => [[['_route' => 'app_commentaire_edit', '_controller' => 'App\\Controller\\CommentaireController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        357 => [[['_route' => 'app_commentaire_delete', '_controller' => 'App\\Controller\\CommentaireController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        380 => [[['_route' => 'app_cour_show', '_controller' => 'App\\Controller\\CourController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        396 => [[['_route' => 'app_cour_edit', '_controller' => 'App\\Controller\\CourController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        413 => [[['_route' => 'app_cour_new_unite', '_controller' => 'App\\Controller\\CourController::newUnite'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        426 => [[['_route' => 'app_cour_units', '_controller' => 'App\\Controller\\CourController::showUnits'], ['id'], ['GET' => 0], null, false, false, null]],
+        435 => [[['_route' => 'app_cour_delete', '_controller' => 'App\\Controller\\CourController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        465 => [[['_route' => 'app_evaluation_pass', '_controller' => 'App\\Controller\\EvaluationController::pass'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        494 => [[['_route' => 'app_forum_show', '_controller' => 'App\\Controller\\ForumController::show'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        507 => [[['_route' => 'app_forum_edit', '_controller' => 'App\\Controller\\ForumController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        531 => [[['_route' => 'app_forum_delete', '_controller' => 'App\\Controller\\ForumController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        593 => [[['_route' => 'reset_password', 'token' => null, '_controller' => 'App\\Controller\\ResetPasswordController::resetPassword'], ['token'], null, null, false, true, null]],
+        632 => [[['_route' => 'teacher_evaluation_show', '_controller' => 'App\\Controller\\TeacherEvaluationController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        653 => [[['_route' => 'teacher_evaluation_edit', '_controller' => 'App\\Controller\\TeacherEvaluationController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        670 => [[['_route' => 'teacher_evaluation_delete', '_controller' => 'App\\Controller\\TeacherEvaluationController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        697 => [[['_route' => 'app_unite_show', '_controller' => 'App\\Controller\\UniteController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        713 => [[['_route' => 'app_unite_edit', '_controller' => 'App\\Controller\\UniteController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        724 => [[['_route' => 'app_unite_pdf', '_controller' => 'App\\Controller\\UniteController::generatePdf'], ['id'], ['GET' => 0], null, false, false, null]],
+        733 => [[['_route' => 'app_unite_delete', '_controller' => 'App\\Controller\\UniteController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        770 => [[['_route' => 'qr_code_generate', '_controller' => 'Endroid\\QrCodeBundle\\Controller\\GenerateController'], ['builder', 'data'], null, null, false, true, null]],
+        809 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
+        829 => [[['_route' => '_wdt', '_controller' => 'web_profiler.controller.profiler::toolbarAction'], ['token'], null, null, false, true, null]],
+        875 => [[['_route' => '_profiler_search_results', '_controller' => 'web_profiler.controller.profiler::searchResultsAction'], ['token'], null, null, false, false, null]],
+        889 => [[['_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'], ['token'], null, null, false, false, null]],
+        909 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
+        922 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
+        932 => [
             [['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

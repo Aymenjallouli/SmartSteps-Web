@@ -1,93 +1,80 @@
 <?php
 
 namespace App\Entity;
-
-use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\Column;
+use Doctrine\ORM\Mapping\GeneratedValue;
+use Doctrine\ORM\Mapping\Id;
+use App\Repository\ForumRepository;
 
-/**
- * Forum
- *
- * @ORM\Table(name="forum")
- * @ORM\Entity
- */
+use Symfony\Component\Validator\Constraints as Assert;
+
+#[ORM\Entity(repositoryClass: ForumRepository::class)]
 class Forum
 {
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="id", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $id;
+    #[Id]
+    #[Column(type: 'integer', nullable: false)]
+    #[GeneratedValue(strategy: 'IDENTITY')]
+    private int $id;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="titre", type="string", length=255, nullable=false)
-     */
-    private $titre;
+    #[Column(type: 'string', length: 255, nullable: false)]
+    #[Assert\NotBlank(message: 'The title cannot be blank')]
+    private string $titre;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="image", type="string", length=255, nullable=false)
-     */
-    private $image;
+    #[Column(type: 'string', length: 255, nullable: false)]
+    #[Assert\NotBlank(message: 'The image cannot be blank')]
+    #[Assert\Length(max: 50, maxMessage: 'Title cannot be longer than {{ limit }} characters')]
+    private string $image;
 
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="dateCreation", type="date", nullable=false)
-     */
-    private $datecreation;
+    #[Column(type: 'date', nullable: false)]
+    #[Assert\NotBlank(message: 'The date of creation cannot be blank')]
+    #[Assert\GreaterThanOrEqual(value: 'today', message: 'The date of creation cannot be in the past')]
+    private \DateTime $datecreation;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="description", type="string", length=255, nullable=false)
-     */
-    private $description;
+    #[Column(type: 'string', length: 255, nullable: true)]
+    #[Assert\NotBlank(message: 'The description cannot be blank')]
+    #[Assert\Length(max: 50, maxMessage: 'Description cannot be longer than {{ limit }} characters')]
+    private ?string $description;
 
-    public function getId(): ?int
+    public function __construct()
+    {
+    }
+
+    public function getId(): int
     {
         return $this->id;
     }
 
-    public function getTitre(): ?string
+    public function getTitre(): string
     {
         return $this->titre;
     }
 
-    public function setTitre(string $titre): static
+    public function setTitre(string $titre): self
     {
         $this->titre = $titre;
-
         return $this;
     }
 
-    public function getImage(): ?string
+    public function getImage(): string
     {
         return $this->image;
     }
 
-    public function setImage(string $image): static
+    public function setImage(string $image): self
     {
         $this->image = $image;
-
         return $this;
     }
 
-    public function getDatecreation(): ?\DateTimeInterface
+    public function getDatecreation(): \DateTime
     {
         return $this->datecreation;
     }
 
-    public function setDatecreation(\DateTimeInterface $datecreation): static
+    public function setDatecreation(\DateTime $datecreation): self
     {
         $this->datecreation = $datecreation;
-
         return $this;
     }
 
@@ -96,12 +83,14 @@ class Forum
         return $this->description;
     }
 
-    public function setDescription(string $description): static
+    public function setDescription(?string $description): self
     {
         $this->description = $description;
-
         return $this;
     }
 
-
+    public function __toString(): string
+    {
+        return $this->titre;
+    }
 }

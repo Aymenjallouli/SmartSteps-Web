@@ -2,76 +2,52 @@
 
 namespace App\Entity;
 
-use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-
-/**
- * Message
- *
- * @ORM\Table(name="message", indexes={@ORM\Index(name="fk_forum", columns={"id_forum"})})
- * @ORM\Entity
- */
+use App\Repository\MessageRepository;
+#[ORM\Entity(repositoryClass: MessageRepository::class)]
 class Message
 {
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="id_message", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $idMessage;
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: 'IDENTITY')]
+    #[ORM\Column(name: 'id_message', type: 'integer', nullable: false)]
+    private ?int $idMessage;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="contenu_message", type="string", length=100, nullable=false)
-     */
-    private $contenuMessage;
+    #[ORM\Column(name: 'contenu_message', type: 'string', length: 100, nullable: false)]
+    private string $contenuMessage;
 
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="date_message", type="datetime", nullable=false)
-     */
-    private $dateMessage;
+    #[ORM\Column(name: 'date_message', type: 'datetime', nullable: false)]
+    private \DateTime $dateMessage;
 
-    /**
-     * @var \Forum
-     *
-     * @ORM\ManyToOne(targetEntity="Forum")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_forum", referencedColumnName="id")
-     * })
-     */
-    private $idForum;
+    #[ORM\ManyToOne(targetEntity: Forum::class)]
+    #[ORM\JoinColumns([
+        ORM\JoinColumn(name: 'id_forum', referencedColumnName: 'id')
+    ])]
+    private ?Forum $idForum=null;
 
     public function getIdMessage(): ?int
     {
         return $this->idMessage;
     }
 
-    public function getContenuMessage(): ?string
+    public function getContenuMessage(): string
     {
         return $this->contenuMessage;
     }
 
-    public function setContenuMessage(string $contenuMessage): static
+    public function setContenuMessage(string $contenuMessage): self
     {
         $this->contenuMessage = $contenuMessage;
-
         return $this;
     }
 
-    public function getDateMessage(): ?\DateTimeInterface
+    public function getDateMessage(): \DateTime
     {
         return $this->dateMessage;
     }
 
-    public function setDateMessage(\DateTimeInterface $dateMessage): static
+    public function setDateMessage(\DateTime $dateMessage): self
     {
         $this->dateMessage = $dateMessage;
-
         return $this;
     }
 
@@ -80,12 +56,9 @@ class Message
         return $this->idForum;
     }
 
-    public function setIdForum(?Forum $idForum): static
+    public function setIdForum(?Forum $idForum): self
     {
         $this->idForum = $idForum;
-
         return $this;
     }
-
-
 }

@@ -185,8 +185,8 @@ class ComposerStaticInitcfb0ac2fc90cebeb47c545f3aa831575
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'Webmozart\\Assert\\' => 
         array (
@@ -618,8 +618,8 @@ class ComposerStaticInitcfb0ac2fc90cebeb47c545f3aa831575
         ),
         'Doctrine\\Common\\' => 
         array (
-            0 => __DIR__ . '/..' . '/doctrine/event-manager/src',
-            1 => __DIR__ . '/..' . '/doctrine/common/src',
+            0 => __DIR__ . '/..' . '/doctrine/common/src',
+            1 => __DIR__ . '/..' . '/doctrine/event-manager/src',
         ),
         'Doctrine\\Bundle\\MigrationsBundle\\' => 
         array (
@@ -658,10 +658,12 @@ class ComposerStaticInitcfb0ac2fc90cebeb47c545f3aa831575
         'App\\Controller\\AdminParameterController' => __DIR__ . '/../..' . '/src/Controller/AdminParameterController.php',
         'App\\Controller\\AdminUserController' => __DIR__ . '/../..' . '/src/Controller/AdminUserController.php',
         'App\\Controller\\BackController' => __DIR__ . '/../..' . '/src/Controller/BackController.php',
+        'App\\Controller\\CommentaireController' => __DIR__ . '/../..' . '/src/Controller/CommentaireController.php',
         'App\\Controller\\CourAdminController' => __DIR__ . '/../..' . '/src/Controller/CourAdminController.php',
         'App\\Controller\\CourController' => __DIR__ . '/../..' . '/src/Controller/CourController.php',
         'App\\Controller\\EvaluationCaldendarController' => __DIR__ . '/../..' . '/src/Controller/EvaluationCaldendarController.php',
         'App\\Controller\\EvaluationController' => __DIR__ . '/../..' . '/src/Controller/EvaluationController.php',
+        'App\\Controller\\ForumController' => __DIR__ . '/../..' . '/src/Controller/ForumController.php',
         'App\\Controller\\FrontController' => __DIR__ . '/../..' . '/src/Controller/FrontController.php',
         'App\\Controller\\HomeController' => __DIR__ . '/../..' . '/src/Controller/HomeController.php',
         'App\\Controller\\QuestionController' => __DIR__ . '/../..' . '/src/Controller/QuestionController.php',
@@ -688,13 +690,16 @@ class ComposerStaticInitcfb0ac2fc90cebeb47c545f3aa831575
         'App\\Form\\AnswerType' => __DIR__ . '/../..' . '/src/Form/AnswerType.php',
         'App\\Form\\BookType' => __DIR__ . '/../..' . '/src/Form/BookType.php',
         'App\\Form\\ChangePasswordFormType' => __DIR__ . '/../..' . '/src/Form/ChangePasswordFormType.php',
+        'App\\Form\\CommentaireType' => __DIR__ . '/../..' . '/src/Form/CommentaireType.php',
         'App\\Form\\Cour1Type' => __DIR__ . '/../..' . '/src/Form/Cour1Type.php',
         'App\\Form\\EvaluationType' => __DIR__ . '/../..' . '/src/Form/EvaluationType.php',
         'App\\Form\\ExtQuestionType' => __DIR__ . '/../..' . '/src/Form/ExtQuestionType.php',
+        'App\\Form\\ForumType' => __DIR__ . '/../..' . '/src/Form/ForumType.php',
         'App\\Form\\QuestionType' => __DIR__ . '/../..' . '/src/Form/QuestionType.php',
         'App\\Form\\RegistrationFormType' => __DIR__ . '/../..' . '/src/Form/RegistrationFormType.php',
         'App\\Form\\RegistrationFormType1' => __DIR__ . '/../..' . '/src/Form/RegistrationFormType1.php',
         'App\\Form\\ResetPasswordRequestFormType' => __DIR__ . '/../..' . '/src/Form/ResetPasswordRequestFormType.php',
+        'App\\Form\\StringToFileTransformer' => __DIR__ . '/../..' . '/src/Form/StringToFileTransformer.php',
         'App\\Form\\UniteType' => __DIR__ . '/../..' . '/src/Form/UniteType.php',
         'App\\Form\\UpdatePasswordType' => __DIR__ . '/../..' . '/src/Form/UpdatePasswordType.php',
         'App\\Form\\UserAddType' => __DIR__ . '/../..' . '/src/Form/UserAddType.php',
@@ -707,6 +712,7 @@ class ComposerStaticInitcfb0ac2fc90cebeb47c545f3aa831575
         'App\\Repository\\CourRepository' => __DIR__ . '/../..' . '/src/Repository/CourRepository.php',
         'App\\Repository\\EntretienRepository' => __DIR__ . '/../..' . '/src/Repository/EntretienRepository.php',
         'App\\Repository\\EvaluationRepository' => __DIR__ . '/../..' . '/src/Repository/EvaluationRepository.php',
+        'App\\Repository\\ForumRepository' => __DIR__ . '/../..' . '/src/Repository/ForumRepository.php',
         'App\\Repository\\NoteRepository' => __DIR__ . '/../..' . '/src/Repository/NoteRepository.php',
         'App\\Repository\\QuestionRepository' => __DIR__ . '/../..' . '/src/Repository/QuestionRepository.php',
         'App\\Repository\\ResetPasswordRequestRepository' => __DIR__ . '/../..' . '/src/Repository/ResetPasswordRequestRepository.php',

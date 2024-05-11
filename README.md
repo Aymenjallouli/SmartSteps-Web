@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # User-Crud-Symfony5
 Users CRUD using SB admin template with login, register and roles requires php: >=7.2.5/Symfony 5.4
 ## features 
@@ -37,3 +38,6 @@ Users CRUD using SB admin template with login, register and roles requires php: 
 * Login with this admin account and connect to admin dashboard (/login)
 * ... then start to create new categories and new articles
 * Tags will be automaticaly created as you write them (SELECT2 JQuery plugin)
+=======
+# SmartSteps-Web
+>>>>>>> dd27b877639aac83f9cac3ccb27388c87014d79a

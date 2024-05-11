@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Commentaire
@@ -25,47 +26,72 @@ class Commentaire
      * @var string
      *
      * @ORM\Column(name="description", type="string", length=255, nullable=false)
+     * @Assert\NotBlank(message="Description cannot be blank")
+     * @Assert\Length(max=255, maxMessage="Description cannot be longer than {{ limit }} characters")
      */
     private $description;
 
     /**
-     * @var \Forum
+     * @var \Forum|null
      *
      * @ORM\ManyToOne(targetEntity="Forum")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_forum", referencedColumnName="id")
-     * })
+     * @ORM\JoinColumn(name="id_forum", referencedColumnName="id")
      */
     private $idForum;
 
-    public function getId(): ?int
+    // Getters and setters...
+
+    /**
+     * @return int
+     */
+    public function getId(): int
     {
         return $this->id;
     }
 
-    public function getDescription(): ?string
+    /**
+     * @return string
+     */
+    public function getDescription(): string
     {
         return $this->description;
     }
 
-    public function setDescription(string $description): static
+    /**
+     * @param string $description
+     * @return self
+     */
+    public function setDescription(string $description): self
     {
         $this->description = $description;
-
         return $this;
     }
 
+    /**
+     * @return \Forum|null
+     */
     public function getIdForum(): ?Forum
     {
         return $this->idForum;
     }
 
-    public function setIdForum(?Forum $idForum): static
+    /**
+     * @param \Forum|null $idForum
+     * @return self
+     */
+    public function setIdForum(?Forum $idForum): self
     {
         $this->idForum = $idForum;
-
         return $this;
     }
 
-
+    /**
+     * Returns a string representation of the object
+     *
+     * @return string
+     */
+    public function __toString(): string
+    {
+        return $this->description;
+    }
 }
