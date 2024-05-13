@@ -34,23 +34,23 @@ class CourRepository extends ServiceEntityRepository
     
         // Recherche par nom de matière
         if ($search) {
-            $queryBuilder->andWhere('c.Matiere LIKE :search')
+            $queryBuilder->andWhere('c.matiere LIKE :search')
                          ->setParameter('search', '%'.$search.'%');
         }
     
         // Tri
         switch ($sort) {
             case 'date_fin_asc':
-                $queryBuilder->orderBy('c.Date_Fin', 'ASC');
+                $queryBuilder->orderBy('c.dateFin', 'ASC');
                 break;
             case 'date_fin_desc':
-                $queryBuilder->orderBy('c.Date_Fin', 'DESC');
+                $queryBuilder->orderBy('c.dateFin', 'DESC');
                 break;
             case 'nom_asc':
-                $queryBuilder->orderBy('c.Matiere', 'ASC');
+                $queryBuilder->orderBy('c.matiere', 'ASC');
                 break;
             case 'nom_desc':
-                $queryBuilder->orderBy('c.Matiere', 'DESC');
+                $queryBuilder->orderBy('c.matiere', 'DESC');
                 break;
             default:
                 // Pas de tri par défaut

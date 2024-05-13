@@ -56,8 +56,6 @@ class UserEditType extends AbstractType
                     'Admin' => 'ROLE_ADMIN',
                     'Teacher' => 'ROLE_TEACHER',
                     'Student' => 'ROLE_STUDENT',
-                    'Recruteur' => 'ROLE_RECRUITER',
-
                 ]
             ])     
             ->add('captcha', CaptchaType::class)   

@@ -9,7 +9,7 @@ return [
     false, // $matchHost
     [ // $staticRoutes
         '/admin/profiledition' => [[['_route' => 'admin_account_edit', '_controller' => 'App\\Controller\\AdminAccountController::edit'], null, null, null, false, false, null]],
-        '/admin/profil' => [[['_route' => 'admin_account_index', '_controller' => 'App\\Controller\\AdminAccountController::index'], null, null, null, false, false, null]],
+        '/admin/profilprofileditionfront' => [[['_route' => 'admin_account_index', '_controller' => 'App\\Controller\\AdminAccountController::index'], null, null, null, false, false, null]],
         '/admin/profilprofilefront' => [[['_route' => 'admin_account_index1', '_controller' => 'App\\Controller\\AdminAccountController::index1'], null, null, null, false, false, null]],
         '/admin/profileditionfront' => [[['_route' => 'admin_account_editfront', '_controller' => 'App\\Controller\\AdminAccountController::editf'], null, null, null, false, false, null]],
         '/admin/tableau-de-bord' => [[['_route' => 'admin_dashboard_index', '_controller' => 'App\\Controller\\AdminDashboardController::index'], null, null, null, false, false, null]],

@@ -24,10 +24,10 @@ class UniteRepository extends ServiceEntityRepository
         }
 
         // Tri par numéro d'unité
-        if ($sort === 'num_unite_asc') {
-            $queryBuilder->orderBy('u.Num_unite', 'ASC');
+        if ($sort === 'NumUnite_asc') {
+            $queryBuilder->orderBy('u.NumUnite', 'ASC');
         } elseif ($sort === 'num_unite_desc') {
-            $queryBuilder->orderBy('u.Num_unite', 'DESC');
+            $queryBuilder->orderBy('u.NumUnite', 'DESC');
         }
 
         return $queryBuilder->getQuery()->getResult();

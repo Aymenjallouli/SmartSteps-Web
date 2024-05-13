@@ -35,6 +35,7 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top " style="background-color:rgba(40, 58, 90, 0.9);">
     <div class="container d-flex align-items-center">
+       
 
       <h1 class="logo me-auto"><a href="{{ path('home_index') }}">SmartSteps</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
@@ -42,28 +43,32 @@
 <nav id="navbar" class="navbar">
         <ul>
        
-          {% if app.user %}
-               <a href="{{ path('admin_account_index1') }}" class="nav-link scrollto active"><span class="ion-ios-arrow-forward">Profile</span></a>
-
-        {% if is_granted('ROLE_ADMIN') %}
-
-           <a href="{{ path('admin_dashboard_index') }}" class="nav-link scrollto active"><span class="ion-ios-arrow-forward">Admin</span></a>
-        {% endif %}
-        <a href="{{ logout_path('main') }}" class="nav-link scrollto active"><span class="ion-ios-arrow-forward">Logout </span></a>
-             
-
-    {% else %}
-        <a href="{{ path('login') }}" class="nav-link scrollto active"><span class="ion-ios-arrow-forward">Login</span></a>
-        <a href="{{ path('registration') }}" class="nav-link scrollto active"><span class="ion-ios-arrow-forward">Register</span></a>
+ {% if app.user %}
+    <a href="{{ path('admin_account_index1') }}" class="nav-link scrollto active"><span class="ion-ios-arrow-forward">Profile</span></a>
+    {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{ path('admin_dashboard_index') }}" class="nav-link scrollto active"><span class="ion-ios-arrow-forward">Admin</span></a>
     {% endif %}
-          <li><a class="nav-link scrollto active" href="{{ path('home_index') }}">Home</a></li>
-          <li><a class="nav-link scrollto" href="{{ url('app_cour_index') }}">Cours</a></li>
-          <li><a class="nav-link scrollto" href="{{ url('app_unite_index') }}">Unité</a></li>
-          <li><a class="nav-link scrollto" href="{{ url('app_evaluation_index') }}">Evaluation</a></li>          
-          <li><a class="nav-link scrollto" href="{{ url('app_forum_index') }}">Forum</a></li>          
-          <li><a class="nav-link scrollto" href="{{ url('app_evaluation_caldendar') }}">Calendar</a></li>          
-          <li><a class="nav-link scrollto" href="{{ url('admin_cour_index') }}">Dashboard Admin</a></li>
-          <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+    {% if not is_granted('ROLE_ADMIN') %}
+        <li><a class="nav-link scrollto active" href="{{ path('home_index') }}">Home</a></li>
+        
+            <li><a class="nav-link scrollto" href="{{ url('app_cour_index') }}">Cours</a></li>
+            <li><a class="nav-link scrollto" href="{{ url('app_unite_index') }}">Unité</a></li>
+            <li><a class="nav-link scrollto" href="{{ url('app_evaluation_index') }}">Evaluation</a></li>          
+      
+        {% if is_granted('ROLE_STUDENT') %}
+            <li><a class="nav-link scrollto" href="{{ url('app_forum_index') }}">Forum</a></li>          
+            <li><a class="nav-link scrollto" href="{{ url('app_evaluation_caldendar') }}">Calendar</a></li>
+        {% endif %}
+        <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+    {% endif %}
+    <a href="{{ logout_path('main') }}" class="nav-link scrollto active"><span class="ion-ios-arrow-forward">Logout</span></a>
+{% else %}
+    <a href="{{ path('login') }}" class="nav-link scrollto active"><span class="ion-ios-arrow-forward">Login</span></a>
+    <a href="{{ path('registration') }}" class="nav-link scrollto active"><span class="ion-ios-arrow-forward">Register</span></a>
+{% endif %}
+
+
+        
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

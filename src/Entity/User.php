@@ -15,7 +15,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column]
+    #[ORM\Column(name: 'idUser', type: 'integer', nullable: false)]
     private ?int $id = null;
 
     #[ORM\Column(length: 180, unique: true)]
@@ -27,19 +27,22 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     /**
      * @var string The hashed password
      */
-    #[ORM\Column]
+    #[ORM\Column(name:'pwd',length: 255)]
     private ?string $password = null;
 
     #[ORM\Column(length: 255)]
     private ?string $username = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(name:'nomUser',length: 255)]
     private ?string $firstName = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(name: 'role',length: 255)]
+    private ?string $roleUser = 'user'; 
+
+    #[ORM\Column(name: 'prenomUser',length: 255)]
     private ?string $lastName = null;
 
-    #[ORM\Column(type: 'boolean')]
+    #[ORM\Column(name: 'isEnable',type: 'boolean')]
     private $isVerified = false;
 
     /**
@@ -101,6 +104,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setRoles(array $roles): self
     {
         $this->roles = $roles;
+        $this->updateRoleUser();
 
         return $this;
     }
@@ -187,9 +191,17 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     }
     public function getRoleTitle()
     {
-        if(in_array("ROLE_ADMIN", $this->roles)) return "Administrateur";
-        else return "Utilisateur";
+        if (in_array("ROLE_ADMIN", $this->roles)) {
+            return "ADMIN";
+        } elseif (in_array("ROLE_TEACHER", $this->roles)) {
+            return "TEACHER";
+        } elseif (in_array("ROLE_STUDENT", $this->roles)) {
+            return "STUDENT";
+        } else {
+            return "USER";
+        }
     }
+
     
     public function getSalt()
     {}
@@ -218,6 +230,29 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->qrCode = $qrCode;
 
         return $this;
+    }
+
+    public function setRoleUser(?string $roleUser): self
+    {
+        $this->roleUser = $roleUser;
+
+        return $this;
+    }
+
+
+
+
+    public function updateRoleUser(): void
+    {
+        if (in_array("ROLE_ADMIN", $this->roles)) {
+            $this->setRoleUser("Admin");
+        } elseif (in_array("ROLE_TEACHER", $this->roles)) {
+            $this->setRoleUser("Enseignant");
+        } elseif (in_array("ROLE_STUDENT", $this->roles)) {
+            $this->setRoleUser("Etudiant");
+        } else {
+            $this->setRoleUser("User");
+        }
     }
 
 }

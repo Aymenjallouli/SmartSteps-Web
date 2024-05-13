@@ -4,7 +4,7 @@
 
 return [
     'admin_account_edit' => [[], ['_controller' => 'App\\Controller\\AdminAccountController::edit'], [], [['text', '/admin/profiledition']], [], [], []],
-    'admin_account_index' => [[], ['_controller' => 'App\\Controller\\AdminAccountController::index'], [], [['text', '/admin/profil']], [], [], []],
+    'admin_account_index' => [[], ['_controller' => 'App\\Controller\\AdminAccountController::index'], [], [['text', '/admin/profilprofileditionfront']], [], [], []],
     'admin_account_index1' => [[], ['_controller' => 'App\\Controller\\AdminAccountController::index1'], [], [['text', '/admin/profilprofilefront']], [], [], []],
     'admin_account_editfront' => [[], ['_controller' => 'App\\Controller\\AdminAccountController::editf'], [], [['text', '/admin/profileditionfront']], [], [], []],
     'admin_dashboard_index' => [[], ['_controller' => 'App\\Controller\\AdminDashboardController::index'], [], [['text', '/admin/tableau-de-bord']], [], [], []],

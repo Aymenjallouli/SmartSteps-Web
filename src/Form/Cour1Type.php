@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Cour;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -19,14 +20,14 @@ class Cour1Type extends AbstractType
                     'class' => 'form-control'
                 ]
             ])
-            ->add('Date_Debut', null, [
+            ->add('Date_Debut', DateType::class, [
                 'label' => 'Start Date',
                 'widget' => 'single_text',
                 'attr' => [
                     'class' => 'form-control'
                 ]
             ])
-            ->add('Date_Fin', null, [
+            ->add('Date_Fin', DateType::class, [
                 'label' => 'End Date',
                 'widget' => 'single_text',
                 'attr' => [

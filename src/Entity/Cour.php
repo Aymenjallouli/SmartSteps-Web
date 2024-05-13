@@ -2,7 +2,6 @@
 
 namespace App\Entity;
 
-
 use App\Repository\CourRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -14,30 +13,30 @@ class Cour
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column]
+    #[ORM\Column(name: "id_cour")]
     private ?int $id = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, name: "Matiere")]
     #[Assert\NotBlank(message: "Le champ Matiere ne doit pas être vide.")]
     #[Assert\Regex(
         pattern: "/^[a-zA-Z\s]+$/",
         message: "Le champ Matiere ne doit contenir que des lettres et des espaces."
     )]
-    private ?string $Matiere = null;
+    private ?string $matiere = null;
 
-    #[ORM\Column(type: 'datetime')]
+    #[ORM\Column(type: 'datetime', name: "Date_Debut")]
     #[Assert\NotBlank(message: "Veuillez sélectionner une date de début.")]
-    private ?\DateTimeInterface $Date_Debut = null;
+    private ?\DateTimeInterface $dateDebut = null;
 
-    #[ORM\Column(type: 'datetime')]
+    #[ORM\Column(type: 'datetime', name: "Date_Fin")]
     #[Assert\NotBlank(message: "Veuillez sélectionner une date de fin.")]
     #[Assert\GreaterThan(
-        propertyPath: "Date_Debut",
+        propertyPath: "dateDebut",
         message: "La date de fin doit être postérieure à la date de début."
     )]
-    private ?\DateTimeInterface $Date_Fin = null;
+    private ?\DateTimeInterface $dateFin = null;
 
-    #[ORM\OneToMany(mappedBy: 'id_Cour', targetEntity: Unite::class)]
+    #[ORM\OneToMany(mappedBy: 'id_cour', targetEntity: Unite::class)]
     private Collection $unites;
 
     public function __construct()
@@ -52,49 +51,44 @@ class Cour
 
     public function getMatiere(): ?string
     {
-
-        return $this->Matiere;
+        return $this->matiere;
     }
 
-    public function setMatiere(string $Matiere): static
+    public function setMatiere(string $matiere): self
     {
-        $this->Matiere = $Matiere;
+        $this->matiere = $matiere;
         return $this;
     }
 
     public function getDateDebut(): ?\DateTimeInterface
     {
-
-        return $this->Date_Debut;
+        return $this->dateDebut;
     }
 
-    public function setDateDebut(\DateTimeInterface $Date_Debut): static
+    public function setDateDebut(\DateTimeInterface $dateDebut): self
     {
-        $this->Date_Debut = $Date_Debut;
+        $this->dateDebut = $dateDebut;
         return $this;
     }
 
     public function getDateFin(): ?\DateTimeInterface
     {
-
-        return $this->Date_Fin;
+        return $this->dateFin;
     }
 
-    public function setDateFin(\DateTimeInterface $Date_Fin): static
+    public function setDateFin(\DateTimeInterface $dateFin): self
     {
-        $this->Date_Fin = $Date_Fin;
+        $this->dateFin = $dateFin;
         return $this;
     }
-
-    /**
+        /**
      * @return Collection<int, Unite>
      */
     public function getUnites(): Collection
     {
         return $this->unites;
     }
-
-    public function addUnite(Unite $unite): static
+    public function addUnite(Unite $unite): self
     {
         if (!$this->unites->contains($unite)) {
             $this->unites->add($unite);
@@ -102,12 +96,16 @@ class Cour
         }
         return $this;
     }
-
+   
     public function __toString(): string
     {
+        if ($this->unites === null) {
+            return '';
+        }
         return $this->getMatiere(); // ou toute autre propriété que vous souhaitez utiliser comme représentation
     }
 
+   
     public function removeUnite(Unite $unite): static
     {
         if ($this->unites->removeElement($unite)) {
@@ -118,5 +116,5 @@ class Cour
         }
         return $this;
     }
-
+ 
 }

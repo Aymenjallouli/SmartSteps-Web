@@ -8,6 +8,8 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Form\UserEditType;
+use App\Form\UserEditType1;
+
 
 
 #[Route('/admin/profil')]
@@ -50,7 +52,7 @@ class AdminAccountController extends AbstractController
     /**
      * Profil
      *
-     * @Route("", name="admin_account_index")
+     * @Route("profileditionfront", name="admin_account_index")
      * 
      * @return Response
      */
@@ -87,7 +89,7 @@ class AdminAccountController extends AbstractController
     {
         $user = $this->getUser();
 
-        $form = $this->createForm(UserEditType::class, $user);
+        $form = $this->createForm(UserEditType1::class, $user);
 
         $form->handleRequest($request);
 
@@ -99,7 +101,7 @@ class AdminAccountController extends AbstractController
                 "Votre profil a bien était mis à jour !"
             );
 
-            return $this->redirectToRoute('admin_account_index');
+            return $this->redirectToRoute('home_index');
         }
 
         return $this->render('admin/account/editfront.html.twig', [

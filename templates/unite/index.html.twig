@@ -23,6 +23,10 @@
 {% endblock %}
 
 {% block body %}
+</br>
+</br>
+</br>
+
 <div class="container">
     <div class="row mb-4">
         <div class="col-md-6">
@@ -59,8 +63,11 @@
                 </div>
                 <div class="card-footer d-flex justify-content-between">
                     <a href="{{ path('app_unite_show', {'id': unite.id}) }}" class="add-course-btn">Show</a>
+                    {% if is_granted('ROLE_TEACHER') %}
                     <a href="{{ path('app_unite_edit', {'id': unite.id}) }}" class="add-course-btn">Edit</a>
                     {{ include('unite/_delete_form.html.twig') }}
+                           {% endif %}
+           
                 </div>
             </div>
         </div>
@@ -70,8 +77,9 @@
         </div>
         {% endfor %}
     </div>
-
+{% if is_granted('ROLE_TEACHER') %}
     <a href="{{ path('app_unite_new') }}" class="add-course-btn">Create New</a>
+         {% endif %}
 </div>
 
 

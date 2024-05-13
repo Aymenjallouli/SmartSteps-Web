@@ -44,7 +44,7 @@
     <div class="card">
         <div class="card-header">
             <!-- Utilisation du même format de tableau que le détail du cours -->
-            <strong>ID:</strong> {{ unite.id }}
+            <strong>Cours:</strong> {{  unite.idCour.Matiere ()  }}
         </div>
         <div class="card-body">
             <dl class="row">
@@ -59,9 +59,10 @@
 
                 <dt class="col-sm-3">Contenu</dt>
                 <dd class="col-sm-9">{{ unite.Contenu }}</dd>
+               
 
-                <dt class="col-sm-3">Cours</dt>
-                <dd class="col-sm-9">{{ unite.idCour }}</dd>
+
+
             </dl>
         </div>
     </div>
@@ -70,13 +71,17 @@
         <div class="btn-container d-flex justify-content-between">
             <!-- Utilisation des mêmes boutons que pour le détail du cours -->
             <a href="{{ path('app_unite_index') }}" class="add-course-btn">Retour à la liste</a>
+            {% if is_granted('ROLE_TEACHER') %}
             <a href="{{ path('app_unite_edit', {'id': unite.id}) }}" class="add-course-btn">Modifier</a>
             {{ include('unite/_delete_form.html.twig') }}
+            {% endif %}
         </div>
         {# Ajouter le lien de téléchargement PDF #}
-<div style="border: 1px solid black; padding: 5px; margin-bottom: 10px; background-color: bold; display: inline-block;">
-    <a href="{{ path('app_unite_pdf', {'id': unite.id}) }}" style="color: white; text-decoration: none; display: inline;">Télécharger PDF</a>
+      <div style="border: 1px solid black; padding: 5px; margin-bottom: 10px; background-color: bold; display: inline-block;">
+    <a href="{{ path('app_unite_pdf', {'id': unite.id}) }}" style="color: white; text-decoration: none; display: inline; padding: 5px; background-color: blue;">Télécharger PDF</a>
 </div>
+
+       
     </div>
 </div>
 {% endblock %}

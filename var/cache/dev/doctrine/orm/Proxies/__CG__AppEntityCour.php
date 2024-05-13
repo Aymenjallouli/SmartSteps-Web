@@ -67,10 +67,10 @@ class Cour extends \App\Entity\Cour implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Cour' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Cour' . "\0" . 'Matiere', '' . "\0" . 'App\\Entity\\Cour' . "\0" . 'Date_Debut', '' . "\0" . 'App\\Entity\\Cour' . "\0" . 'Date_Fin', '' . "\0" . 'App\\Entity\\Cour' . "\0" . 'unites'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Cour' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Cour' . "\0" . 'matiere', '' . "\0" . 'App\\Entity\\Cour' . "\0" . 'dateDebut', '' . "\0" . 'App\\Entity\\Cour' . "\0" . 'dateFin', '' . "\0" . 'App\\Entity\\Cour' . "\0" . 'unites'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Cour' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Cour' . "\0" . 'Matiere', '' . "\0" . 'App\\Entity\\Cour' . "\0" . 'Date_Debut', '' . "\0" . 'App\\Entity\\Cour' . "\0" . 'Date_Fin', '' . "\0" . 'App\\Entity\\Cour' . "\0" . 'unites'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Cour' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Cour' . "\0" . 'matiere', '' . "\0" . 'App\\Entity\\Cour' . "\0" . 'dateDebut', '' . "\0" . 'App\\Entity\\Cour' . "\0" . 'dateFin', '' . "\0" . 'App\\Entity\\Cour' . "\0" . 'unites'];
     }
 
     /**
@@ -206,12 +206,12 @@ class Cour extends \App\Entity\Cour implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
-    public function setMatiere(string $Matiere): static
+    public function setMatiere(string $matiere): \App\Entity\Cour
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setMatiere', [$Matiere]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setMatiere', [$matiere]);
 
-        return parent::setMatiere($Matiere);
+        return parent::setMatiere($matiere);
     }
 
     /**
@@ -228,12 +228,12 @@ class Cour extends \App\Entity\Cour implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
-    public function setDateDebut(\DateTimeInterface $Date_Debut): static
+    public function setDateDebut(\DateTimeInterface $dateDebut): \App\Entity\Cour
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setDateDebut', [$Date_Debut]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setDateDebut', [$dateDebut]);
 
-        return parent::setDateDebut($Date_Debut);
+        return parent::setDateDebut($dateDebut);
     }
 
     /**
@@ -250,12 +250,12 @@ class Cour extends \App\Entity\Cour implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
-    public function setDateFin(\DateTimeInterface $Date_Fin): static
+    public function setDateFin(\DateTimeInterface $dateFin): \App\Entity\Cour
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setDateFin', [$Date_Fin]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setDateFin', [$dateFin]);
 
-        return parent::setDateFin($Date_Fin);
+        return parent::setDateFin($dateFin);
     }
 
     /**
@@ -272,7 +272,7 @@ class Cour extends \App\Entity\Cour implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
-    public function addUnite(\App\Entity\Unite $unite): static
+    public function addUnite(\App\Entity\Unite $unite): \App\Entity\Cour
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'addUnite', [$unite]);

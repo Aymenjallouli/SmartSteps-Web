@@ -72,14 +72,14 @@
                             <img src="{{ user.qrCode }}" width="123" height="100" />
                             </td>
                             <td>
-                                <a href="{{ path("admin_user_show", {"id": user.id}) }}" class="btn btn-info rounded with-icon">
+                                <a href="{{ path("admin_user_show", {"id": user.id}) }}" class="btn btn-info ">
                                     <i class="far fa-eye"></i>
                                 </a>
-                                {% if user.roleTitle == "Utilisateur" %}
-                                    <a href="{{ path("admin_user_edit", {"id": user.id}) }}" class="btn btn-primary rounded with-icon">
+                          {% if user.roleTitle in ["USER", "TEACHER", "STUDENT"] %}
+                                    <a href="{{ path("admin_user_edit", {"id": user.id}) }}" class="btn btn-primary ">
                                         <i class="far fa-edit"></i>
                                     </a>
-                                    <a href="{{ path("admin_user_delete", {"id": user.id}) }}" class="btn btn-danger rounded with-icon">
+                                    <a href="{{ path("admin_user_delete", {"id": user.id}) }}" class="btn btn-danger ">
                                         <i class="far fa-trash-alt"></i>
                                     </a>
                                 {% endif %}
